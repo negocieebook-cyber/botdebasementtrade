@@ -330,7 +330,7 @@ def _run_scheduler_debug(logger) -> dict:
         f"- Caminho do Python sys.executable: {sys.executable}",
         f"- Argumentos recebidos sys.argv: {sys.argv}",
         f"- Arquivo .env existe no diretório atual: {'sim' if env_path.exists() else 'nao'}",
-        f"- TELEGRAM_BOT_TOKEN carregado: {'sim (' + _mask_secret(settings.telegram_bot_token) + ')' if token_loaded else 'nao'}",
+        f"- TELEGRAM_BOT_TOKEN carregado: {'sim' if token_loaded else 'nao'}",
         f"- TELEGRAM_CHAT_ID carregado: {'sim' if chat_id_loaded else 'nao'}",
         f"- Pasta reports existe: {'sim' if REPORTS_DIR.exists() else 'nao'}",
         f"- Pasta logs existe: {'sim' if (Path(__file__).resolve().parent / 'logs').exists() else 'nao'}",
@@ -356,14 +356,6 @@ def _run_scheduler_debug(logger) -> dict:
         "telegram_success": telegram_result.success,
         "telegram_api_status": telegram_result.api_status(),
     }
-
-
-def _mask_secret(value: str | None) -> str:
-    if not value:
-        return ""
-    if len(value) <= 8:
-        return "***"
-    return f"{value[:4]}...{value[-4:]}"
 
 
 def _run_individual_payload(start_date: str, use_macro: bool, use_intermarket: bool, use_narrative: bool) -> dict:

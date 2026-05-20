@@ -5,7 +5,7 @@
 - Caminho do Python sys.executable: C:\Users\BARBARA DE PAULA\AppData\Local\Programs\Python\Python311\python.exe
 - Argumentos recebidos sys.argv: ['main.py', 'scheduler-debug']
 - Arquivo .env existe no diretório atual: sim
-- TELEGRAM_BOT_TOKEN carregado: sim (8719...gjqQ)
+- TELEGRAM_BOT_TOKEN carregado: sim
 - TELEGRAM_CHAT_ID carregado: sim
 - Pasta reports existe: sim
 - Pasta logs existe: sim
