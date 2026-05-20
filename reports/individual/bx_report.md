@@ -1,0 +1,82 @@
+# Relatório — BX
+
+## Resumo
+- Ativo: BX
+- Classe: banks
+- Data: 2026-05-19
+- Fase: Queda extrema, mas sem fundo
+- Score: 31/100
+- Classificação: Queda extrema, mas sem fundo
+
+## Por que entrou no radar
+Rejeitado nesta leitura: Queda extrema, mas sem fundo.
+
+## Pontos a favor
+- Drawdown relevante para a classe do ativo.
+- Invalidacao abaixo de 100.80.
+- Regime macro: neutral/mixed.
+
+## Pontos contra
+- Preço abaixo da SMA 50.
+- Abaixo da SMA 200.
+- RSI ainda fraco.
+- MACD não confirmou.
+- Muito distante da resistência de 60 dias.
+- Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
+- Risco de perder suporte.
+- Confirmação técnica ainda pendente.
+- Intermarket misto.
+- Narrativa não calculada nesta execução.
+
+## Macro
+- score: 59.0
+- regime: neutral/mixed
+- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+
+## Intermarket
+- score: 50.0
+- regime: mixed
+- notes: Banks curve/yield rule is intentionally neutral until specific bank data is configured.
+
+## Narrativa
+- score: 0.0
+- tone: not_calculated
+- notes: Narrative not implemented yet.
+
+## Gatilho de confirmação
+Confirmacao acima de 130.73, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+
+## Ponto de invalidação
+Invalidacao abaixo de 100.80.
+
+## Qualidade dos dados
+- has_price_data: True
+- error: None
+- approved: False
+- confidence_score: 100
+- confidence_level: Alta
+- issues: 
+- has_enough_history: True
+- has_volume: True
+- missing_values_pct: 0.0
+- last_date: 2026-05-19
+- source: yfinance/cache
+
+## Conclusão
+O ativo não passa no filtro principal nesta leitura. Fase atual: Queda extrema, mas sem fundo; score 31/100.
+
+## Aviso
+Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.
+
+## Regras de segurança
+- Nunca recomendar compra ou venda diretamente.
+- Nunca prometer retorno.
+- Sempre mostrar riscos.
+- Sempre mostrar gatilho de confirmacao.
+- Sempre mostrar ponto de invalidacao.
+- Avisar quando faltar dado.
+- Avisar quando API falhar.
+- Nao inventar dados ausentes.
+- Diferenciar dado de interpretacao.
+- Mostrar que a tese pode estar errada.

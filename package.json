@@ -1,0 +1,14 @@
+{
+  "name": "desbasement-agent-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Atalhos npm para iniciar o Desbasement Agent V2.",
+  "scripts": {
+    "setup": "python -m pip install -r requirements.txt",
+    "dev": "python main.py daily-alert",
+    "screener": "python main.py screener --full",
+    "individual": "python main.py individual",
+    "weekly": "python main.py weekly-report",
+    "backtest": "python main.py backtest-summary"
+  }
+}

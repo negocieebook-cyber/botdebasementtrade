@@ -1,0 +1,9 @@
+pandas
+numpy
+yfinance
+requests
+python-dotenv
+ta
+matplotlib
+scipy
+tabulate
