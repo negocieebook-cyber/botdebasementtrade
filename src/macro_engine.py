@@ -58,6 +58,40 @@ class MacroEngine:
                 score -= 3.0
                 notes.append(f"Fed balance sheet trend is contracting: {balance_sheet_trend:.2f}%.")
 
+        # MELHORIA — taxa real de juros (FEDFUNDS - inflação CPI YoY)
+        if "FEDFUNDS" in latest and "CPIAUCSL" in fred_data:  # MELHORIA
+            fed = latest["FEDFUNDS"]  # MELHORIA
+            cpi_yoy = _pct_change_over_last_points(fred_data["CPIAUCSL"], 12)  # MELHORIA
+            real_rate = fed - cpi_yoy  # MELHORIA
+            if real_rate > 2.5:  # MELHORIA
+                score -= 6.0  # MELHORIA
+                notes.append(f"Taxa real de juros elevada: {real_rate:.2f}% (restritiva para ativos de risco).")  # MELHORIA
+            elif real_rate < 0:  # MELHORIA
+                score += 5.0  # MELHORIA
+                notes.append(f"Taxa real negativa: {real_rate:.2f}% (favorável para ativos de risco).")  # MELHORIA
+            else:  # MELHORIA
+                notes.append(f"Taxa real neutra: {real_rate:.2f}%.")  # MELHORIA
+
+        # MELHORIA — tendência de inflação CPI núcleo nos últimos 6 meses
+        if "CPILFESL" in fred_data:  # MELHORIA
+            cpi_core_trend = _pct_change_over_last_points(fred_data["CPILFESL"], 6)  # MELHORIA
+            if cpi_core_trend < -0.1:  # MELHORIA
+                score += 4.0  # MELHORIA
+                notes.append(f"CPI núcleo em desinflação: tendência {cpi_core_trend:.2f} pp nos últimos 6 meses.")  # MELHORIA
+            elif cpi_core_trend > 0.2:  # MELHORIA
+                score -= 4.0  # MELHORIA
+                notes.append(f"CPI núcleo acelerando: tendência {cpi_core_trend:.2f} pp nos últimos 6 meses.")  # MELHORIA
+
+        # MELHORIA — M2: contração de liquidez
+        if "M2SL" in fred_data:  # MELHORIA
+            m2_trend = _pct_change_over_last_points(fred_data["M2SL"], 12)  # MELHORIA
+            if m2_trend < -2.0:  # MELHORIA
+                score -= 5.0  # MELHORIA
+                notes.append(f"M2 em contração: {m2_trend:.2f}% no ano (aperto de liquidez).")  # MELHORIA
+            elif m2_trend > 5.0:  # MELHORIA
+                score += 3.0  # MELHORIA
+                notes.append(f"M2 expandindo: {m2_trend:.2f}% no ano (liquidez favorável).")  # MELHORIA
+
         score = max(0.0, min(100.0, score))
         regime = "supportive" if score >= 60 else "hostile" if score <= 40 else "neutral/mixed"
         return MacroSnapshot(

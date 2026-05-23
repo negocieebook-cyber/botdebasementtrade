@@ -3,23 +3,21 @@
 ## Resumo
 - Ativo: BNB-USD
 - Classe: crypto
-- Data: 2026-05-19
+- Data: 2026-05-23
 - Fase: Acumulação inicial
-- Score: 59/100
+- Score: 51/100
 - Classificação: Acumulacao inicial
 
 ## Por que entrou no radar
-Entrou no radar como Acumulação inicial porque combina queda relevante para a classe, score 59/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Entrou no radar como Acumulação inicial porque combina queda relevante para a classe, score 51/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
 - Preço acima da SMA 50.
 - RSI acima de 50.
-- Suporte recente foi defendido.
 - Confirmação técnica já presente.
 - Invalidacao abaixo de 570.68.
 - Regime macro: neutral/mixed.
-- Intermarket favorável.
 
 ## Pontos contra
 - Abaixo da SMA 200.
@@ -27,17 +25,19 @@ Entrou no radar como Acumulação inicial porque combina queda relevante para a 
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
+- Risco de perder suporte.
+- Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
-- score: 70.0
-- regime: supportive
-- notes: +4: BTC rising.; +3: QQQ rising.
+- score: 30.0
+- regime: hostile
+- notes: +3: QQQ rising.
 
 ## Narrativa
 - score: 0.0
@@ -60,11 +60,11 @@ Invalidacao abaixo de 570.68.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-23
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Acumulação inicial, com score 59/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo permanece no radar como Acumulação inicial, com score 51/100, aguardando confirmação e respeitando o ponto de invalidação.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

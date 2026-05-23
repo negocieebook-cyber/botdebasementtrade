@@ -56,6 +56,35 @@ def generate_ranking_report(results: list) -> str:
     )
 
 
+def _pattern_section(result: dict) -> str:  # MELHORIA
+    """Gera seção markdown de padrões gráficos se PatternSnapshot estiver disponível."""  # MELHORIA
+    technical = result.get("technical", {}) or {}  # MELHORIA
+    ps = technical.get("pattern_snapshot") if isinstance(technical, dict) else getattr(technical, "pattern_snapshot", None)  # MELHORIA
+    if not ps:  # MELHORIA
+        return ""  # MELHORIA
+    lines = ["## Padrões Gráficos Detectados", ""]  # MELHORIA
+    detected = getattr(ps, "patterns_detected", [])  # MELHORIA
+    bullish_detected = [p for p in detected if getattr(p, "detected", False)]  # MELHORIA
+    if bullish_detected:  # MELHORIA
+        lines.append("| Padrão | Confiança | Direção | Taxa Bulkowski | Score |")  # MELHORIA
+        lines.append("| --- | ---: | --- | ---: | ---: |")  # MELHORIA
+        for p in bullish_detected:  # MELHORIA
+            lines.append(  # MELHORIA
+                f"| {p.pattern_name.replace('_', ' ').title()} "  # MELHORIA
+                f"| {p.confidence:.0%} | {p.breakout_direction} "  # MELHORIA
+                f"| {p.success_rate:.0%} | {p.pattern_score:.0f} |"  # MELHORIA
+            )  # MELHORIA
+    candle = getattr(ps, "candle_pattern", "none")  # MELHORIA
+    if candle != "none":  # MELHORIA
+        lines.append("")  # MELHORIA
+        lines.append(f"**Candle:** {candle} — {getattr(ps, 'candle_direction', 'neutral')} (taxa: {getattr(ps, 'candle_success_rate', 0):.0%})")  # MELHORIA
+    if getattr(ps, "has_bearish_warning", False):  # MELHORIA
+        lines.append("")  # MELHORIA
+        lines.append("⚠️ **Alerta bearish:** padrão de topo detectado.")  # MELHORIA
+    lines.append("")  # MELHORIA
+    return "\n".join(lines)  # MELHORIA
+
+
 def generate_individual_report(result: dict) -> str:
     pros = "\n".join(f"- {item}" for item in result.get("pros", [])) or "- None."
     cons = "\n".join(f"- {item}" for item in result.get("cons", [])) or "- None."
@@ -63,6 +92,7 @@ def generate_individual_report(result: dict) -> str:
     intermarket = result.get("intermarket", {})
     narrative = result.get("narrative", {})
     data_quality = result.get("data_quality", {})
+    pattern_sec = _pattern_section(result)  # MELHORIA
     return "\n".join(
         [
             f"# Relatório — {result.get('symbol', '')}",
@@ -84,6 +114,7 @@ def generate_individual_report(result: dict) -> str:
             "## Pontos contra",
             cons,
             "",
+            pattern_sec,  # MELHORIA — seção de padrões gráficos (vazia se não detectados)
             "## Macro",
             _dict_as_bullets(macro),
             "",

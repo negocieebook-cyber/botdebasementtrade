@@ -3,7 +3,7 @@
 ## Resumo
 - Ativo: XLV
 - Classe: sectors
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Possível estabilização
 - Score: 40/100
 - Classificação: Possivel estabilizacao
@@ -16,7 +16,6 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Preço acima da SMA 200.
 - RSI acima de 50.
 - MACD confirmou acima da linha de sinal.
-- Volume relativo acima da média de 30 dias.
 - Suporte recente foi defendido.
 - Confirmação técnica já presente.
 - Invalidacao abaixo de 141.97.
@@ -26,13 +25,14 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Drawdown ainda não é relevante para a classe.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
 - Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 148.07, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 150.32, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 141.97.
@@ -60,7 +60,7 @@ Invalidacao abaixo de 141.97.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão

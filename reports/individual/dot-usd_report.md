@@ -3,7 +3,7 @@
 ## Resumo
 - Ativo: DOT-USD
 - Classe: crypto
-- Data: 2026-05-19
+- Data: 2026-05-23
 - Fase: Possível estabilização
 - Score: 48/100
 - Classificação: Possivel estabilizacao
@@ -13,31 +13,31 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
-- Suporte recente foi defendido.
+- Preço acima da SMA 50.
+- Volume relativo acima da média de 30 dias.
 - Invalidacao abaixo de 1.15.
 - Regime macro: neutral/mixed.
-- Intermarket favorável.
 
 ## Pontos contra
-- Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
 - MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
-- Volume fraco ou abaixo da média.
+- Risco de perder suporte.
 - Confirmação técnica ainda pendente.
+- Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
-- score: 70.0
-- regime: supportive
-- notes: +4: BTC rising.; +3: QQQ rising.
+- score: 30.0
+- regime: hostile
+- notes: +3: QQQ rising.
 
 ## Narrativa
 - score: 0.0
@@ -60,7 +60,7 @@ Invalidacao abaixo de 1.15.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-23
 - source: yfinance/cache
 
 ## Conclusão

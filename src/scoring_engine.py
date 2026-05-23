@@ -11,7 +11,7 @@ from src.thresholds import get_threshold as get_class_threshold
 from src.utils import clamp
 
 
-RAW_TOTAL_WEIGHT = 95.0
+RAW_TOTAL_WEIGHT = 105.0  # MELHORIA — 95 base + 3 volume trigger + 7 divergências + 10 padrões
 
 
 @dataclass
@@ -55,6 +55,8 @@ class ScoringEngine:
         intermarket_score = score_intermarket(intermarket_result)
         narrative_score = score_narrative(narrative_result)
         liquidity_score = score_liquidity(snapshot)
+
+        pattern_score = score_pattern(technical)  # MELHORIA
 
         phases = [
             ThesisPhase(
@@ -102,10 +104,16 @@ class ScoringEngine:
                 liquidity_score,
                 f"30D volume ratio: {technical.volume_ratio_30d:.2f}.",
             ),
+            ThesisPhase(  # MELHORIA
+                "Pattern Recognition",  # MELHORIA
+                pattern_score >= 5,  # MELHORIA
+                pattern_score,  # MELHORIA
+                _pattern_phase_detail(technical),  # MELHORIA
+            ),  # MELHORIA
         ]
 
-        total = calculate_total_score(snapshot, asset_class, macro_result, intermarket_result, narrative_result)
-        classification = classify_asset(total, snapshot, asset_class, macro_result, intermarket_result, narrative_result)
+        total = calculate_total_score(snapshot, asset_class, macro_result, intermarket_result, narrative_result, technical)  # MELHORIA
+        classification = classify_asset(total, snapshot, asset_class, macro_result, intermarket_result, narrative_result, technical)  # MELHORIA
         risk = _risk(technical, threshold, macro, intermarket)
         return ScoreResult(total_score=total, classification=classification, risk=risk, phases=phases)
 
@@ -145,6 +153,9 @@ def score_technical_confirmation(snapshot) -> int:
     score += 4 if macd > macd_signal else 0
     score += 4 if _value(snapshot, "structure_recovery", False) else 0
     score += 3 if rolling_high_60d and last_close >= rolling_high_60d * 0.97 else 0
+    score += 3 if _value(snapshot, "trigger_volume_confirmed", False) else 0   # MELHORIA
+    score += 4 if _value(snapshot, "rsi_bullish_divergence", False) else 0     # MELHORIA
+    score += 3 if _value(snapshot, "macd_bullish_divergence", False) else 0    # MELHORIA
     return int(clamp(score, 0, 20))
 
 
@@ -158,6 +169,21 @@ def score_intermarket(intermarket_result) -> int:
 
 def score_narrative(narrative_result) -> int:
     return int(clamp(_value(narrative_result, "narrative_score", 0.0), 0, 5))
+
+
+def score_pattern(technical) -> int:  # MELHORIA
+    """Retorna 0–10 baseado em PatternSnapshot. Bearish warning → 0. Candle bullish ≥0.55 → +2 bônus."""  # MELHORIA
+    ps = getattr(technical, "pattern_snapshot", None)  # MELHORIA
+    if ps is None:  # MELHORIA
+        return 0  # MELHORIA
+    if getattr(ps, "has_bearish_warning", False):  # MELHORIA
+        return 0  # MELHORIA
+    base = min(getattr(ps, "aggregate_pattern_score", 0.0), 8.0)  # MELHORIA
+    candle_bonus = 0  # MELHORIA
+    if getattr(ps, "candle_direction", "neutral") == "bullish":  # MELHORIA
+        if getattr(ps, "candle_success_rate", 0.0) >= 0.55:  # MELHORIA
+            candle_bonus = 2  # MELHORIA
+    return int(min(base + candle_bonus, 10))  # MELHORIA
 
 
 def score_liquidity(snapshot) -> int:
@@ -188,6 +214,7 @@ def calculate_total_score(
     macro_result=None,
     intermarket_result=None,
     narrative_result=None,
+    technical=None,  # MELHORIA
 ) -> int:
     raw_score = (
         score_drawdown(snapshot, asset_class)
@@ -197,6 +224,7 @@ def calculate_total_score(
         + score_intermarket(intermarket_result or {})
         + score_narrative(narrative_result or {})
         + score_liquidity(snapshot)
+        + score_pattern(technical)  # MELHORIA
     )
     return int(round(clamp((raw_score / RAW_TOTAL_WEIGHT) * 100, 0, 100)))
 
@@ -208,9 +236,16 @@ def classify_asset(
     macro_result=None,
     intermarket_result=None,
     narrative_result=None,
+    technical=None,  # MELHORIA
 ) -> str:
     if _is_invalidated(snapshot):
         return "Tese invalidada"
+    # MELHORIA — verificações de padrão antes das demais
+    ps = getattr(technical, "pattern_snapshot", None) if technical else None  # MELHORIA
+    if ps and getattr(ps, "has_bearish_warning", False):  # MELHORIA
+        return "Alerta bearish — padrao de topo"  # MELHORIA
+    if score_pattern(technical) >= 8 and total_score >= 65:  # MELHORIA
+        return "Tese forte com padrao confirmado"  # MELHORIA
     if _is_strong_thesis(total_score, snapshot, asset_class):
         return "Tese forte"
     if total_score >= 70:
@@ -293,7 +328,17 @@ def _snapshot_from_technical(technical: TechnicalSnapshot) -> dict:
         "lateralization": technical.lateralization,
         "volatility_compression": technical.volatility_compression,
         "invalidation_level": technical.invalidation_level,
+        "trigger_volume_confirmed": getattr(technical, "trigger_volume_confirmed", False),  # MELHORIA
+        "rsi_bullish_divergence": getattr(technical, "rsi_bullish_divergence", False),      # MELHORIA
+        "macd_bullish_divergence": getattr(technical, "macd_bullish_divergence", False),    # MELHORIA
     }
+
+
+def _pattern_phase_detail(technical) -> str:  # MELHORIA
+    ps = getattr(technical, "pattern_snapshot", None)  # MELHORIA
+    if ps is None:  # MELHORIA
+        return "No pattern data available."  # MELHORIA
+    return getattr(ps, "summary", "Pattern snapshot present.")  # MELHORIA
 
 
 def _value(source, key: str, default=0.0):

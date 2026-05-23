@@ -3,7 +3,7 @@
 ## Resumo
 - Ativo: EFA
 - Classe: equity_indices
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Possível estabilização
 - Score: 46/100
 - Classificação: Possivel estabilizacao
@@ -15,6 +15,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Preço acima da SMA 50.
 - Preço acima da SMA 200.
 - RSI acima de 50.
+- Perto de rompimento da resistência de 60 dias.
 - Confirmação técnica já presente.
 - Invalidacao abaixo de 93.08.
 - Regime macro: neutral/mixed.
@@ -23,7 +24,6 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
 - MACD não confirmou.
-- Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
@@ -32,7 +32,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 100.0
@@ -60,7 +60,7 @@ Invalidacao abaixo de 93.08.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão

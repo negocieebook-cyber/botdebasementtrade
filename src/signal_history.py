@@ -101,6 +101,23 @@ def get_previous_signal(symbol: str) -> dict | None:
     return matches.iloc[-1].to_dict()
 
 
+def _was_recently_notified(symbol: str, days: int = 5) -> bool:  # MELHORIA
+    """Retorna True se o ativo foi notificado nos últimos `days` dias."""  # MELHORIA
+    history = load_signal_history()  # MELHORIA
+    if history.empty:  # MELHORIA
+        return False  # MELHORIA
+    matches = history[  # MELHORIA
+        (history["symbol"].astype(str).str.upper() == symbol.upper()) &  # MELHORIA
+        (history["was_notified"].astype(str).str.lower().isin(["true", "1", "yes"]))  # MELHORIA
+    ]  # MELHORIA
+    if matches.empty:  # MELHORIA
+        return False  # MELHORIA
+    matches = matches.copy()  # MELHORIA
+    matches["created_at"] = pd.to_datetime(matches["created_at"], errors="coerce")  # MELHORIA
+    recent = matches[matches["created_at"] >= pd.Timestamp.now() - pd.Timedelta(days=days)]  # MELHORIA
+    return not recent.empty  # MELHORIA
+
+
 def get_phase_rank(phase: str) -> int:
     return PHASE_RANKS.get(phase, 0)
 
@@ -167,6 +184,10 @@ def compare_signal_change(current_result: dict, previous_signal: dict | None) ->
 
 
 def should_notify_with_history(result: dict, previous_signal: dict | None) -> tuple[bool, str]:
+    if _was_recently_notified(result.get("symbol", ""), days=5):  # MELHORIA
+        result["alert_type"] = "Sem novo alerta"  # MELHORIA
+        return False, "Ativo já foi alertado nos últimos 5 dias."  # MELHORIA
+
     comparison = compare_signal_change(result, previous_signal)
     phase_change = comparison["phase_change"]
     score_change = comparison["score_change"]

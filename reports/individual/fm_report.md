@@ -32,7 +32,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 50.0

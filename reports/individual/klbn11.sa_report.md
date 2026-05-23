@@ -3,17 +3,18 @@
 ## Resumo
 - Ativo: KLBN11.SA
 - Classe: brazil_commodities
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Fora do padrão
-- Score: 23/100
+- Score: 27/100
 - Classificação: Fora do padrao
 
 ## Por que entrou no radar
 Rejeitado nesta leitura: Fora do padrão.
 
 ## Pontos a favor
-- Volume relativo acima da média de 30 dias.
+- MACD confirmou acima da linha de sinal.
 - Suporte recente foi defendido.
+- Invalidacao abaixo de 16.10.
 - Regime macro: neutral/mixed.
 
 ## Pontos contra
@@ -21,18 +22,17 @@ Rejeitado nesta leitura: Fora do padrão.
 - Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
-- MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
 - Confirmação técnica ainda pendente.
-- Ponto de invalidação não está claramente abaixo do preço atual.
 - Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Rejeitado nesta leitura: Fora do padrão.
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 18.93, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 18.23, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 16.10.
@@ -60,11 +60,11 @@ Invalidacao abaixo de 16.10.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão
-O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 23/100.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 27/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

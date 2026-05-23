@@ -3,28 +3,28 @@
 ## Resumo
 - Ativo: BBAS3.SA
 - Classe: brazil_banks
-- Data: 2026-05-19
-- Fase: Queda extrema, mas sem fundo
-- Score: 32/100
-- Classificação: Queda extrema, mas sem fundo
+- Data: 2026-05-22
+- Fase: Fora do padrão
+- Score: 27/100
+- Classificação: Fora do padrao
 
 ## Por que entrou no radar
-Rejeitado nesta leitura: Queda extrema, mas sem fundo.
+Rejeitado nesta leitura: Fora do padrão.
 
 ## Pontos a favor
-- Drawdown relevante para a classe do ativo.
-- Volume relativo acima da média de 30 dias.
+- MACD confirmou acima da linha de sinal.
 - Suporte recente foi defendido.
 - Invalidacao abaixo de 19.74.
 - Regime macro: neutral/mixed.
 
 ## Pontos contra
+- Drawdown ainda não é relevante para a classe.
 - Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
-- MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
 - Confirmação técnica ainda pendente.
 - Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
@@ -32,7 +32,7 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 24.53, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 23.09, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 19.74.
@@ -60,11 +60,11 @@ Invalidacao abaixo de 19.74.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão
-O ativo não passa no filtro principal nesta leitura. Fase atual: Queda extrema, mas sem fundo; score 32/100.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 27/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

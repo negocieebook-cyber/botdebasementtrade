@@ -3,36 +3,36 @@
 ## Resumo
 - Ativo: BLK
 - Classe: banks
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Possível estabilização
-- Score: 40/100
+- Score: 41/100
 - Classificação: Possivel estabilizacao
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 40/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 41/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
 
 ## Pontos a favor
 - Preço acima da SMA 50.
-- Volume relativo acima da média de 30 dias.
+- Preço acima da SMA 200.
+- RSI acima de 50.
+- Confirmação técnica já presente.
 - Invalidacao abaixo de 917.39.
 - Regime macro: neutral/mixed.
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
-- Abaixo da SMA 200.
-- RSI ainda fraco.
 - MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
 - Risco de perder suporte.
-- Confirmação técnica ainda pendente.
 - Intermarket misto.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 50.0
@@ -60,11 +60,11 @@ Invalidacao abaixo de 917.39.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 40/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo permanece no radar como Possível estabilização, com score 41/100, aguardando confirmação e respeitando o ponto de invalidação.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

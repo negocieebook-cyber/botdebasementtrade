@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
+from scipy.signal import argrelmin  # MELHORIA
 
 from src.thresholds import ClassThreshold
 
@@ -51,6 +52,10 @@ class TechnicalSnapshot:
     exhaustion: bool
     invalidation_level: float
     trigger_level: float
+    trigger_volume_confirmed: bool = False   # MELHORIA — True se volume no dia do trigger >= média 30d
+    rsi_bullish_divergence: bool = False     # MELHORIA — preço mínima < anterior, RSI não confirma
+    macd_bullish_divergence: bool = False    # MELHORIA — mesmo critério com MACD
+    pattern_snapshot: object = None          # MELHORIA — PatternSnapshot do pattern_engine
 
 
 def sma(series: pd.Series, window: int) -> pd.Series:
@@ -147,8 +152,42 @@ def _last_float(row: pd.Series, column: str) -> float:
     return float(value)
 
 
+def _find_support_level(df: pd.DataFrame, window: int = 90) -> float:  # MELHORIA
+    """Suporte como zona de preço com mais toques nos últimos `window` dias (fallback: mínimo)."""  # MELHORIA
+    tail = df.tail(window)  # MELHORIA
+    lows = tail["Low"].dropna().values  # MELHORIA
+    if len(lows) < 10:  # MELHORIA
+        return float(np.min(lows))  # MELHORIA
+    idx = argrelmin(lows, order=3)[0]  # MELHORIA
+    if len(idx) < 2:  # MELHORIA
+        return float(np.min(lows))  # MELHORIA
+    local_lows = lows[idx]  # MELHORIA
+    best_level = float(np.min(local_lows))  # MELHORIA
+    best_count = 0  # MELHORIA
+    for level in local_lows:  # MELHORIA
+        count = int(np.sum(np.abs(local_lows / level - 1) <= 0.02))  # MELHORIA
+        if count > best_count:  # MELHORIA
+            best_count = count  # MELHORIA
+            best_level = float(level)  # MELHORIA
+    return best_level  # MELHORIA
+
+
+def _detect_bullish_divergence(close: pd.Series, indicator: pd.Series, window: int = 60) -> bool:  # MELHORIA
+    """True se divergência bullish: preço faz mínima mais baixa mas indicador não confirma."""  # MELHORIA
+    c = close.tail(window).dropna()  # MELHORIA
+    ind = indicator.tail(window).dropna()  # MELHORIA
+    if len(c) < 20 or len(ind) < 20:  # MELHORIA
+        return False  # MELHORIA
+    mid = len(c) // 2  # MELHORIA
+    price_first_low = c.iloc[:mid].min()  # MELHORIA
+    price_second_low = c.iloc[mid:].min()  # MELHORIA
+    ind_first_low = ind.iloc[:mid].min()  # MELHORIA
+    ind_second_low = ind.iloc[mid:].min()  # MELHORIA
+    return bool(price_second_low < price_first_low and ind_second_low > ind_first_low)  # MELHORIA
+
+
 class TechnicalEngine:
-    def analyze(self, df: pd.DataFrame, threshold: ClassThreshold) -> TechnicalSnapshot:
+    def analyze(self, df: pd.DataFrame, threshold: ClassThreshold, asset_class: str = "equity_indices") -> TechnicalSnapshot:  # MELHORIA
         work = add_technical_indicators(df)
         close = work["Close"]
 
@@ -160,7 +199,7 @@ class TechnicalEngine:
         high_252d = float(tail_252["Close"].max())
         low_252d = float(tail_252["Close"].min())
         drawdown_pct = _last_float(last, "Drawdown52WPct")
-        support_90d = float(tail_90["Low"].min())
+        support_90d = _find_support_level(work, window=90)  # MELHORIA — zona de suporte com mais toques
         support_distance_pct = ((last_close / support_90d) - 1) * 100 if support_90d else 0.0
 
         atr_14 = _last_float(last, "ATR14")
@@ -182,6 +221,26 @@ class TechnicalEngine:
         lateralization = lateral_range_pct <= abs(threshold.extreme_drawdown_pct) * 0.75
         structure_recovery = last_close > sma_50 and sma_50 >= work["SMA50"].tail(20).mean()
         confirmation = last_close >= twenty_high * 0.995 or (last_close > sma_50 and last_rsi >= 50)
+
+        # MELHORIA — volume confirmação do trigger
+        last_20 = work.tail(20)
+        high_idx = last_20["High"].idxmax()
+        volume_at_high = float(work.loc[high_idx, "Volume"]) if "Volume" in work.columns else 0.0
+        avg_vol_30 = float(work["Volume"].tail(30).mean()) if "Volume" in work.columns else 0.0
+        trigger_volume_confirmed = volume_at_high >= avg_vol_30 * 0.8 if avg_vol_30 > 0 else False  # MELHORIA
+
+        # MELHORIA — divergências bullish RSI e MACD
+        rsi_bullish_divergence = _detect_bullish_divergence(close, work["RSI14"], window=60)  # MELHORIA
+        macd_divergence_series = work["MACD"].fillna(0)  # MELHORIA
+        macd_bullish_divergence = _detect_bullish_divergence(close, macd_divergence_series, window=60)  # MELHORIA
+
+        # MELHORIA — padrões gráficos via PatternEngine
+        pattern_snapshot = None  # MELHORIA
+        try:  # MELHORIA
+            from src.pattern_engine import PatternEngine as _PatternEngine  # MELHORIA
+            pattern_snapshot = _PatternEngine().analyze(df, asset_class)  # MELHORIA
+        except Exception:  # MELHORIA
+            pass  # MELHORIA
 
         return TechnicalSnapshot(
             date=str(last_date.date() if hasattr(last_date, "date") else last_date),
@@ -225,4 +284,8 @@ class TechnicalEngine:
             exhaustion=bool(exhaustion),
             invalidation_level=float(min(ten_low, support_90d)),
             trigger_level=twenty_high,
+            trigger_volume_confirmed=bool(trigger_volume_confirmed),   # MELHORIA
+            rsi_bullish_divergence=bool(rsi_bullish_divergence),       # MELHORIA
+            macd_bullish_divergence=bool(macd_bullish_divergence),     # MELHORIA
+            pattern_snapshot=pattern_snapshot,                         # MELHORIA
         )

@@ -3,7 +3,7 @@
 ## Resumo
 - Ativo: KNRI11.SA
 - Classe: brazil_reits
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Fora do padrão
 - Score: 21/100
 - Classificação: Fora do padrao
@@ -32,7 +32,7 @@ Rejeitado nesta leitura: Fora do padrão.
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Rejeitado nesta leitura: Fora do padrão.
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 170.04, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 169.09, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 153.13.
@@ -60,7 +60,7 @@ Invalidacao abaixo de 153.13.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão

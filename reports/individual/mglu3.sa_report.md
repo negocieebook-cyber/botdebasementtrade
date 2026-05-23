@@ -3,7 +3,7 @@
 ## Resumo
 - Ativo: MGLU3.SA
 - Classe: brazil_stocks
-- Data: 2026-05-19
+- Data: 2026-05-22
 - Fase: Queda extrema, mas sem fundo
 - Score: 26/100
 - Classificação: Queda extrema, mas sem fundo
@@ -13,7 +13,6 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
-- Volume relativo acima da média de 30 dias.
 - Suporte recente foi defendido.
 - Invalidacao abaixo de 6.34.
 - Regime macro: neutral/mixed.
@@ -25,6 +24,7 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 - MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
+- Volume fraco ou abaixo da média.
 - Confirmação técnica ainda pendente.
 - Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
@@ -32,7 +32,7 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 9.32, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 8.77, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 6.34.
@@ -60,7 +60,7 @@ Invalidacao abaixo de 6.34.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão

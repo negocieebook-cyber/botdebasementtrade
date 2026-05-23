@@ -3,22 +3,21 @@
 ## Resumo
 - Ativo: OP-USD
 - Classe: crypto
-- Data: 2026-05-19
+- Data: 2026-05-23
 - Fase: Possível estabilização
-- Score: 37/100
+- Score: 42/100
 - Classificação: Possivel estabilizacao
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 37/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 42/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
+- Preço acima da SMA 50.
 - Invalidacao abaixo de 0.10.
 - Regime macro: neutral/mixed.
-- Intermarket favorável.
 
 ## Pontos contra
-- Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
 - MACD não confirmou.
@@ -27,17 +26,18 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
 - Confirmação técnica ainda pendente.
+- Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
-- score: 70.0
-- regime: supportive
-- notes: +4: BTC rising.; +3: QQQ rising.
+- score: 30.0
+- regime: hostile
+- notes: +3: QQQ rising.
 
 ## Narrativa
 - score: 0.0
@@ -60,11 +60,11 @@ Invalidacao abaixo de 0.10.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-23
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 37/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo permanece no radar como Possível estabilização, com score 42/100, aguardando confirmação e respeitando o ponto de invalidação.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

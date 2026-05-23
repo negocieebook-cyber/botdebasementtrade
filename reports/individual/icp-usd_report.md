@@ -3,19 +3,18 @@
 ## Resumo
 - Ativo: ICP-USD
 - Classe: crypto
-- Data: 2026-05-19
-- Fase: Possível estabilização
-- Score: 36/100
-- Classificação: Possivel estabilizacao
+- Data: 2026-05-23
+- Fase: Queda extrema, mas sem fundo
+- Score: 32/100
+- Classificação: Queda extrema, mas sem fundo
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 36/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
 - Invalidacao abaixo de 2.02.
 - Regime macro: neutral/mixed.
-- Intermarket favorável.
 
 ## Pontos contra
 - Preço abaixo da SMA 50.
@@ -27,17 +26,18 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
 - Confirmação técnica ainda pendente.
+- Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
-- score: 70.0
-- regime: supportive
-- notes: +4: BTC rising.; +3: QQQ rising.
+- score: 30.0
+- regime: hostile
+- notes: +3: QQQ rising.
 
 ## Narrativa
 - score: 0.0
@@ -53,18 +53,18 @@ Invalidacao abaixo de 2.02.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-23
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 36/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Queda extrema, mas sem fundo; score 32/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

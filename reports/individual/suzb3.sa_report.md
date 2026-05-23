@@ -3,22 +3,22 @@
 ## Resumo
 - Ativo: SUZB3.SA
 - Classe: brazil_commodities
-- Data: 2026-05-19
-- Fase: Possível estabilização
-- Score: 36/100
-- Classificação: Possivel estabilizacao
+- Data: 2026-05-22
+- Fase: Fora do padrão
+- Score: 27/100
+- Classificação: Fora do padrao
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 36/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Fora do padrão.
 
 ## Pontos a favor
-- Drawdown relevante para a classe do ativo.
 - MACD confirmou acima da linha de sinal.
 - Suporte recente foi defendido.
 - Invalidacao abaixo de 40.97.
 - Regime macro: neutral/mixed.
 
 ## Pontos contra
+- Drawdown ainda não é relevante para a classe.
 - Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
@@ -32,7 +32,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -45,7 +45,7 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - notes: Narrative not implemented yet.
 
 ## Gatilho de confirmação
-Confirmacao acima de 48.58, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
+Confirmacao acima de 46.81, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
 Invalidacao abaixo de 40.97.
@@ -53,18 +53,18 @@ Invalidacao abaixo de 40.97.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 36/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 27/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

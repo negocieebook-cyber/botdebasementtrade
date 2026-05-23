@@ -3,36 +3,36 @@
 ## Resumo
 - Ativo: ARKK
 - Classe: sectors
-- Data: 2026-05-19
-- Fase: Possível estabilização
-- Score: 44/100
-- Classificação: Possivel estabilizacao
+- Data: 2026-05-22
+- Fase: Fora do padrão
+- Score: 28/100
+- Classificação: Fora do padrao
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 44/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Fora do padrão.
 
 ## Pontos a favor
-- Drawdown relevante para a classe do ativo.
 - Preço acima da SMA 50.
-- RSI acima de 50.
-- Confirmação técnica já presente.
 - Invalidacao abaixo de 62.94.
 - Regime macro: neutral/mixed.
 
 ## Pontos contra
+- Drawdown ainda não é relevante para a classe.
 - Abaixo da SMA 200.
+- RSI ainda fraco.
 - MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
+- Confirmação técnica ainda pendente.
 - Intermarket fraco ou não calculado.
 - Narrativa não calculada nesta execução.
 
 ## Macro
 - score: 59.0
 - regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.54.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.73%.
+- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
 
 ## Intermarket
 - score: 0.0
@@ -53,18 +53,18 @@ Invalidacao abaixo de 62.94.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-19
+- last_date: 2026-05-22
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 44/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 28/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

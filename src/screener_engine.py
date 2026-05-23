@@ -108,7 +108,7 @@ class ScreenerEngine:
                 )
                 continue
 
-            technical = self.technical_engine.analyze(result.data, threshold)
+            technical = self.technical_engine.analyze(result.data, threshold, asset.asset_class)  # MELHORIA
             score = self.scoring_engine.score(technical, threshold, macro, intermarket, narrative, asset.asset_class)
             thesis_phase = score.classification
             pros, cons = build_pros_cons(technical, score, macro, intermarket, narrative, asset.asset_class)
@@ -133,6 +133,31 @@ class ScreenerEngine:
         return sorted(analyses, key=lambda item: item.score.total_score if item.score else -1, reverse=True)
 
 
+def _build_engine_inputs(  # MELHORIA
+    assets: list,
+    settings,
+    use_macro: bool,
+    use_intermarket: bool,
+    start_date: str,
+) -> tuple:
+    """Retorna (market_results, fred_data, intermarket_data) — elimina duplicação entre run_screener e run_screener_with_metadata."""  # MELHORIA
+    collector = YFinanceCollector()  # MELHORIA
+    market_results = collector.fetch_universe(  # MELHORIA
+        assets, period=settings.period, interval=settings.interval, start_date=start_date  # MELHORIA
+    )  # MELHORIA
+    fred_data = None  # MELHORIA
+    if use_macro and settings.fred_api_key:  # MELHORIA
+        fred_data = FredCollector(settings.fred_api_key).fetch_many(start_date=start_date)  # MELHORIA
+    intermarket_data = None  # MELHORIA
+    if use_intermarket:  # MELHORIA
+        intermarket_assets = [Asset(symbol=s, name=s, asset_class="intermarket") for s in INTERMARKET_SYMBOLS]  # MELHORIA
+        intermarket_results = collector.fetch_universe(  # MELHORIA
+            intermarket_assets, period=settings.period, interval=settings.interval, start_date=start_date  # MELHORIA
+        )  # MELHORIA
+        intermarket_data = {r.asset.symbol: r.data for r in intermarket_results if r.error is None}  # MELHORIA
+    return market_results, fred_data, intermarket_data  # MELHORIA
+
+
 def run_screener(
     universe: list,
     start_date: str,
@@ -143,29 +168,9 @@ def run_screener(
 ) -> list:
     settings = load_settings()
     assets = _coerce_universe(universe)
-    collector = YFinanceCollector()
-    market_results = collector.fetch_universe(
-        assets,
-        period=settings.period,
-        interval=settings.interval,
-        start_date=start_date,
-    )
-
-    fred_data = None
-    if use_macro and settings.fred_api_key:
-        fred_data = FredCollector(settings.fred_api_key).fetch_many(start_date=start_date)
-
-    intermarket_data = None
-    if use_intermarket:
-        intermarket_assets = [Asset(symbol=symbol, name=symbol, asset_class="intermarket") for symbol in INTERMARKET_SYMBOLS]
-        intermarket_results = collector.fetch_universe(
-            intermarket_assets,
-            period=settings.period,
-            interval=settings.interval,
-            start_date=start_date,
-        )
-        intermarket_data = {result.asset.symbol: result.data for result in intermarket_results if result.error is None}
-
+    market_results, fred_data, intermarket_data = _build_engine_inputs(  # MELHORIA
+        assets, settings, use_macro, use_intermarket, start_date  # MELHORIA
+    )  # MELHORIA
     engine = ScreenerEngine()
     if use_narrative:
         engine.narrative_engine = NarrativeEngine()
@@ -185,29 +190,9 @@ def run_screener_with_metadata(
 ) -> dict:
     settings = load_settings()
     assets = _coerce_universe(universe)
-    collector = YFinanceCollector()
-    market_results = collector.fetch_universe(
-        assets,
-        period=settings.period,
-        interval=settings.interval,
-        start_date=start_date,
-    )
-
-    fred_data = None
-    if use_macro and settings.fred_api_key:
-        fred_data = FredCollector(settings.fred_api_key).fetch_many(start_date=start_date)
-
-    intermarket_data = None
-    if use_intermarket:
-        intermarket_assets = [Asset(symbol=symbol, name=symbol, asset_class="intermarket") for symbol in INTERMARKET_SYMBOLS]
-        intermarket_results = collector.fetch_universe(
-            intermarket_assets,
-            period=settings.period,
-            interval=settings.interval,
-            start_date=start_date,
-        )
-        intermarket_data = {result.asset.symbol: result.data for result in intermarket_results if result.error is None}
-
+    market_results, fred_data, intermarket_data = _build_engine_inputs(  # MELHORIA
+        assets, settings, use_macro, use_intermarket, start_date  # MELHORIA
+    )  # MELHORIA
     engine = ScreenerEngine()
     if use_narrative:
         engine.narrative_engine = NarrativeEngine()
