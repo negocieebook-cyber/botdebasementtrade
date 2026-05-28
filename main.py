@@ -19,8 +19,10 @@ from src.config import (
 from src.backtest_engine import evaluate_signal_history
 from src.logger_config import setup_logging
 from src.market_groups import empty_group_stats, market_group_for_class
+from src.momentum_screener import format_momentum_alert, run_momentum_screener  # V4
 from src.report_generator import (
     generate_daily_telegram_messages,
+    generate_momentum_report,  # V4
     generate_telegram_messages,
     generate_weekly_telegram_messages,
     save_daily_report,
@@ -56,6 +58,7 @@ def parse_args() -> argparse.Namespace:
             "validate-universe",
             "validate-brazil",
             "scheduler-debug",
+            "momentum-alert",  # V4
         ],
         help="Run individual assets, screener, daily alert, weekly report, backtest or Telegram diagnostic.",
     )
@@ -64,6 +67,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--no-intermarket", action="store_true", help="Disable intermarket analysis.")
     parser.add_argument("--narrative", action="store_true", help="Enable narrative analysis.")
     parser.add_argument("--start-date", default=None, help="Start date for price history, e.g. 2015-01-01.")
+    parser.add_argument("--min-score", type=float, default=55.0, help="Score minimo para momentum-alert (default: 55).")  # V4
     return parser.parse_args()
 
 
@@ -259,6 +263,38 @@ def main() -> None:
             time.time() - started_at,
         )
         return
+
+    if args.command == "momentum-alert":  # V4
+        min_score = getattr(args, "min_score", 55.0)  # V4
+        snapshots = run_momentum_screener(start_date=start_date, min_score=min_score, alert_only=True)  # V4
+        telegram_status = TelegramDispatchStatus()  # V4
+        for snap in snapshots[:10]:  # V4
+            logger.info("momentum-alert | %s score=%.0f sinal=%s", snap.symbol, snap.momentum_score, snap.signal_type)  # V4
+            result = send_telegram_message_detailed(format_momentum_alert(snap))  # V4
+            telegram_status.called = telegram_status.called or result.called  # V4
+            telegram_status.success = telegram_status.success or result.success  # V4
+            telegram_status.api_status = result.api_status()  # V4
+        report_text = generate_momentum_report(snapshots)  # V4
+        report_path = REPORTS_DIR / f"momentum_{datetime.now().strftime('%Y-%m-%d')}.md"  # V4
+        write_text(report_path, report_text)  # V4
+        payload = {  # V4
+            "planned_count": 0,  # V4
+            "analyzed_count": len(snapshots),  # V4
+            "approved_count": len(snapshots),  # V4
+            "rejected_count": 0,  # V4
+            "all_results": [],  # V4
+        }  # V4
+        _write_execution_report(  # V4
+            args, "momentum-alert", "momentum", started_at, payload,  # V4
+            telegram_status.called, telegram_status.success, min(len(snapshots), 10), telegram_status.api_status,  # V4
+        )  # V4
+        print(f"Momentum alerts encontrados: {len(snapshots)}")  # V4
+        print(f"Relatorio salvo em: {report_path}")  # V4
+        logger.info(  # V4
+            "momentum-alert: sinais=%s enviados=%s tempo=%.1fs",  # V4
+            len(snapshots), min(len(snapshots), 10), time.time() - started_at,  # V4
+        )  # V4
+        return  # V4
 
     if args.command == "backtest-summary":
         summary = evaluate_signal_history()
@@ -522,6 +558,9 @@ def _command_text(args: argparse.Namespace) -> str:
         parts.append("--narrative")
     if getattr(args, "start_date", None):
         parts.extend(["--start-date", str(args.start_date)])
+    min_score = getattr(args, "min_score", None)  # V4
+    if min_score is not None and min_score != 55.0:  # V4
+        parts.extend(["--min-score", str(min_score)])  # V4
     return " ".join(parts)
 
 

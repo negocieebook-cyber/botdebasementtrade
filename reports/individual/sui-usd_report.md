@@ -4,17 +4,19 @@
 - Ativo: SUI-USD
 - Classe: crypto
 - Data: 2024-06-04
-- Fase: Queda extrema, mas sem fundo
-- Score: 34/100
-- Classificação: Queda extrema, mas sem fundo
+- Fase: Alerta bearish — padrao de topo
+- Score: 41/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Rejeitado nesta leitura: Queda extrema, mas sem fundo.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
 - Invalidacao abaixo de 0.00.
-- Regime macro: neutral/mixed.
+- Regime macro: supportive.
+- Padrão de acumulação por volume: dias de alta com volume maior que dias de baixa.
+- NR7: menor range dos últimos 7 dias — setup de contração antes de rompimento.
 
 ## Pontos contra
 - Preço abaixo da SMA 50.
@@ -26,23 +28,24 @@ Rejeitado nesta leitura: Queda extrema, mas sem fundo.
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
 - Confirmação técnica ainda pendente.
-- Intermarket fraco ou não calculado.
-- Narrativa não calculada nesta execução.
+- Intermarket misto.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 30.0
-- regime: hostile
-- notes: +3: QQQ rising.
+- score: 51.0
+- regime: mixed
+- notes: +1.2: BTC rising (trend score 1.2/4).; +3.0: QQQ rising (trend score 3.0/3).; +0.9: Dollar proxy UUP falling (falling trend score 0.9/3).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 52.0
+- tone: neutral
+- notes: +16 positive signals in 20 headlines; -14 negative signals in 20 headlines
 
 ## Gatilho de confirmação
 Confirmacao acima de 0.00, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
@@ -64,7 +67,7 @@ Invalidacao abaixo de 0.00.
 - source: yfinance/cache
 
 ## Conclusão
-O ativo não passa no filtro principal nesta leitura. Fase atual: Queda extrema, mas sem fundo; score 34/100.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 41/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

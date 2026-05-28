@@ -93,17 +93,30 @@ def generate_individual_report(result: dict) -> str:
     narrative = result.get("narrative", {})
     data_quality = result.get("data_quality", {})
     pattern_sec = _pattern_section(result)  # MELHORIA
+    score = result.get("score", 0)
+    dq = data_quality or {}
+    dq_lines = [
+        f"- Confiança: {dq.get('confidence_level', 'n/a')} ({dq.get('confidence_score', 'n/a')}/100)",
+        f"- Última data: {dq.get('last_date', 'n/a')}",
+        f"- Volume presente: {'sim' if dq.get('has_volume') else 'não'}",
+        f"- Histórico suficiente: {'sim' if dq.get('has_enough_history') else 'não'}",
+        f"- Valores ausentes: {dq.get('missing_values_pct', 'n/a'):.1f}%" if isinstance(dq.get('missing_values_pct'), float) else f"- Valores ausentes: {dq.get('missing_values_pct', 'n/a')}",
+    ]
+    if dq.get("issues"):
+        dq_lines.append("- Problemas: " + "; ".join(dq["issues"]))
     return "\n".join(
         [
-            f"# Relatório — {result.get('symbol', '')}",
+            f"# {result.get('symbol', '')} — Relatório de análise",
             "",
             "## Resumo",
-            f"- Ativo: {result.get('symbol', '')}",
-            f"- Classe: {result.get('asset_class', '')}",
-            f"- Data: {result.get('date', '')}",
-            f"- Fase: {result.get('phase', '')}",
-            f"- Score: {result.get('score', 0)}/100",
-            f"- Classificação: {result.get('classification', '')}",
+            f"| Campo | Valor |",
+            f"| --- | --- |",
+            f"| Ativo | {result.get('symbol', '')} |",
+            f"| Classe | {result.get('asset_class', '')} |",
+            f"| Data | {result.get('date', '')} |",
+            f"| Fase | **{result.get('phase', '')}** |",
+            f"| Score | `{_score_bar(score)}` **{score}/100** |",
+            f"| Classificação | {result.get('classification', '')} |",
             "",
             "## Por que entrou no radar",
             result.get("why_on_radar", ""),
@@ -114,33 +127,29 @@ def generate_individual_report(result: dict) -> str:
             "## Pontos contra",
             cons,
             "",
-            pattern_sec,  # MELHORIA — seção de padrões gráficos (vazia se não detectados)
+            pattern_sec,
             "## Macro",
-            _dict_as_bullets(macro),
+            _fmt_analysis_section(macro, regime_key="regime", notes_key="notes"),
             "",
             "## Intermarket",
-            _dict_as_bullets(intermarket),
+            _fmt_analysis_section(intermarket, regime_key="regime", notes_key="notes"),
             "",
             "## Narrativa",
-            _dict_as_bullets(narrative),
+            _fmt_analysis_section(narrative, regime_key="tone", notes_key="notes"),
             "",
             "## Gatilho de confirmação",
-            result.get("confirmation_trigger", ""),
+            result.get("confirmation_trigger", "") or "_Aguardando confirmação técnica._",
             "",
             "## Ponto de invalidação",
-            result.get("invalidation_level", ""),
+            result.get("invalidation_level", "") or "_Nível não definido com segurança._",
             "",
             "## Qualidade dos dados",
-            _dict_as_bullets(data_quality),
+            "\n".join(dq_lines),
             "",
             "## Conclusão",
             _conclusion(result),
             "",
-            "## Aviso",
-            "Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.",
-            "",
-            "## Regras de segurança",
-            "\n".join(f"- {rule}" for rule in SAFETY_RULES),
+            "> ⚠️ Este relatório é uma análise quantitativa inicial. Não é recomendação financeira.",
             "",
         ]
     )
@@ -310,15 +319,15 @@ def generate_telegram_summary(all_results: list | dict, notification_results: li
         why = item.get("notification_reason", item.get("why_on_radar", "N/A"))
         watch = item.get("what_to_watch_now", "N/A")
 
-        if _is_brazil_result(item):
-            message += "🇧🇷 Mercado brasileiro\n"
-        message += f"*{index}. {symbol}* — {asset_class}\n"
-        message += f"Fase: {phase}\n"
-        message += f"Score: {score}/100\n"
-        message += f"Motivo do alerta: {why}\n"
-        message += f"Gatilho: {trigger}\n"
-        message += f"Invalidação: {risk}\n"
-        message += f"O que observar agora: {watch}\n\n"
+        flag = "🇧🇷 " if _is_brazil_result(item) else ""
+        message += f"*{index}. {flag}{symbol}* — {asset_class}\n"
+        message += f"Fase: {phase} | Score: *{score}/100*\n"
+        message += f"Motivo: {why}\n"
+        message += f"🎯 {trigger}\n"
+        message += f"🛑 {risk}\n"
+        if watch and watch != "N/A":
+            message += f"Observar: {watch}\n"
+        message += "\n"
 
     message += (
         "⚠️ *Aviso:*\n"
@@ -765,6 +774,28 @@ def _timestamp() -> str:
     return f"Generated at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} local time."
 
 
+def _score_bar(score: float, width: int = 12) -> str:
+    filled = round(max(0.0, min(100.0, score)) / 100 * width)
+    return "█" * filled + "░" * (width - filled)
+
+
+def _fmt_analysis_section(data: dict, regime_key: str = "regime", notes_key: str = "notes") -> str:
+    if not data:
+        return "n/a"
+    score = data.get("score", 0)
+    regime = data.get(regime_key, "")
+    notes = data.get(notes_key, [])
+    bar = _score_bar(score)
+    header = f"{bar} {score:.0f}/100"
+    if regime:
+        header += f" — {regime}"
+    if isinstance(notes, list):
+        note_lines = "\n".join(f"  · {n}" for n in notes if n)
+    else:
+        note_lines = f"  · {notes}" if notes else ""
+    return f"{header}\n{note_lines}" if note_lines else header
+
+
 def _coerce_results(results: list) -> list[dict]:
     normalized = []
     for result in results:
@@ -901,16 +932,14 @@ def simplify_reason_text(text: str | None) -> str:
 def _format_daily_alert_item(item: dict, index: int) -> str:
     trigger = simplify_trigger_text(item.get("confirmation_trigger", ""), item.get("confirmation_trigger_value"))
     risk = simplify_invalidation_text(item.get("invalidation_level", ""), item.get("invalidation_level_value"))
+    score = item.get("score", 0)
     return "\n".join(
         [
-            "--------------------------------",
-            f"{index}) {item.get('symbol', 'N/A')} | {item.get('asset_class', 'N/A')}",
-            f"🔎 Fase: {item.get('phase', 'N/A')}",
-            f"📊 Score: {item.get('score', 0)}/100",
-            f"🧠 Leitura: {simplify_reason_text(item.get('daily_alert_reason') or item.get('why_on_radar', ''))}",
-            f"🎯 Gatilho: {trigger}",
-            f"🛑 Risco: {risk}",
-            "--------------------------------",
+            f"*{index}. {item.get('symbol', 'N/A')}* — {item.get('asset_class', 'N/A')}",
+            f"Fase: {item.get('phase', 'N/A')} | Score: *{score}/100*",
+            f"Leitura: {simplify_reason_text(item.get('daily_alert_reason') or item.get('why_on_radar', ''))}",
+            f"🎯 {trigger}",
+            f"🛑 {risk}",
             "",
         ]
     )
@@ -1020,16 +1049,14 @@ def _format_weekly_top_items(items: list[dict], empty_text: str) -> list[str]:
     for index, item in enumerate(items, start=1):
         trigger = simplify_trigger_text(item.get("confirmation_trigger", ""), item.get("confirmation_trigger_value"))
         risk = simplify_invalidation_text(item.get("invalidation_level", ""), item.get("invalidation_level_value"))
+        score = item.get("score", 0)
         lines.extend(
             [
-                "--------------------------------",
-                f"{index}) {item.get('symbol', 'N/A')} | {item.get('asset_class', 'N/A')}",
-                f"🔎 Fase: {item.get('phase', 'N/A')}",
-                f"📊 Score: {item.get('score', 0)}/100",
-                f"🧠 Leitura: {simplify_reason_text(item.get('why_on_radar', ''))}",
-                f"🎯 Gatilho: {trigger}",
-                f"🛑 Risco: {risk}",
-                "--------------------------------",
+                f"*{index}. {item.get('symbol', 'N/A')}* — {item.get('asset_class', 'N/A')}",
+                f"Fase: {item.get('phase', 'N/A')} | Score: *{score}/100*",
+                f"Leitura: {simplify_reason_text(item.get('why_on_radar', ''))}",
+                f"🎯 {trigger}",
+                f"🛑 {risk}",
                 "",
             ]
         )
@@ -1307,3 +1334,54 @@ def _conclusion(result: dict) -> str:
     if result.get("data_quality", {}).get("approved"):
         return f"O ativo permanece no radar como {phase}, com score {score}/100, aguardando confirmação e respeitando o ponto de invalidação."
     return f"O ativo não passa no filtro principal nesta leitura. Fase atual: {phase}; score {score}/100."
+
+
+def generate_momentum_report(snapshots: list) -> str:  # V4
+    if not snapshots:  # V4
+        return "Nenhum sinal de momentum hoje."  # V4
+
+    header_row = "| Ativo | Classe | Score | Sinal | Volume | ATR | RSI | Gatilho | Stop |"  # V4
+    separator_row = "| --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |"  # V4
+    table_rows = []  # V4
+    for snap in snapshots:  # V4
+        table_rows.append(  # V4
+            f"| {snap.symbol} | {snap.asset_class} | {snap.momentum_score:.0f} "  # V4
+            f"| {snap.signal_type} | {snap.volume_ratio:.1f}x "  # V4
+            f"| {snap.atr_compression_ratio:.2f} | {snap.rsi_14:.1f} "  # V4
+            f"| {snap.resistance_level:.2f} | {snap.stop_level:.2f} |"  # V4
+        )  # V4
+
+    detail_sections = []  # V4
+    for snap in snapshots[:5]:  # V4
+        pros_text = "\n".join(f"  - {p}" for p in snap.pros) if snap.pros else "  - n/a"  # V4
+        cons_text = "\n".join(f"  - {c}" for c in snap.cons) if snap.cons else "  - n/a"  # V4
+        detail_sections.append(  # V4
+            "\n".join([  # V4
+                f"### {snap.symbol} — {snap.classification}",  # V4
+                f"Score {snap.momentum_score:.0f}/100 | Preco {snap.close:.2f} | RSI {snap.rsi_14:.1f}",  # V4
+                "",  # V4
+                "**Positivos:**",  # V4
+                pros_text,  # V4
+                "",  # V4
+                "**Negativos:**",  # V4
+                cons_text,  # V4
+            ])  # V4
+        )  # V4
+
+    return "\n".join([  # V4
+        "# Momentum Screener — Sinais do Dia",  # V4
+        "",  # V4
+        _timestamp(),  # V4
+        "",  # V4
+        "Radar de momentum para estudo. Nao e recomendacao financeira.",  # V4
+        "",  # V4
+        "## Tabela de sinais",  # V4
+        header_row,  # V4
+        separator_row,  # V4
+        *table_rows,  # V4
+        "",  # V4
+        "## Detalhes (top 5)",  # V4
+        "",  # V4
+        "\n\n".join(detail_sections),  # V4
+        "",  # V4
+    ])  # V4

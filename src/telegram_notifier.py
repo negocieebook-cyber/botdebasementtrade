@@ -1,12 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
 import os
 
 import requests
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
 @dataclass(frozen=True)
@@ -25,7 +23,7 @@ class TelegramSendResult:
         if not self.response_text:
             return f"HTTP {self.status_code}"
         try:
-            payload = requests.models.complexjson.loads(self.response_text)
+            payload = json.loads(self.response_text)
         except ValueError:
             return f"HTTP {self.status_code}: {self.response_text[:300]}"
         ok = payload.get("ok")

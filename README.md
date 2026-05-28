@@ -54,6 +54,7 @@ python main.py individual
 python main.py screener
 python main.py daily-alert
 python main.py weekly-report
+python main.py momentum-alert
 python main.py test-telegram
 python main.py validate-universe
 python main.py validate-brazil
@@ -67,6 +68,9 @@ python main.py screener --full
 python main.py screener --no-macro
 python main.py screener --no-intermarket
 python main.py screener --narrative
+python main.py daily-alert --full --narrative
+python main.py weekly-report --full --narrative
+python main.py momentum-alert --min-score 55
 ```
 
 Rules:
@@ -76,6 +80,7 @@ Rules:
 - `screener --full`: runs the full universe.
 - `daily-alert`: runs the full universe, saves complete reports, and only sends Telegram when mature setups pass the daily alert filter.
 - `weekly-report`: runs the full universe, saves complete reports, and sends a weekly context report.
+- `momentum-alert`: runs the momentum universe and sends Telegram alerts for the strongest momentum setups.
 - `test-telegram`: validates `.env`, sends a Telegram test message, logs the API status and writes `reports/execution_report.md`.
 - `validate-universe`: checks recent yfinance data for every configured ticker and writes `reports/universe_validation_report.md`.
 - `validate-brazil`: checks the Brazilian universe over the last 60 days and writes `reports/brazil_validation_report.md`.
@@ -97,6 +102,7 @@ Reports are written to:
 - `reports/universe_validation_errors.txt`
 - `reports/individual/{SYMBOL}_report.md`
 - `reports/backtest_summary.md`
+- `reports/momentum_YYYY-MM-DD.md`
 
 Cached data is written to:
 
@@ -153,12 +159,16 @@ Se o Agendador do Windows mostrar aviso de argumentos misturados ao usar `python
 - Primeiro teste `run_test_telegram.bat` com duplo clique.
 - Depois teste `run_test_telegram.bat` pelo Agendador.
 - So depois configure `run_daily_alert.bat` e `run_weekly_report.bat`.
+- Para configurar tudo de uma vez, clique com o botao direito em `install_scheduled_tasks.bat` e escolha "Executar como administrador".
 
 Arquivos disponiveis:
 
 - `run_test_telegram.bat`: envia mensagem de teste para o Telegram e deixa a janela aberta.
-- `run_daily_alert.bat`: roda `main.py daily-alert --full`.
-- `run_weekly_report.bat`: roda `main.py weekly-report --full`.
+- `run_daily_alert.bat`: roda `main.py daily-alert --full --narrative`.
+- `run_momentum_alert.bat`: roda `main.py momentum-alert --min-score 55`.
+- `run_weekly_report.bat`: roda `main.py weekly-report --full --narrative`.
+- `CLIQUE_AQUI_ATUALIZAR_ACOES_BRASIL.bat`: atualiza `data/brazil_stocks_all.csv` com a lista publica de acoes brasileiras.
+- `CLIQUE_AQUI_ATUALIZAR_ACOES_EUA.bat`: atualiza `data/us_stocks_core.csv` com S&P 500 + Nasdaq 100.
 - `run_scheduler_debug.bat`: valida a pasta de execucao e deixa a janela aberta.
 
 Guia completo: `install_task_scheduler_windows.md`.

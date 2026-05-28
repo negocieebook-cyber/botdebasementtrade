@@ -3,19 +3,18 @@
 ## Resumo
 - Ativo: WFC
 - Classe: banks
-- Data: 2026-05-22
-- Fase: Possível estabilização
+- Data: 2026-05-27
+- Fase: Alerta bearish — padrao de topo
 - Score: 39/100
-- Classificação: Possivel estabilizacao
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 39/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
 - MACD confirmou acima da linha de sinal.
-- Suporte recente foi defendido.
 - Invalidacao abaixo de 72.78.
-- Regime macro: neutral/mixed.
+- Regime macro: supportive.
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
@@ -25,24 +24,27 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
+- Risco de perder suporte.
 - Confirmação técnica ainda pendente.
 - Intermarket misto.
-- Narrativa não calculada nesta execução.
+- Sem padrão de acumulação por volume.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 50.0
+- score: 65.0
 - regime: mixed
-- notes: Banks curve/yield rule is intentionally neutral until specific bank data is configured.
+- notes: +1.5: XLF (banks ETF) rising (trend score 1.5/5).; +5.0: 10Y yield ^TNX rising supports bank margins (trend score 5.0/5).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 77.1
+- tone: bullish
+- notes: +23 positive signals in 20 headlines; -4 negative signals in 20 headlines; 6/20 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 82.19, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
@@ -53,18 +55,18 @@ Invalidacao abaixo de 72.78.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-22
+- last_date: 2026-05-27
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 39/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 39/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

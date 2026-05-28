@@ -24,9 +24,11 @@ from src.macro_engine import MacroEngine, MacroSnapshot
 from src.market_groups import empty_group_stats, market_group_for_class
 from src.narrative_engine import NarrativeEngine, NarrativeSnapshot
 from src.scoring_engine import ScoreResult, ScoringEngine
-from src.technical_engine import TechnicalEngine, TechnicalSnapshot
+from src.technical_engine import CLASS_BENCHMARK, TechnicalEngine, TechnicalSnapshot  # V3 CLASS_BENCHMARK
 from src.thresholds import get_threshold
 from src.universe import Asset, get_assets_by_symbols
+
+_EXTRA_BENCHMARK_SYMBOLS = ["XLF", "EFA", "VNQ", "DBC", "BOVA11.SA", "EWZ"]  # V3
 
 
 @dataclass
@@ -63,6 +65,7 @@ class ScreenerEngine:
         results: list[MarketDataResult],
         fred_data: dict[str, pd.DataFrame] | None = None,
         intermarket_data: dict[str, pd.DataFrame] | None = None,
+        benchmark_data: dict[str, pd.DataFrame] | None = None,  # V3
     ) -> list[AssetAnalysis]:
         macro = self.macro_engine.analyze(fred_data)
         market_data = {result.asset.symbol: result.data for result in results if result.error is None}
@@ -108,8 +111,11 @@ class ScreenerEngine:
                 )
                 continue
 
-            technical = self.technical_engine.analyze(result.data, threshold, asset.asset_class)  # MELHORIA
-            score = self.scoring_engine.score(technical, threshold, macro, intermarket, narrative, asset.asset_class)
+            # V3 — look up benchmark DataFrame for relative strength calculation
+            bench_symbol = CLASS_BENCHMARK.get(asset.asset_class, "SPY")  # V3
+            bench_df = (benchmark_data or {}).get(bench_symbol)  # V3
+            technical = self.technical_engine.analyze(result.data, threshold, asset.asset_class, bench_df)  # V3
+            score = self.scoring_engine.score(technical, threshold, macro, intermarket, narrative, asset.asset_class, data_quality)  # V3
             thesis_phase = score.classification
             pros, cons = build_pros_cons(technical, score, macro, intermarket, narrative, asset.asset_class)
             analyses.append(
@@ -140,7 +146,7 @@ def _build_engine_inputs(  # MELHORIA
     use_intermarket: bool,
     start_date: str,
 ) -> tuple:
-    """Retorna (market_results, fred_data, intermarket_data) — elimina duplicação entre run_screener e run_screener_with_metadata."""  # MELHORIA
+    """Retorna (market_results, fred_data, intermarket_data, benchmark_data)."""  # V3
     collector = YFinanceCollector()  # MELHORIA
     market_results = collector.fetch_universe(  # MELHORIA
         assets, period=settings.period, interval=settings.interval, start_date=start_date  # MELHORIA
@@ -155,7 +161,15 @@ def _build_engine_inputs(  # MELHORIA
             intermarket_assets, period=settings.period, interval=settings.interval, start_date=start_date  # MELHORIA
         )  # MELHORIA
         intermarket_data = {r.asset.symbol: r.data for r in intermarket_results if r.error is None}  # MELHORIA
-    return market_results, fred_data, intermarket_data  # MELHORIA
+    # V3 — fetch extra benchmark symbols (XLF, EFA, VNQ, DBC, BOVA11.SA, EWZ) for relative strength
+    extra_bench_assets = [Asset(symbol=s, name=s, asset_class="benchmark") for s in _EXTRA_BENCHMARK_SYMBOLS]  # V3
+    extra_bench_results = collector.fetch_universe(  # V3
+        extra_bench_assets, period=settings.period, interval=settings.interval, start_date=start_date  # V3
+    )  # V3
+    benchmark_data: dict[str, pd.DataFrame] = {r.asset.symbol: r.data for r in extra_bench_results if r.error is None}  # V3
+    if intermarket_data:  # V3
+        benchmark_data.update(intermarket_data)  # V3 — intermarket symbols also usable as benchmarks
+    return market_results, fred_data, intermarket_data, benchmark_data  # V3
 
 
 def run_screener(
@@ -168,13 +182,13 @@ def run_screener(
 ) -> list:
     settings = load_settings()
     assets = _coerce_universe(universe)
-    market_results, fred_data, intermarket_data = _build_engine_inputs(  # MELHORIA
-        assets, settings, use_macro, use_intermarket, start_date  # MELHORIA
-    )  # MELHORIA
+    market_results, fred_data, intermarket_data, benchmark_data = _build_engine_inputs(  # V3
+        assets, settings, use_macro, use_intermarket, start_date
+    )
     engine = ScreenerEngine()
     if use_narrative:
         engine.narrative_engine = NarrativeEngine()
-    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data)
+    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data, benchmark_data=benchmark_data)  # V3
     approved = filter_approved_assets(analyses)
     return analyses_to_dicts(approved) if as_dict else approved
 
@@ -190,13 +204,13 @@ def run_screener_with_metadata(
 ) -> dict:
     settings = load_settings()
     assets = _coerce_universe(universe)
-    market_results, fred_data, intermarket_data = _build_engine_inputs(  # MELHORIA
-        assets, settings, use_macro, use_intermarket, start_date  # MELHORIA
-    )  # MELHORIA
+    market_results, fred_data, intermarket_data, benchmark_data = _build_engine_inputs(  # V3
+        assets, settings, use_macro, use_intermarket, start_date
+    )
     engine = ScreenerEngine()
     if use_narrative:
         engine.narrative_engine = NarrativeEngine()
-    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data)
+    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data, benchmark_data=benchmark_data)  # V3
     approved = filter_approved_assets(analyses)
     rejected = [analysis for analysis in analyses if not analysis.approved]
     brazil_assets = [asset for asset in assets if _is_brazil_asset(asset)]
@@ -246,33 +260,15 @@ def analyze_single_asset(
 ) -> dict:
     asset = Asset(symbol=symbol, name=symbol, asset_class=asset_class)
     settings = load_settings()
-    collector = YFinanceCollector()
-    market_results = collector.fetch_universe(
-        [asset],
-        period=settings.period,
-        interval=settings.interval,
-        start_date=start_date,
-    )
-
-    fred_data = None
-    if use_macro and settings.fred_api_key:
-        fred_data = FredCollector(settings.fred_api_key).fetch_many(start_date=start_date)
-
-    intermarket_data = None
-    if use_intermarket:
-        intermarket_assets = [Asset(symbol=item, name=item, asset_class="intermarket") for item in INTERMARKET_SYMBOLS]
-        intermarket_results = collector.fetch_universe(
-            intermarket_assets,
-            period=settings.period,
-            interval=settings.interval,
-            start_date=start_date,
-        )
-        intermarket_data = {result.asset.symbol: result.data for result in intermarket_results if result.error is None}
+    # V3 — refactored to use _build_engine_inputs() instead of manual collector calls
+    market_results, fred_data, intermarket_data, benchmark_data = _build_engine_inputs(  # V3
+        [asset], settings, use_macro, use_intermarket, start_date
+    )  # V3
 
     engine = ScreenerEngine()
     if use_narrative:
         engine.narrative_engine = NarrativeEngine()
-    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data)
+    analyses = engine.run(market_results, fred_data=fred_data, intermarket_data=intermarket_data, benchmark_data=benchmark_data)  # V3
     if not analyses:
         return {
             "symbol": symbol,
@@ -508,7 +504,22 @@ def filter_daily_alerts(results: list) -> list:
     alerts = []
     for group_items in grouped_alerts.values():
         alerts.extend(sorted(group_items, key=lambda item: item.get("score", 0), reverse=True)[:5])
-    return sorted(alerts, key=lambda item: item.get("score", 0), reverse=True)[:20]
+    alerts = sorted(alerts, key=lambda item: item.get("score", 0), reverse=True)[:20]
+    alerts = _deduplicate_by_class(alerts)  # V3
+    return alerts
+
+
+def _deduplicate_by_class(alerts: list, max_per_class: int = 3) -> list:  # V3
+    """Keeps at most max_per_class alerts per asset_class to avoid flooding a single class."""  # V3
+    seen: dict[str, int] = {}  # V3
+    result = []  # V3
+    for item in alerts:  # V3
+        cls = item.get("asset_class", "")  # V3
+        count = seen.get(cls, 0)  # V3
+        if count < max_per_class:  # V3
+            result.append(item)  # V3
+            seen[cls] = count + 1  # V3
+    return result  # V3
 
 
 def analyses_to_dicts(analyses: list[AssetAnalysis]) -> list[dict]:
@@ -642,7 +653,6 @@ def _daily_alert_severe_risks(technical: dict, phase: str) -> list[str]:
     return risks
 
 
-
 def create_confirmation_point(technical: TechnicalSnapshot) -> str:
     if not _is_valid_technical_level(technical.trigger_level):
         return "Gatilho nao definido com seguranca."
@@ -751,6 +761,23 @@ def build_pros_cons(
 
     if narrative.tone == "not_calculated":
         cons.append("Narrativa não calculada nesta execução.")
+
+    # V3 — volume accumulation pattern
+    if getattr(technical, "volume_accumulation_pattern", False):  # V3
+        pros.append("Padrão de acumulação por volume: dias de alta com volume maior que dias de baixa.")  # V3
+    else:  # V3
+        cons.append("Sem padrão de acumulação por volume.")  # V3
+
+    # V3 — relative strength vs class benchmark
+    if getattr(technical, "outperforming_class", False):  # V3
+        rs = getattr(technical, "relative_strength_vs_class", 0.0)  # V3
+        pros.append(f"Força relativa positiva vs benchmark da classe (+{rs:.1f}pp nos últimos 63 dias).")  # V3
+    else:  # V3
+        cons.append("Ativo abaixo do benchmark da classe (força relativa negativa).")  # V3
+
+    # V3 — NR7 pattern (volatility contraction, potential breakout setup)
+    if getattr(technical, "nr7_pattern", False):  # V3
+        pros.append("NR7: menor range dos últimos 7 dias — setup de contração antes de rompimento.")  # V3
 
     return pros, cons
 

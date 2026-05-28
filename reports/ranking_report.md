@@ -1,264 +1,1073 @@
 # Ranking do Desbasement Agent
 
-Generated at 2026-05-23 19:33:24 local time.
+Generated at 2026-05-27 19:55:44 local time.
 
 Radar quantitativo para estudo. Nao e recomendacao financeira.
 
 ## Resumo
-- Ativos analisados: 249
-- Aprovados no screener: 138
-- Ativos brasileiros analisados: 41
-- Ativos brasileiros aprovados: 12
+- Ativos analisados: 1058
+- Aprovados no screener: 6
+- Ativos brasileiros analisados: 388
+- Ativos brasileiros aprovados: 5
 
 ## Ativos ranqueados
 | # | Ativo | Classe | Fase | Score | Gatilho | Risco |
 | ---: | --- | --- | --- | ---: | --- | --- |
-| 1 | DIA | equity_indices | Acumulação inicial | 54 | fechamento acima de 508,74 com volume forte. | perde força abaixo de 450,00. |
-| 2 | RSP | equity_indices | Acumulação inicial | 54 | fechamento acima de 206,97 com volume forte. | perde força abaixo de 187,36. |
-| 3 | AVAX-USD | crypto | Acumulação inicial | 53 | fechamento acima de 10,47 com volume forte. | perde força abaixo de 8,20. |
-| 4 | BNB-USD | crypto | Acumulação inicial | 51 | fechamento acima de 689,12 com volume forte. | perde força abaixo de 570,68. |
-| 5 | SPY | equity_indices | Possível estabilização | 49 | fechamento acima de 749,53 com volume forte. | perde força abaixo de 629,28. |
-| 6 | IWM | equity_indices | Possível estabilização | 49 | fechamento acima de 287,58 com volume forte. | perde força abaixo de 238,69. |
-| 7 | VTI | equity_indices | Possível estabilização | 49 | fechamento acima de 368,30 com volume forte. | perde força abaixo de 310,40. |
-| 8 | VT | equity_indices | Possível estabilização | 49 | fechamento acima de 156,42 com volume forte. | perde força abaixo de 133,65. |
-| 9 | MDY | equity_indices | Possível estabilização | 49 | fechamento acima de 685,50 com volume forte. | perde força abaixo de 597,03. |
-| 10 | IJH | equity_indices | Possível estabilização | 49 | fechamento acima de 75,15 com volume forte. | perde força abaixo de 65,37. |
-| 11 | IJR | equity_indices | Possível estabilização | 49 | fechamento acima de 139,49 com volume forte. | perde força abaixo de 119,78. |
-| 12 | DKNG | growth_stocks | Possível estabilização | 48 | fechamento acima de 27,21 com volume forte. | perde força abaixo de 20,46. |
-| 13 | GS | banks | Possível estabilização | 48 | fechamento acima de 1005,36 com volume forte. | perde força abaixo de 780,50. |
-| 14 | MS | banks | Possível estabilização | 48 | fechamento acima de 203,09 com volume forte. | perde força abaixo de 151,98. |
-| 15 | DOT-USD | crypto | Possível estabilização | 48 | fechamento acima de 1,43 com volume forte. | perde força abaixo de 1,15. |
-| 16 | ATOM-USD | crypto | Possível estabilização | 48 | fechamento acima de 2,23 com volume forte. | perde força abaixo de 1,61. |
-| 17 | ORCL | mega_caps | Possível estabilização | 47 | fechamento acima de 200,71 com volume forte. | perde força abaixo de 134,57. |
-| 18 | COF | banks | Possível estabilização | 47 | fechamento acima de 195,16 com volume forte. | perde força abaixo de 174,23. |
-| 19 | QQQ | equity_indices | Possível estabilização | 46 | fechamento acima de 722,12 com volume forte. | perde força abaixo de 555,60. |
-| 20 | EFA | equity_indices | Possível estabilização | 46 | fechamento acima de 104,92 com volume forte. | perde força abaixo de 93,08. |
-| 21 | ACWI | equity_indices | Possível estabilização | 46 | fechamento acima de 156,98 com volume forte. | perde força abaixo de 133,65. |
-| 22 | VEA | equity_indices | Possível estabilização | 46 | fechamento acima de 71,12 com volume forte. | perde força abaixo de 61,68. |
-| 23 | QQQM | equity_indices | Possível estabilização | 46 | fechamento acima de 297,33 com volume forte. | perde força abaixo de 228,75. |
-| 24 | ADBE | mega_caps | Possível estabilização | 46 | fechamento acima de 265,09 com volume forte. | perde força abaixo de 224,13. |
-| 25 | RENDER-USD | crypto | Possível estabilização | 46 | fechamento acima de 2,10 com volume forte. | perde força abaixo de 1,30. |
-| 26 | RBLX | growth_stocks | Possível estabilização | 45 | fechamento acima de 58,89 com volume forte. | perde força abaixo de 40,15. |
-| 27 | AAPL | mega_caps | Possível estabilização | 45 | fechamento acima de 311,40 com volume forte. | perde força abaixo de 242,97. |
-| 28 | V | banks | Possível estabilização | 45 | fechamento acima de 341,27 com volume forte. | perde força abaixo de 293,28. |
-| 29 | FM | emerging_markets | Possível estabilização | 45 | fechamento acima de 27,26 com volume forte. | perde força abaixo de 26,85. |
-| 30 | PATH | growth_stocks | Possível estabilização | 44 | fechamento acima de 11,30 com volume forte. | perde força abaixo de 9,20. |
-| 31 | EWW | emerging_markets | Possível estabilização | 44 | fechamento acima de 81,07 com volume forte. | perde força abaixo de 69,59. |
-| 32 | ADA-USD | crypto | Possível estabilização | 44 | fechamento acima de 0,29 com volume forte. | perde força abaixo de 0,23. |
-| 33 | FIL-USD | crypto | Possível estabilização | 44 | fechamento acima de 1,32 com volume forte. | perde força abaixo de 0,79. |
-| 34 | APT-USD | crypto | Possível estabilização | 44 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
-| 35 | EEM | equity_indices | Possível estabilização | 43 | fechamento acima de 68,15 com volume forte. | perde força abaixo de 54,44. |
-| 36 | VWO | equity_indices | Possível estabilização | 43 | fechamento acima de 61,03 com volume forte. | perde força abaixo de 52,20. |
-| 37 | U | growth_stocks | Possível estabilização | 43 | fechamento acima de 30,65 com volume forte. | perde força abaixo de 16,78. |
-| 38 | LINK-USD | crypto | Possível estabilização | 43 | fechamento acima de 10,85 com volume forte. | perde força abaixo de 8,08. |
-| 39 | DOGE-USD | crypto | Possível estabilização | 43 | fechamento acima de 0,12 com volume forte. | perde força abaixo de 0,09. |
-| 40 | INJ-USD | crypto | Possível estabilização | 43 | fechamento acima de 6,07 com volume forte. | perde força abaixo de 2,73. |
-| 41 | IVVB11.SA | brazil_etfs | Possível estabilização | 43 | fechamento acima de 425,37 com volume forte. | perde força abaixo de 374,25. |
-| 42 | UNG | commodities | Possível estabilização | 42 | fechamento acima de 11,94 com volume forte. | perde força abaixo de 9,95. |
-| 43 | ETH-USD | crypto | Possível estabilização | 42 | fechamento acima de 2423,04 com volume forte. | perde força abaixo de 1804,11. |
-| 44 | OP-USD | crypto | Possível estabilização | 42 | fechamento acima de 0,18 com volume forte. | perde força abaixo de 0,10. |
-| 45 | TIA-USD | crypto | Possível estabilização | 42 | fechamento acima de 0,52 com volume forte. | perde força abaixo de 0,28. |
-| 46 | CSNA3.SA | brazil_commodities | Possível estabilização | 42 | fechamento acima de 6,88 com volume forte. | perde força abaixo de 5,67. |
-| 47 | HGRU11.SA | brazil_reits | Possível estabilização | 42 | fechamento acima de 132,53 com volume forte. | perde força abaixo de 121,41. |
-| 48 | BTLG11.SA | brazil_reits | Possível estabilização | 42 | fechamento acima de 103,62 com volume forte. | perde força abaixo de 99,09. |
-| 49 | PNC | banks | Possível estabilização | 41 | fechamento acima de 226,01 com volume forte. | perde força abaixo de 196,05. |
-| 50 | BLK | banks | Possível estabilização | 41 | fechamento acima de 1111,09 com volume forte. | perde força abaixo de 917,39. |
-| 51 | JD | emerging_markets | Possível estabilização | 41 | fechamento acima de 34,30 com volume forte. | perde força abaixo de 23,66. |
-| 52 | ASHR | emerging_markets | Possível estabilização | 41 | fechamento acima de 36,99 com volume forte. | perde força abaixo de 31,90. |
-| 53 | XRP-USD | crypto | Possível estabilização | 41 | fechamento acima de 1,55 com volume forte. | perde força abaixo de 1,27. |
-| 54 | STX-USD | crypto | Possível estabilização | 41 | fechamento acima de 0,03 com volume forte. | nível de invalidação não definido com segurança. |
-| 55 | HYG | bonds | Possível estabilização | 40 | fechamento acima de 80,24 com volume forte. | perde força abaixo de 77,78. |
-| 56 | JNK | bonds | Possível estabilização | 40 | fechamento acima de 96,62 com volume forte. | perde força abaixo de 93,46. |
-| 57 | XLE | sectors | Possível estabilização | 40 | fechamento acima de 61,70 com volume forte. | perde força abaixo de 46,87. |
-| 58 | XLV | sectors | Possível estabilização | 40 | fechamento acima de 150,32 com volume forte. | perde força abaixo de 141,97. |
-| 59 | TAN | sectors | Possível estabilização | 40 | fechamento acima de 66,18 com volume forte. | perde força abaixo de 50,71. |
-| 60 | DDOG | growth_stocks | Possível estabilização | 40 | fechamento acima de 224,77 com volume forte. | perde força abaixo de 98,01. |
-| 61 | CRWD | growth_stocks | Possível estabilização | 40 | fechamento acima de 674,84 com volume forte. | perde força abaixo de 342,72. |
-| 62 | SE | growth_stocks | Possível estabilização | 40 | fechamento acima de 99,97 com volume forte. | perde força abaixo de 77,05. |
-| 63 | CSCO | mega_caps | Possível estabilização | 40 | fechamento acima de 120,79 com volume forte. | perde força abaixo de 72,62. |
-| 64 | JPM | banks | Possível estabilização | 40 | fechamento acima de 316,30 com volume forte. | perde força abaixo de 277,68. |
-| 65 | C | banks | Possível estabilização | 40 | fechamento acima de 131,95 com volume forte. | perde força abaixo de 101,53. |
-| 66 | BX | banks | Possível estabilização | 40 | fechamento acima de 127,06 com volume forte. | perde força abaixo de 100,80. |
-| 67 | KO | defensive_dividends | Possível estabilização | 40 | fechamento acima de 82,66 com volume forte. | perde força abaixo de 69,31. |
-| 68 | COST | defensive_dividends | Possível estabilização | 40 | fechamento acima de 1096,50 com volume forte. | perde força abaixo de 928,95. |
-| 69 | EWG | developed_international | Possível estabilização | 40 | fechamento acima de 43,51 com volume forte. | perde força abaixo de 37,98. |
-| 70 | PLD | reits | Possível estabilização | 40 | fechamento acima de 146,27 com volume forte. | perde força abaixo de 124,47. |
-| 71 | IMAB11.SA | brazil_etfs | Possível estabilização | 40 | fechamento acima de 114,87 com volume forte. | perde força abaixo de 107,32. |
-| 72 | ABEV3.SA | brazil_stocks | Possível estabilização | 40 | fechamento acima de 17,04 com volume forte. | perde força abaixo de 13,77. |
-| 73 | EMB | bonds | Possível estabilização | 39 | fechamento acima de 96,42 com volume forte. | perde força abaixo de 92,02. |
-| 74 | XLF | sectors | Possível estabilização | 39 | fechamento acima de 52,61 com volume forte. | perde força abaixo de 47,67. |
-| 75 | KBE | sectors | Possível estabilização | 39 | fechamento acima de 65,31 com volume forte. | perde força abaixo de 56,46. |
-| 76 | KRE | sectors | Possível estabilização | 39 | fechamento acima de 71,24 com volume forte. | perde força abaixo de 61,44. |
-| 77 | WFC | banks | Possível estabilização | 39 | fechamento acima de 82,19 com volume forte. | perde força abaixo de 72,78. |
-| 78 | ARB-USD | crypto | Possível estabilização | 39 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
-| 79 | EWJ | developed_international | Possível estabilização | 39 | fechamento acima de 93,27 com volume forte. | perde força abaixo de 80,85. |
-| 80 | EWC | developed_international | Possível estabilização | 39 | fechamento acima de 58,81 com volume forte. | perde força abaixo de 52,97. |
-| 81 | SLV | commodities | Possível estabilização | 38 | fechamento acima de 80,86 com volume forte. | perde força abaixo de 60,37. |
-| 82 | TSLA | growth_stocks | Possível estabilização | 38 | fechamento acima de 453,40 com volume forte. | perde força abaixo de 337,24. |
-| 83 | MSFT | mega_caps | Possível estabilização | 38 | fechamento acima de 431,76 com volume forte. | perde força abaixo de 355,51. |
-| 84 | IMX-USD | crypto | Possível estabilização | 38 | fechamento acima de 0,03 com volume forte. | nível de invalidação não definido com segurança. |
-| 85 | EWS | developed_international | Possível estabilização | 38 | fechamento acima de 29,61 com volume forte. | perde força abaixo de 27,05. |
-| 86 | HASH11.SA | brazil_etfs | Possível estabilização | 38 | fechamento acima de 53,00 com volume forte. | perde força abaixo de 43,07. |
-| 87 | B5P211.SA | brazil_etfs | Possível estabilização | 38 | fechamento acima de 107,73 com volume forte. | perde força abaixo de 101,73. |
-| 88 | UPST | growth_stocks | Possível estabilização | 37 | fechamento acima de 34,06 com volume forte. | perde força abaixo de 23,97. |
-| 89 | QCOM | mega_caps | Possível estabilização | 37 | fechamento acima de 247,90 com volume forte. | perde força abaixo de 121,99. |
-| 90 | BAC | banks | Possível estabilização | 37 | fechamento acima de 54,20 com volume forte. | perde força abaixo de 46,12. |
-| 91 | USB | banks | Possível estabilização | 37 | fechamento acima de 57,05 com volume forte. | perde força abaixo de 49,81. |
-| 92 | TFC | banks | Possível estabilização | 37 | fechamento acima de 51,57 com volume forte. | perde força abaixo de 42,68. |
-| 93 | KWEB | emerging_markets | Possível estabilização | 37 | fechamento acima de 30,74 com volume forte. | perde força abaixo de 26,41. |
-| 94 | PDD | emerging_markets | Possível estabilização | 37 | fechamento acima de 102,87 com volume forte. | perde força abaixo de 92,57. |
-| 95 | SOL-USD | crypto | Possível estabilização | 37 | fechamento acima de 98,27 com volume forte. | perde força abaixo de 76,02. |
-| 96 | NIB | commodities | Possível estabilização | 36 | fechamento acima de 36,29 com volume forte. | perde força abaixo de 28,02. |
-| 97 | XME | commodities | Possível estabilização | 36 | fechamento acima de 125,82 com volume forte. | perde força abaixo de 100,66. |
-| 98 | XLY | sectors | Possível estabilização | 36 | fechamento acima de 121,13 com volume forte. | perde força abaixo de 105,19. |
-| 99 | XLRE | sectors | Possível estabilização | 36 | fechamento acima de 44,91 com volume forte. | perde força abaixo de 39,94. |
-| 100 | PLTR | growth_stocks | Possível estabilização | 36 | fechamento acima de 149,64 com volume forte. | perde força abaixo de 122,68. |
-| 101 | CELH | growth_stocks | Possível estabilização | 36 | fechamento acima de 35,75 com volume forte. | perde força abaixo de 27,66. |
-| 102 | NVDA | mega_caps | Possível estabilização | 36 | fechamento acima de 236,54 com volume forte. | perde força abaixo de 164,27. |
-| 103 | AMD | mega_caps | Possível estabilização | 36 | fechamento acima de 481,41 com volume forte. | perde força abaixo de 188,22. |
-| 104 | TXN | mega_caps | Possível estabilização | 36 | fechamento acima de 315,57 com volume forte. | perde força abaixo de 183,97. |
-| 105 | MA | banks | Possível estabilização | 36 | fechamento acima de 534,21 com volume forte. | perde força abaixo de 479,68. |
-| 106 | BIDU | emerging_markets | Possível estabilização | 36 | fechamento acima de 152,37 com volume forte. | perde força abaixo de 105,77. |
-| 107 | EWT | emerging_markets | Possível estabilização | 36 | fechamento acima de 97,73 com volume forte. | perde força abaixo de 66,10. |
-| 108 | CL | defensive_dividends | Possível estabilização | 36 | fechamento acima de 91,52 com volume forte. | perde força abaixo de 81,79. |
-| 109 | JNJ | defensive_dividends | Possível estabilização | 36 | fechamento acima de 235,50 com volume forte. | perde força abaixo de 209,39. |
-| 110 | MRK | defensive_dividends | Possível estabilização | 36 | fechamento acima de 122,66 com volume forte. | perde força abaixo de 105,25. |
-| 111 | ABBV | defensive_dividends | Possível estabilização | 36 | fechamento acima de 220,01 com volume forte. | perde força abaixo de 190,75. |
-| 112 | VZ | defensive_dividends | Possível estabilização | 36 | fechamento acima de 48,65 com volume forte. | perde força abaixo de 38,11. |
-| 113 | EWU | developed_international | Possível estabilização | 36 | fechamento acima de 47,53 com volume forte. | perde força abaixo de 43,59. |
-| 114 | EWH | developed_international | Possível estabilização | 36 | fechamento acima de 24,66 com volume forte. | perde força abaixo de 21,36. |
-| 115 | VNQ | reits | Possível estabilização | 36 | fechamento acima de 97,37 com volume forte. | perde força abaixo de 86,84. |
-| 116 | IYR | reits | Possível estabilização | 36 | fechamento acima de 103,59 com volume forte. | perde força abaixo de 92,45. |
-| 117 | SCHH | reits | Possível estabilização | 36 | fechamento acima de 23,80 com volume forte. | perde força abaixo de 20,89. |
-| 118 | SPG | reits | Possível estabilização | 36 | fechamento acima de 206,46 com volume forte. | perde força abaixo de 177,88. |
-| 119 | PSA | reits | Possível estabilização | 36 | fechamento acima de 313,12 com volume forte. | perde força abaixo de 262,99. |
-| 120 | LREN3.SA | brazil_stocks | Possível estabilização | 36 | fechamento acima de 15,35 com volume forte. | perde força abaixo de 12,78. |
-| 121 | VALE3.SA | brazil_commodities | Possível estabilização | 36 | fechamento acima de 86,99 com volume forte. | perde força abaixo de 74,06. |
-| 122 | GGBR4.SA | brazil_commodities | Possível estabilização | 36 | fechamento acima de 24,42 com volume forte. | perde força abaixo de 16,66. |
-| 123 | COPX | commodities | Possível estabilização | 35 | fechamento acima de 92,77 com volume forte. | perde força abaixo de 68,49. |
-| 124 | DBA | commodities | Possível estabilização | 35 | fechamento acima de 28,84 com volume forte. | perde força abaixo de 25,48. |
-| 125 | CPER | commodities | Possível estabilização | 35 | fechamento acima de 40,78 com volume forte. | perde força abaixo de 32,31. |
-| 126 | WEAT | commodities | Possível estabilização | 35 | fechamento acima de 25,60 com volume forte. | perde força abaixo de 20,02. |
-| 127 | PICK | commodities | Possível estabilização | 35 | fechamento acima de 67,90 com volume forte. | perde força abaixo de 51,48. |
-| 128 | ITB | sectors | Possível estabilização | 35 | fechamento acima de 100,56 com volume forte. | perde força abaixo de 84,98. |
-| 129 | XYZ | growth_stocks | Possível estabilização | 35 | fechamento acima de 77,16 com volume forte. | perde força abaixo de 48,21. |
-| 130 | CRM | mega_caps | Possível estabilização | 35 | fechamento acima de 190,31 com volume forte. | perde força abaixo de 163,52. |
-| 131 | AXP | banks | Possível estabilização | 35 | fechamento acima de 325,00 com volume forte. | perde força abaixo de 290,05. |
-| 132 | ILF | emerging_markets | Possível estabilização | 35 | fechamento acima de 37,10 com volume forte. | perde força abaixo de 31,93. |
-| 133 | LTC-USD | crypto | Possível estabilização | 35 | fechamento acima de 60,53 com volume forte. | perde força abaixo de 50,36. |
-| 134 | NEAR-USD | crypto | Possível estabilização | 35 | fechamento acima de 2,44 com volume forte. | perde força abaixo de 0,96. |
-| 135 | EWI | developed_international | Possível estabilização | 35 | fechamento acima de 59,67 com volume forte. | perde força abaixo de 50,48. |
-| 136 | EWP | developed_international | Possível estabilização | 35 | fechamento acima de 57,83 com volume forte. | perde força abaixo de 51,43. |
-| 137 | EWL | developed_international | Possível estabilização | 35 | fechamento acima de 63,04 com volume forte. | perde força abaixo de 55,97. |
-| 138 | SANB11.SA | brazil_banks | Possível estabilização | 35 | fechamento acima de 30,07 com volume forte. | perde força abaixo de 26,38. |
-| 139 | LQD | bonds | Fora do padrão | 34 | fechamento acima de 109,39 com volume forte. | perde força abaixo de 106,50. |
-| 140 | VWOB | bonds | Fora do padrão | 34 | fechamento acima de 67,25 com volume forte. | perde força abaixo de 64,37. |
-| 141 | PYPL | banks | Queda extrema, mas sem fundo | 34 | fechamento acima de 51,87 com volume forte. | perde força abaixo de 38,34. |
-| 142 | EZA | emerging_markets | Fora do padrão | 34 | fechamento acima de 73,31 com volume forte. | perde força abaixo de 62,20. |
-| 143 | SUI-USD | crypto | Queda extrema, mas sem fundo | 34 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
-| 144 | MXRF11.SA | brazil_reits | Fora do padrão | 34 | fechamento acima de 10,00 com volume forte. | perde força abaixo de 9,07. |
-| 145 | SNOW | growth_stocks | Fora do padrão | 33 | fechamento acima de 176,98 com volume forte. | perde força abaixo de 118,30. |
-| 146 | INTC | mega_caps | Fora do padrão | 33 | fechamento acima de 132,75 com volume forte. | perde força abaixo de 40,63. |
-| 147 | IBM | mega_caps | Fora do padrão | 33 | fechamento acima de 264,38 com volume forte. | perde força abaixo de 212,34. |
-| 148 | MU | mega_caps | Fora do padrão | 33 | fechamento acima de 818,67 com volume forte. | perde força abaixo de 311,49. |
-| 149 | SCHW | banks | Fora do padrão | 33 | fechamento acima de 93,43 com volume forte. | perde força abaixo de 87,53. |
-| 150 | EWY | emerging_markets | Fora do padrão | 33 | fechamento acima de 194,58 com volume forte. | perde força abaixo de 108,57. |
-| 151 | PG | defensive_dividends | Fora do padrão | 33 | fechamento acima de 151,19 com volume forte. | perde força abaixo de 139,69. |
-| 152 | AMT | reits | Fora do padrão | 33 | fechamento acima de 185,06 com volume forte. | perde força abaixo de 163,45. |
-| 153 | HGLG11.SA | brazil_reits | Fora do padrão | 33 | fechamento acima de 157,55 com volume forte. | perde força abaixo de 151,73. |
-| 154 | GLD | commodities | Fora do padrão | 32 | fechamento acima de 437,42 com volume forte. | perde força abaixo de 399,20. |
-| 155 | IAU | commodities | Fora do padrão | 32 | fechamento acima de 89,62 com volume forte. | perde força abaixo de 81,87. |
-| 156 | XLI | sectors | Fora do padrão | 32 | fechamento acima de 177,72 com volume forte. | perde força abaixo de 156,08. |
-| 157 | XBI | sectors | Fora do padrão | 32 | fechamento acima de 138,10 com volume forte. | perde força abaixo de 118,19. |
-| 158 | XRT | sectors | Fora do padrão | 32 | fechamento acima de 86,42 com volume forte. | perde força abaixo de 77,86. |
-| 159 | SHOP | growth_stocks | Queda extrema, mas sem fundo | 32 | fechamento acima de 129,39 com volume forte. | perde força abaixo de 94,00. |
-| 160 | ROKU | growth_stocks | Fora do padrão | 32 | fechamento acima de 131,39 com volume forte. | perde força abaixo de 78,53. |
-| 161 | NET | growth_stocks | Fora do padrão | 32 | fechamento acima de 258,88 com volume forte. | perde força abaixo de 158,83. |
-| 162 | SOFI | growth_stocks | Queda extrema, mas sem fundo | 32 | fechamento acima de 19,17 com volume forte. | perde força abaixo de 14,92. |
-| 163 | NFLX | mega_caps | Queda extrema, mas sem fundo | 32 | fechamento acima de 94,70 com volume forte. | perde força abaixo de 75,01. |
-| 164 | INDA | emerging_markets | Fora do padrão | 32 | fechamento acima de 50,30 com volume forte. | perde força abaixo de 45,21. |
-| 165 | ICP-USD | crypto | Queda extrema, mas sem fundo | 32 | fechamento acima de 4,07 com volume forte. | perde força abaixo de 2,02. |
-| 166 | SO | defensive_dividends | Fora do padrão | 32 | fechamento acima de 96,60 com volume forte. | perde força abaixo de 85,50. |
-| 167 | VIVA3.SA | brazil_stocks | Queda extrema, mas sem fundo | 32 | fechamento acima de 28,79 com volume forte. | perde força abaixo de 21,85. |
-| 168 | TIPS | bonds | Queda extrema, mas sem fundo | 31 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
-| 169 | XLK | sectors | Fora do padrão | 31 | fechamento acima de 181,73 com volume forte. | perde força abaixo de 126,68. |
-| 170 | SMH | sectors | Fora do padrão | 31 | fechamento acima de 582,50 com volume forte. | perde força abaixo de 359,86. |
-| 171 | SOXX | sectors | Fora do padrão | 31 | fechamento acima de 541,89 com volume forte. | perde força abaixo de 307,26. |
-| 172 | COIN | growth_stocks | Queda extrema, mas sem fundo | 31 | fechamento acima de 222,35 com volume forte. | perde força abaixo de 139,36. |
-| 173 | HOOD | growth_stocks | Queda extrema, mas sem fundo | 31 | fechamento acima de 85,70 com volume forte. | perde força abaixo de 63,51. |
-| 174 | BABA | emerging_markets | Queda extrema, mas sem fundo | 31 | fechamento acima de 146,87 com volume forte. | perde força abaixo de 117,93. |
-| 175 | FET-USD | crypto | Queda extrema, mas sem fundo | 31 | fechamento acima de 0,25 com volume forte. | perde força abaixo de 0,14. |
-| 176 | SHY | bonds | Fora do padrão | 29 | fechamento acima de 82,36 com volume forte. | perde força abaixo de 81,73. |
-| 177 | GOVT | bonds | Fora do padrão | 29 | fechamento acima de 22,86 com volume forte. | perde força abaixo de 22,47. |
-| 178 | BND | bonds | Fora do padrão | 29 | fechamento acima de 73,65 com volume forte. | perde força abaixo de 72,34. |
-| 179 | AGG | bonds | Fora do padrão | 29 | fechamento acima de 99,39 com volume forte. | perde força abaixo de 97,52. |
-| 180 | TIP | bonds | Fora do padrão | 29 | fechamento acima de 111,49 com volume forte. | perde força abaixo de 109,03. |
-| 181 | MUB | bonds | Fora do padrão | 29 | fechamento acima de 107,20 com volume forte. | perde força abaixo de 104,75. |
-| 182 | TUR | emerging_markets | Fora do padrão | 29 | fechamento acima de 43,98 com volume forte. | perde força abaixo de 36,40. |
-| 183 | EIDO | emerging_markets | Queda extrema, mas sem fundo | 29 | fechamento acima de 15,30 com volume forte. | perde força abaixo de 12,95. |
-| 184 | EWQ | developed_international | Fora do padrão | 29 | fechamento acima de 46,78 com volume forte. | perde força abaixo de 41,58. |
-| 185 | PDBC | commodities | Fora do padrão | 28 | fechamento acima de 18,95 com volume forte. | perde força abaixo de 13,69. |
-| 186 | ARKK | sectors | Fora do padrão | 28 | fechamento acima de 80,68 com volume forte. | perde força abaixo de 62,94. |
-| 187 | AFRM | growth_stocks | Fora do padrão | 28 | fechamento acima de 71,29 com volume forte. | perde força abaixo de 42,10. |
-| 188 | AMZN | mega_caps | Fora do padrão | 28 | fechamento acima de 278,56 com volume forte. | perde força abaixo de 196,00. |
-| 189 | GOOGL | mega_caps | Fora do padrão | 28 | fechamento acima de 408,61 com volume forte. | perde força abaixo de 272,11. |
-| 190 | AVGO | mega_caps | Fora do padrão | 28 | fechamento acima de 442,36 com volume forte. | perde força abaixo de 289,96. |
-| 191 | FXI | emerging_markets | Fora do padrão | 28 | fechamento acima de 38,35 com volume forte. | perde força abaixo de 34,77. |
-| 192 | MCHI | emerging_markets | Fora do padrão | 28 | fechamento acima de 59,93 com volume forte. | perde força abaixo de 54,76. |
-| 193 | BTC-USD | crypto | Fora do padrão | 28 | fechamento acima de 82792,21 com volume forte. | perde força abaixo de 62553,19. |
-| 194 | DBC | commodities | Fora do padrão | 27 | fechamento acima de 31,79 com volume forte. | perde força abaixo de 23,09. |
-| 195 | SOYB | commodities | Fora do padrão | 27 | fechamento acima de 25,47 com volume forte. | perde força abaixo de 21,70. |
-| 196 | XLC | sectors | Fora do padrão | 27 | fechamento acima de 118,20 com volume forte. | perde força abaixo de 106,72. |
-| 197 | FAN | sectors | Fora do padrão | 27 | fechamento acima de 27,30 com volume forte. | perde força abaixo de 21,44. |
-| 198 | MCD | defensive_dividends | Fora do padrão | 27 | fechamento acima de 298,53 com volume forte. | perde força abaixo de 271,98. |
-| 199 | EQIX | reits | Fora do padrão | 27 | fechamento acima de 1103,01 com volume forte. | perde força abaixo de 773,94. |
-| 200 | BBAS3.SA | brazil_banks | Fora do padrão | 27 | fechamento acima de 23,09 com volume forte. | perde força abaixo de 19,74. |
-| 201 | PRIO3.SA | brazil_commodities | Fora do padrão | 27 | fechamento acima de 70,80 com volume forte. | perde força abaixo de 42,32. |
-| 202 | SUZB3.SA | brazil_commodities | Fora do padrão | 27 | fechamento acima de 46,81 com volume forte. | perde força abaixo de 40,97. |
-| 203 | KLBN11.SA | brazil_commodities | Fora do padrão | 27 | fechamento acima de 18,23 com volume forte. | perde força abaixo de 16,10. |
-| 204 | TLT | bonds | Fora do padrão | 26 | fechamento acima de 86,30 com volume forte. | perde força abaixo de 82,77. |
-| 205 | EDV | bonds | Fora do padrão | 26 | fechamento acima de 64,29 com volume forte. | perde força abaixo de 60,49. |
-| 206 | URA | commodities | Fora do padrão | 26 | fechamento acima de 58,63 com volume forte. | perde força abaixo de 44,76. |
-| 207 | XLU | sectors | Fora do padrão | 26 | fechamento acima de 47,30 com volume forte. | perde força abaixo de 42,01. |
-| 208 | IBB | sectors | Fora do padrão | 26 | fechamento acima de 174,25 com volume forte. | perde força abaixo de 159,68. |
-| 209 | MELI | growth_stocks | Fora do padrão | 26 | fechamento acima de 1890,00 com volume forte. | perde força abaixo de 1495,00. |
-| 210 | T | defensive_dividends | Fora do padrão | 26 | fechamento acima de 26,47 com volume forte. | perde força abaixo de 22,71. |
-| 211 | DUK | defensive_dividends | Fora do padrão | 26 | fechamento acima de 129,58 com volume forte. | perde força abaixo de 114,28. |
-| 212 | O | reits | Fora do padrão | 26 | fechamento acima de 64,33 com volume forte. | perde força abaixo de 58,25. |
-| 213 | MGLU3.SA | brazil_stocks | Queda extrema, mas sem fundo | 26 | fechamento acima de 8,77 com volume forte. | perde força abaixo de 6,34. |
-| 214 | ZROZ | bonds | Fora do padrão | 25 | fechamento acima de 63,26 com volume forte. | perde força abaixo de 59,22. |
-| 215 | CORN | commodities | Fora do padrão | 24 | fechamento acima de 19,13 com volume forte. | perde força abaixo de 17,01. |
-| 216 | EWZ | emerging_markets | Fora do padrão | 24 | fechamento acima de 40,34 com volume forte. | perde força abaixo de 32,73. |
-| 217 | IEF | bonds | Fora do padrão | 23 | fechamento acima de 95,22 com volume forte. | perde força abaixo de 92,95. |
-| 218 | USO | commodities | Fora do padrão | 23 | fechamento acima de 154,08 com volume forte. | perde força abaixo de 71,00. |
-| 219 | PEP | defensive_dividends | Fora do padrão | 23 | fechamento acima de 160,00 com volume forte. | perde força abaixo de 141,79. |
-| 220 | WMT | defensive_dividends | Fora do padrão | 23 | fechamento acima de 135,16 com volume forte. | perde força abaixo de 115,02. |
-| 221 | SMAL11.SA | brazil_etfs | Fora do padrão | 23 | fechamento acima de 120,99 com volume forte. | perde força abaixo de 108,00. |
-| 222 | WEGE3.SA | brazil_stocks | Fora do padrão | 23 | fechamento acima de 48,63 com volume forte. | perde força abaixo de 41,51. |
-| 223 | RENT3.SA | brazil_stocks | Fora do padrão | 23 | fechamento acima de 50,45 com volume forte. | perde força abaixo de 39,65. |
-| 224 | RAIL3.SA | brazil_stocks | Fora do padrão | 23 | fechamento acima de 17,14 com volume forte. | perde força abaixo de 13,22. |
-| 225 | ITUB4.SA | brazil_banks | Fora do padrão | 23 | fechamento acima de 44,59 com volume forte. | perde força abaixo de 38,69. |
-| 226 | BBDC4.SA | brazil_banks | Fora do padrão | 23 | fechamento acima de 20,12 com volume forte. | perde força abaixo de 17,26. |
-| 227 | BPAC11.SA | brazil_banks | Fora do padrão | 23 | fechamento acima de 61,39 com volume forte. | perde força abaixo de 51,82. |
-| 228 | CPFE3.SA | brazil_utilities | Fora do padrão | 23 | fechamento acima de 50,57 com volume forte. | perde força abaixo de 42,16. |
-| 229 | ENGI11.SA | brazil_utilities | Fora do padrão | 23 | fechamento acima de 56,00 com volume forte. | perde força abaixo de 46,13. |
-| 230 | TAEE11.SA | brazil_utilities | Fora do padrão | 23 | fechamento acima de 43,25 com volume forte. | perde força abaixo de 37,92. |
-| 231 | EQTL3.SA | brazil_utilities | Fora do padrão | 23 | fechamento acima de 44,44 com volume forte. | perde força abaixo de 36,86. |
-| 232 | XPML11.SA | brazil_reits | Fora do padrão | 23 | fechamento acima de 110,90 com volume forte. | perde força abaixo de 0,14. |
-| 233 | XLB | sectors | Fora do padrão | 22 | fechamento acima de 52,77 com volume forte. | perde força abaixo de 46,52. |
-| 234 | META | mega_caps | Fora do padrão | 22 | fechamento acima de 682,50 com volume forte. | perde força abaixo de 520,26. |
-| 235 | EWA | developed_international | Fora do padrão | 22 | fechamento acima de 30,14 com volume forte. | perde força abaixo de 26,40. |
-| 236 | GDX | commodities | Fora do padrão | 21 | fechamento acima de 98,74 com volume forte. | perde força abaixo de 78,74. |
-| 237 | GDXJ | commodities | Fora do padrão | 21 | fechamento acima de 131,36 com volume forte. | perde força abaixo de 102,88. |
-| 238 | UGA | commodities | Fora do padrão | 21 | fechamento acima de 125,47 com volume forte. | perde força abaixo de 63,61. |
-| 239 | BCH-USD | crypto | Fora do padrão | 21 | fechamento acima de 486,96 com volume forte. | perde força abaixo de 343,88. |
-| 240 | DIVO11.SA | brazil_etfs | Fora do padrão | 21 | fechamento acima de 139,10 com volume forte. | perde força abaixo de 116,21. |
-| 241 | XFIX11.SA | brazil_etfs | Fora do padrão | 21 | fechamento acima de 13,91 com volume forte. | perde força abaixo de 13,34. |
-| 242 | KNRI11.SA | brazil_reits | Fora do padrão | 21 | fechamento acima de 169,09 com volume forte. | perde força abaixo de 153,13. |
-| 243 | VISC11.SA | brazil_reits | Fora do padrão | 21 | fechamento acima de 111,68 com volume forte. | perde força abaixo de 105,11. |
-| 244 | RBRF11.SA | brazil_reits | Fora do padrão | 21 | fechamento acima de 6,65 com volume forte. | perde força abaixo de 6,65. |
-| 245 | NEE | defensive_dividends | Fora do padrão | 19 | fechamento acima de 98,75 com volume forte. | perde força abaixo de 80,39. |
-| 246 | BOVA11.SA | brazil_etfs | Fora do padrão | 19 | fechamento acima de 188,13 com volume forte. | perde força abaixo de 158,69. |
-| 247 | CMIG4.SA | brazil_utilities | Fora do padrão | 19 | fechamento acima de 13,11 com volume forte. | perde força abaixo de 10,22. |
-| 248 | PETR4.SA | brazil_commodities | Fora do padrão | 17 | fechamento acima de 49,85 com volume forte. | perde força abaixo de 29,80. |
-| 249 | PETR3.SA | brazil_commodities | Fora do padrão | 17 | fechamento acima de 55,19 com volume forte. | perde força abaixo de 31,42. |
+| 1 | OIBR4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 63 | fechamento acima de 1,31 com volume forte. | perde força abaixo de 1,15. |
+| 2 | DIA | equity_indices | Alerta bearish — padrao de topo | 61 | fechamento acima de 508,74 com volume forte. | perde força abaixo de 489,06. |
+| 3 | MS | banks | Alerta bearish — padrao de topo | 61 | fechamento acima de 203,92 com volume forte. | perde força abaixo de 185,90. |
+| 4 | ABBV | defensive_dividends | Alerta bearish — padrao de topo | 59 | fechamento acima de 220,01 com volume forte. | perde força abaixo de 202,59. |
+| 5 | HAPV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 59 | fechamento acima de 14,42 com volume forte. | perde força abaixo de 9,97. |
+| 6 | RSP | equity_indices | Alerta bearish — padrao de topo | 58 | fechamento acima de 208,73 com volume forte. | perde força abaixo de 195,95. |
+| 7 | XLY | sectors | Alerta bearish — padrao de topo | 58 | fechamento acima de 121,94 com volume forte. | perde força abaixo de 114,20. |
+| 8 | IT | us_core_stocks | Alerta bearish — padrao de topo | 57 | fechamento acima de 164,56 com volume forte. | perde força abaixo de 140,56. |
+| 9 | VRSK | us_core_stocks | Alerta bearish — padrao de topo | 57 | fechamento acima de 191,51 com volume forte. | perde força abaixo de 155,94. |
+| 10 | UPST | growth_stocks | Alerta bearish — padrao de topo | 56 | fechamento acima de 33,23 com volume forte. | perde força abaixo de 26,22. |
+| 11 | EFA | equity_indices | Alerta bearish — padrao de topo | 55 | fechamento acima de 105,46 com volume forte. | perde força abaixo de 100,37. |
+| 12 | XLV | sectors | Alerta bearish — padrao de topo | 55 | fechamento acima de 150,32 com volume forte. | perde força abaixo de 144,12. |
+| 13 | KRE | sectors | Alerta bearish — padrao de topo | 54 | fechamento acima de 71,24 com volume forte. | perde força abaixo de 66,35. |
+| 14 | ITB | sectors | Alerta bearish — padrao de topo | 54 | fechamento acima de 98,02 com volume forte. | perde força abaixo de 84,98. |
+| 15 | ATOM-USD | crypto | Alerta bearish — padrao de topo | 54 | fechamento acima de 2,29 com volume forte. | perde força abaixo de 1,77. |
+| 16 | GDDY | us_core_stocks | Alerta bearish — padrao de topo | 54 | fechamento acima de 94,33 com volume forte. | perde força abaixo de 81,08. |
+| 17 | CBAV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 54 | fechamento acima de 10,77 com volume forte. | perde força abaixo de 10,48. |
+| 18 | AGG | bonds | Alerta bearish — padrao de topo | 53 | fechamento acima de 99,39 com volume forte. | perde força abaixo de 97,52. |
+| 19 | GS | banks | Alerta bearish — padrao de topo | 53 | fechamento acima de 1016,54 com volume forte. | perde força abaixo de 912,25. |
+| 20 | TIA-USD | crypto | Alerta bearish — padrao de topo | 53 | fechamento acima de 0,52 com volume forte. | perde força abaixo de 0,31. |
+| 21 | VZ | defensive_dividends | Alerta bearish — padrao de topo | 53 | fechamento acima de 48,95 com volume forte. | perde força abaixo de 45,14. |
+| 22 | EWC | developed_international | Alerta bearish — padrao de topo | 53 | fechamento acima de 58,97 com volume forte. | perde força abaixo de 54,68. |
+| 23 | WHRL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 53 | fechamento acima de 4,09 com volume forte. | perde força abaixo de 3,85. |
+| 24 | BND | bonds | Alerta bearish — padrao de topo | 52 | fechamento acima de 73,65 com volume forte. | perde força abaixo de 72,34. |
+| 25 | UNG | commodities | Alerta bearish — padrao de topo | 52 | fechamento acima de 11,94 com volume forte. | perde força abaixo de 10,29. |
+| 26 | COPX | commodities | Alerta bearish — padrao de topo | 52 | fechamento acima de 92,77 com volume forte. | perde força abaixo de 78,34. |
+| 27 | IWM | equity_indices | Alerta bearish — padrao de topo | 52 | fechamento acima de 291,72 com volume forte. | perde força abaixo de 257,93. |
+| 28 | BNB-USD | crypto | Alerta bearish — padrao de topo | 52 | fechamento acima de 689,12 com volume forte. | perde força abaixo de 609,40. |
+| 29 | CL | defensive_dividends | Alerta bearish — padrao de topo | 52 | fechamento acima de 92,23 com volume forte. | perde força abaixo de 82,98. |
+| 30 | EWG | developed_international | Alerta bearish — padrao de topo | 52 | fechamento acima de 43,83 com volume forte. | perde força abaixo de 41,32. |
+| 31 | NATU3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 52 | fechamento acima de 11,15 com volume forte. | perde força abaixo de 8,59. |
+| 32 | ONCO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 52 | fechamento acima de 1,84 com volume forte. | perde força abaixo de 0,99. |
+| 33 | MDY | equity_indices | Alerta bearish — padrao de topo | 51 | fechamento acima de 685,50 com volume forte. | perde força abaixo de 638,88. |
+| 34 | ADP | us_core_stocks | Alerta bearish — padrao de topo | 51 | fechamento acima de 227,43 com volume forte. | perde força abaixo de 204,56. |
+| 35 | CCEP | us_core_stocks | Alerta bearish — padrao de topo | 51 | fechamento acima de 95,52 com volume forte. | perde força abaixo de 89,30. |
+| 36 | PAYX | us_core_stocks | Alerta bearish — padrao de topo | 51 | fechamento acima de 97,21 com volume forte. | perde força abaixo de 87,43. |
+| 37 | PEAB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 51 | fechamento acima de 40,00 com volume forte. | perde força abaixo de 39,20. |
+| 38 | IEF | bonds | Alerta bearish — padrao de topo | 50 | fechamento acima de 95,18 com volume forte. | perde força abaixo de 92,95. |
+| 39 | SPY | equity_indices | Alerta bearish — padrao de topo | 50 | fechamento acima de 752,13 com volume forte. | perde força abaixo de 673,95. |
+| 40 | VTI | equity_indices | Alerta bearish — padrao de topo | 50 | fechamento acima de 370,24 com volume forte. | perde força abaixo de 333,62. |
+| 41 | IJR | equity_indices | Alerta bearish — padrao de topo | 50 | fechamento acima de 140,53 com volume forte. | perde força abaixo de 126,31. |
+| 42 | XLI | sectors | Alerta bearish — padrao de topo | 50 | fechamento acima de 177,72 com volume forte. | perde força abaixo de 168,11. |
+| 43 | XLB | sectors | Alerta bearish — padrao de topo | 50 | fechamento acima de 52,77 com volume forte. | perde força abaixo de 48,59. |
+| 44 | TAN | sectors | Alerta bearish — padrao de topo | 50 | fechamento acima de 71,31 com volume forte. | perde força abaixo de 52,81. |
+| 45 | PATH | growth_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 11,46 com volume forte. | perde força abaixo de 9,20. |
+| 46 | ORCL | mega_caps | Alerta bearish — padrao de topo | 50 | fechamento acima de 200,71 com volume forte. | perde força abaixo de 136,47. |
+| 47 | COF | banks | Alerta bearish — padrao de topo | 50 | fechamento acima de 195,16 com volume forte. | perde força abaixo de 176,77. |
+| 48 | AVAX-USD | crypto | Alerta bearish — padrao de topo | 50 | fechamento acima de 10,47 com volume forte. | perde força abaixo de 8,84. |
+| 49 | DOT-USD | crypto | Alerta bearish — padrao de topo | 50 | fechamento acima de 1,43 com volume forte. | perde força abaixo de 1,20. |
+| 50 | INJ-USD | crypto | Alerta bearish — padrao de topo | 50 | fechamento acima de 6,09 com volume forte. | perde força abaixo de 2,77. |
+| 51 | OP-USD | crypto | Alerta bearish — padrao de topo | 50 | fechamento acima de 0,18 com volume forte. | perde força abaixo de 0,12. |
+| 52 | STX-USD | crypto | Alerta bearish — padrao de topo | 50 | fechamento acima de 0,03 com volume forte. | nível de invalidação não definido com segurança. |
+| 53 | IMX-USD | crypto | Acumulação inicial | 50 | fechamento acima de 0,03 com volume forte. | nível de invalidação não definido com segurança. |
+| 54 | KO | defensive_dividends | Alerta bearish — padrao de topo | 50 | fechamento acima de 82,66 com volume forte. | perde força abaixo de 75,49. |
+| 55 | MRK | defensive_dividends | Alerta bearish — padrao de topo | 50 | fechamento acima de 123,13 com volume forte. | perde força abaixo de 110,94. |
+| 56 | EWP | developed_international | Alerta bearish — padrao de topo | 50 | fechamento acima de 58,19 com volume forte. | perde força abaixo de 54,64. |
+| 57 | SPG | reits | Alerta bearish — padrao de topo | 50 | fechamento acima de 208,79 com volume forte. | perde força abaixo de 196,01. |
+| 58 | VALE3.SA | brazil_commodities | Alerta bearish — padrao de topo | 50 | fechamento acima de 85,41 com volume forte. | perde força abaixo de 77,41. |
+| 59 | AES | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 14,74 com volume forte. | perde força abaixo de 13,94. |
+| 60 | BRK-B | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 489,42 com volume forte. | perde força abaixo de 471,91. |
+| 61 | CHD | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 100,29 com volume forte. | perde força abaixo de 90,56. |
+| 62 | CSGP | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 36,53 com volume forte. | perde força abaixo de 31,36. |
+| 63 | LIN | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 521,28 com volume forte. | perde força abaixo de 482,77. |
+| 64 | NOW | us_core_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 110,83 com volume forte. | perde força abaixo de 85,44. |
+| 65 | BRAV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 20,44 com volume forte. | perde força abaixo de 17,11. |
+| 66 | DOTZ3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 4,40 com volume forte. | perde força abaixo de 2,82. |
+| 67 | FRIO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 210,00 com volume forte. | perde força abaixo de 170,18. |
+| 68 | HBOR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 2,48 com volume forte. | perde força abaixo de 2,14. |
+| 69 | PATI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 50 | fechamento acima de 35,00 com volume forte. | perde força abaixo de 31,21. |
+| 70 | HYG | bonds | Alerta bearish — padrao de topo | 49 | fechamento acima de 80,24 com volume forte. | perde força abaixo de 79,08. |
+| 71 | SOYB | commodities | Alerta bearish — padrao de topo | 49 | fechamento acima de 25,47 com volume forte. | perde força abaixo de 24,18. |
+| 72 | ACWI | equity_indices | Alerta bearish — padrao de topo | 49 | fechamento acima de 158,00 com volume forte. | perde força abaixo de 142,21. |
+| 73 | VWO | equity_indices | Alerta bearish — padrao de topo | 49 | fechamento acima de 61,03 com volume forte. | perde força abaixo de 57,15. |
+| 74 | IJH | equity_indices | Alerta bearish — padrao de topo | 49 | fechamento acima de 75,15 com volume forte. | perde força abaixo de 69,96. |
+| 75 | EWJ | developed_international | Alerta bearish — padrao de topo | 49 | fechamento acima de 93,27 com volume forte. | perde força abaixo de 83,60. |
+| 76 | EWI | developed_international | Alerta bearish — padrao de topo | 49 | fechamento acima de 59,67 com volume forte. | perde força abaixo de 55,68. |
+| 77 | EWS | developed_international | Alerta bearish — padrao de topo | 49 | fechamento acima de 29,61 com volume forte. | perde força abaixo de 27,30. |
+| 78 | PLD | reits | Alerta bearish — padrao de topo | 49 | fechamento acima de 147,93 com volume forte. | perde força abaixo de 128,84. |
+| 79 | CPRT | us_core_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 35,66 com volume forte. | perde força abaixo de 32,24. |
+| 80 | LLY | us_core_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 1093,00 com volume forte. | perde força abaixo de 978,87. |
+| 81 | LNT | us_core_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 75,76 com volume forte. | perde força abaixo de 70,27. |
+| 82 | VTR | us_core_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 91,06 com volume forte. | perde força abaixo de 84,56. |
+| 83 | BALM4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 20,05 com volume forte. | perde força abaixo de 17,46. |
+| 84 | BLAU3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 11,42 com volume forte. | perde força abaixo de 9,88. |
+| 85 | DIRR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 13,75 com volume forte. | perde força abaixo de 12,15. |
+| 86 | PEAB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 49 | fechamento acima de 40,40 com volume forte. | perde força abaixo de 38,18. |
+| 87 | GOVT | bonds | Alerta bearish — padrao de topo | 48 | fechamento acima de 22,86 com volume forte. | perde força abaixo de 22,47. |
+| 88 | CPER | commodities | Alerta bearish — padrao de topo | 48 | fechamento acima de 40,78 com volume forte. | perde força abaixo de 35,18. |
+| 89 | VT | equity_indices | Alerta bearish — padrao de topo | 48 | fechamento acima de 157,63 com volume forte. | perde força abaixo de 141,95. |
+| 90 | IBB | sectors | Alerta bearish — padrao de topo | 48 | fechamento acima de 174,25 com volume forte. | perde força abaixo de 162,08. |
+| 91 | KBE | sectors | Alerta bearish — padrao de topo | 48 | fechamento acima de 65,20 com volume forte. | perde força abaixo de 61,26. |
+| 92 | TSLA | growth_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 453,40 com volume forte. | perde força abaixo de 387,53. |
+| 93 | SE | growth_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 99,97 com volume forte. | perde força abaixo de 77,05. |
+| 94 | AAPL | mega_caps | Alerta bearish — padrao de topo | 48 | fechamento acima de 313,26 com volume forte. | perde força abaixo de 242,97. |
+| 95 | V | banks | Alerta bearish — padrao de topo | 48 | fechamento acima de 341,27 com volume forte. | perde força abaixo de 319,80. |
+| 96 | SCHH | reits | Alerta bearish — padrao de topo | 48 | fechamento acima de 23,92 com volume forte. | perde força abaixo de 20,89. |
+| 97 | ABEV3.SA | brazil_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 17,04 com volume forte. | perde força abaixo de 14,60. |
+| 98 | AMCR | us_core_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 41,36 com volume forte. | perde força abaixo de 36,25. |
+| 99 | FISV | us_core_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 64,03 com volume forte. | perde força abaixo de 52,17. |
+| 100 | MOS | us_core_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 23,76 com volume forte. | perde força abaixo de 20,68. |
+| 101 | SMCI | us_core_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 38,81 com volume forte. | perde força abaixo de 29,47. |
+| 102 | ALPK3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 4,67 com volume forte. | perde força abaixo de 4,03. |
+| 103 | CLSC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 133,01 com volume forte. | perde força abaixo de 126,78. |
+| 104 | GFSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 1,53 com volume forte. | perde força abaixo de 1,10. |
+| 105 | GOAU4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 10,55 com volume forte. | perde força abaixo de 9,35. |
+| 106 | MNDL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 22,00 com volume forte. | perde força abaixo de 15,60. |
+| 107 | RCSL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 0,71 com volume forte. | perde força abaixo de 0,46. |
+| 108 | RSUL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 48 | fechamento acima de 65,72 com volume forte. | perde força abaixo de 62,84. |
+| 109 | EMB | bonds | Alerta bearish — padrao de topo | 47 | fechamento acima de 96,42 com volume forte. | perde força abaixo de 93,49. |
+| 110 | XLC | sectors | Alerta bearish — padrao de topo | 47 | fechamento acima de 118,20 com volume forte. | perde força abaixo de 114,16. |
+| 111 | C | banks | Alerta bearish — padrao de topo | 47 | fechamento acima de 131,95 com volume forte. | perde força abaixo de 106,99. |
+| 112 | FM | emerging_markets | Alerta bearish — padrao de topo | 47 | fechamento acima de 27,26 com volume forte. | perde força abaixo de 26,85. |
+| 113 | IVVB11.SA | brazil_etfs | Alerta bearish — padrao de topo | 47 | fechamento acima de 430,18 com volume forte. | perde força abaixo de 403,15. |
+| 114 | CNP | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 43,82 com volume forte. | perde força abaixo de 40,98. |
+| 115 | EW | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 88,28 com volume forte. | perde força abaixo de 78,29. |
+| 116 | FCX | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 68,85 com volume forte. | perde força abaixo de 58,30. |
+| 117 | HSY | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 200,00 com volume forte. | perde força abaixo de 186,13. |
+| 118 | PTC | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 153,98 com volume forte. | perde força abaixo de 132,77. |
+| 119 | UNP | us_core_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 279,68 com volume forte. | perde força abaixo de 260,16. |
+| 120 | AZEV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 0,23 com volume forte. | perde força abaixo de 0,16. |
+| 121 | BBSE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 35,39 com volume forte. | perde força abaixo de 33,85. |
+| 122 | IGTI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 3,81 com volume forte. | perde força abaixo de 3,11. |
+| 123 | NGRD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 33,57 com volume forte. | perde força abaixo de 26,31. |
+| 124 | OIBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 0,14 com volume forte. | perde força abaixo de 0,12. |
+| 125 | OPCT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 10,87 com volume forte. | perde força abaixo de 9,12. |
+| 126 | RVEE3.SA | brazil_all_stocks | Possível estabilização | 47 | fechamento acima de 1,10 com volume forte. | perde força abaixo de 0,76. |
+| 127 | SEQL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 47 | fechamento acima de 0,15 com volume forte. | perde força abaixo de 0,11. |
+| 128 | SHY | bonds | Alerta bearish — padrao de topo | 46 | fechamento acima de 82,36 com volume forte. | perde força abaixo de 82,00. |
+| 129 | JNK | bonds | Alerta bearish — padrao de topo | 46 | fechamento acima de 96,62 com volume forte. | perde força abaixo de 95,22. |
+| 130 | XLF | sectors | Alerta bearish — padrao de topo | 46 | fechamento acima de 52,61 com volume forte. | perde força abaixo de 50,78. |
+| 131 | U | growth_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 30,65 com volume forte. | perde força abaixo de 16,78. |
+| 132 | RBLX | growth_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 56,89 com volume forte. | perde força abaixo de 40,15. |
+| 133 | ADBE | mega_caps | Alerta bearish — padrao de topo | 46 | fechamento acima de 265,09 com volume forte. | perde força abaixo de 231,74. |
+| 134 | EWW | emerging_markets | Alerta bearish — padrao de topo | 46 | fechamento acima de 81,07 com volume forte. | perde força abaixo de 76,53. |
+| 135 | SOL-USD | crypto | Alerta bearish — padrao de topo | 46 | fechamento acima de 98,27 com volume forte. | perde força abaixo de 80,71. |
+| 136 | ARE | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 50,06 com volume forte. | perde força abaixo de 44,81. |
+| 137 | KEY | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 22,43 com volume forte. | perde força abaixo de 20,69. |
+| 138 | MSTR | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 197,00 com volume forte. | perde força abaixo de 118,40. |
+| 139 | NWSA | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 27,73 com volume forte. | perde força abaixo de 25,58. |
+| 140 | SOLV | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 77,81 com volume forte. | perde força abaixo de 71,49. |
+| 141 | UAL | us_core_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 114,35 com volume forte. | perde força abaixo de 88,34. |
+| 142 | BRKM5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 13,38 com volume forte. | perde força abaixo de 8,83. |
+| 143 | CEAB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 46 | fechamento acima de 13,03 com volume forte. | perde força abaixo de 10,48. |
+| 144 | TLT | bonds | Alerta bearish — padrao de topo | 45 | fechamento acima de 86,29 com volume forte. | perde força abaixo de 82,77. |
+| 145 | SLV | commodities | Alerta bearish — padrao de topo | 45 | fechamento acima de 80,86 com volume forte. | perde força abaixo de 65,14. |
+| 146 | VEA | equity_indices | Alerta bearish — padrao de topo | 45 | fechamento acima de 71,88 com volume forte. | perde força abaixo de 66,96. |
+| 147 | XLK | sectors | Alerta bearish — padrao de topo | 45 | fechamento acima de 186,26 com volume forte. | perde força abaixo de 136,85. |
+| 148 | XYZ | growth_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 77,16 com volume forte. | perde força abaixo de 67,08. |
+| 149 | AFRM | growth_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 71,80 com volume forte. | perde força abaixo de 42,78. |
+| 150 | MU | mega_caps | Alerta bearish — padrao de topo | 45 | fechamento acima de 956,16 com volume forte. | perde força abaixo de 363,75. |
+| 151 | PNC | banks | Alerta bearish — padrao de topo | 45 | fechamento acima de 226,01 com volume forte. | perde força abaixo de 196,53. |
+| 152 | TFC | banks | Alerta bearish — padrao de topo | 45 | fechamento acima de 51,04 com volume forte. | perde força abaixo de 43,31. |
+| 153 | ASHR | emerging_markets | Alerta bearish — padrao de topo | 45 | fechamento acima de 36,99 com volume forte. | perde força abaixo de 33,03. |
+| 154 | FIL-USD | crypto | Alerta bearish — padrao de topo | 45 | fechamento acima de 1,32 com volume forte. | perde força abaixo de 0,92. |
+| 155 | ICP-USD | crypto | Alerta bearish — padrao de topo | 45 | fechamento acima de 4,07 com volume forte. | perde força abaixo de 2,40. |
+| 156 | AMT | reits | Alerta bearish — padrao de topo | 45 | fechamento acima de 188,59 com volume forte. | perde força abaixo de 167,37. |
+| 157 | CHRW | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 190,05 com volume forte. | perde força abaixo de 150,40. |
+| 158 | DECK | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 115,82 com volume forte. | perde força abaixo de 92,31. |
+| 159 | DOC | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 20,27 com volume forte. | perde força abaixo de 15,84. |
+| 160 | MAR | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 386,30 com volume forte. | perde força abaixo de 311,37. |
+| 161 | MGM | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 42,71 com volume forte. | perde força abaixo de 33,21. |
+| 162 | VST | us_core_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 168,39 com volume forte. | perde força abaixo de 132,66. |
+| 163 | ASAI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 9,48 com volume forte. | perde força abaixo de 8,09. |
+| 164 | NORD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 2,29 com volume forte. | perde força abaixo de 1,66. |
+| 165 | POMO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 45 | fechamento acima de 6,47 com volume forte. | perde força abaixo de 5,66. |
+| 166 | WEAT | commodities | Alerta bearish — padrao de topo | 44 | fechamento acima de 25,60 com volume forte. | perde força abaixo de 21,61. |
+| 167 | EEM | equity_indices | Alerta bearish — padrao de topo | 44 | fechamento acima de 68,96 com volume forte. | perde força abaixo de 57,24. |
+| 168 | CRWD | growth_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 677,50 com volume forte. | perde força abaixo de 439,17. |
+| 169 | AMD | mega_caps | Alerta bearish — padrao de topo | 44 | fechamento acima de 510,21 com volume forte. | perde força abaixo de 190,72. |
+| 170 | QCOM | mega_caps | Alerta bearish — padrao de topo | 44 | fechamento acima de 258,00 com volume forte. | perde força abaixo de 131,88. |
+| 171 | BAC | banks | Alerta bearish — padrao de topo | 44 | fechamento acima de 54,20 com volume forte. | perde força abaixo de 46,77. |
+| 172 | FET-USD | crypto | Alerta bearish — padrao de topo | 44 | fechamento acima de 0,26 com volume forte. | perde força abaixo de 0,19. |
+| 173 | PG | defensive_dividends | Alerta bearish — padrao de topo | 44 | fechamento acima de 149,28 com volume forte. | perde força abaixo de 140,09. |
+| 174 | SO | defensive_dividends | Alerta bearish — padrao de topo | 44 | fechamento acima de 96,60 com volume forte. | perde força abaixo de 86,44. |
+| 175 | EQIX | reits | Alerta bearish — padrao de topo | 44 | fechamento acima de 1092,04 com volume forte. | perde força abaixo de 1039,56. |
+| 176 | AEE | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 115,59 com volume forte. | perde força abaixo de 105,76. |
+| 177 | AJG | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 218,88 com volume forte. | perde força abaixo de 190,75. |
+| 178 | APP | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 581,00 com volume forte. | perde força abaixo de 360,12. |
+| 179 | AXON | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 438,97 com volume forte. | perde força abaixo de 366,00. |
+| 180 | CHTR | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 175,05 com volume forte. | perde força abaixo de 136,63. |
+| 181 | CINF | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 169,50 com volume forte. | perde força abaixo de 157,98. |
+| 182 | DXCM | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 73,10 com volume forte. | perde força abaixo de 57,66. |
+| 183 | ES | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 70,92 com volume forte. | perde força abaixo de 66,05. |
+| 184 | FDS | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 237,65 com volume forte. | perde força abaixo de 198,00. |
+| 185 | JBHT | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 273,00 com volume forte. | perde força abaixo de 199,01. |
+| 186 | PNW | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 104,20 com volume forte. | perde força abaixo de 97,90. |
+| 187 | RL | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 392,10 com volume forte. | perde força abaixo de 317,23. |
+| 188 | WBD | us_core_stocks | Alerta bearish — padrao de topo | 44 | fechamento acima de 27,44 com volume forte. | perde força abaixo de 26,86. |
+| 189 | LQD | bonds | Alerta bearish — padrao de topo | 43 | fechamento acima de 109,39 com volume forte. | perde força abaixo de 106,93. |
+| 190 | TIP | bonds | Alerta bearish — padrao de topo | 43 | fechamento acima de 111,49 com volume forte. | perde força abaixo de 109,13. |
+| 191 | MUB | bonds | Alerta bearish — padrao de topo | 43 | fechamento acima de 107,13 com volume forte. | perde força abaixo de 105,56. |
+| 192 | QQQ | equity_indices | Alerta bearish — padrao de topo | 43 | fechamento acima de 733,32 com volume forte. | perde força abaixo de 598,30. |
+| 193 | QQQM | equity_indices | Alerta bearish — padrao de topo | 43 | fechamento acima de 301,82 com volume forte. | perde força abaixo de 246,32. |
+| 194 | SMH | sectors | Alerta bearish — padrao de topo | 43 | fechamento acima de 612,30 com volume forte. | perde força abaixo de 380,87. |
+| 195 | SOXX | sectors | Alerta bearish — padrao de topo | 43 | fechamento acima de 584,50 com volume forte. | perde força abaixo de 323,13. |
+| 196 | FAN | sectors | Alerta bearish — padrao de topo | 43 | fechamento acima de 27,30 com volume forte. | perde força abaixo de 22,79. |
+| 197 | DDOG | growth_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 226,48 com volume forte. | perde força abaixo de 105,66. |
+| 198 | DKNG | growth_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 27,21 com volume forte. | perde força abaixo de 21,01. |
+| 199 | MSFT | mega_caps | Alerta bearish — padrao de topo | 43 | fechamento acima de 431,76 com volume forte. | perde força abaixo de 397,15. |
+| 200 | PYPL | banks | Alerta bearish — padrao de topo | 43 | fechamento acima de 51,87 com volume forte. | perde força abaixo de 42,93. |
+| 201 | XRP-USD | crypto | Alerta bearish — padrao de topo | 43 | fechamento acima de 1,55 com volume forte. | perde força abaixo de 1,31. |
+| 202 | ADA-USD | crypto | Alerta bearish — padrao de topo | 43 | fechamento acima de 0,29 com volume forte. | perde força abaixo de 0,24. |
+| 203 | LINK-USD | crypto | Alerta bearish — padrao de topo | 43 | fechamento acima de 10,85 com volume forte. | perde força abaixo de 8,59. |
+| 204 | NEAR-USD | crypto | Alerta bearish — padrao de topo | 43 | fechamento acima de 2,97 com volume forte. | perde força abaixo de 1,14. |
+| 205 | APT-USD | crypto | Alerta bearish — padrao de topo | 43 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 206 | RENDER-USD | crypto | Alerta bearish — padrao de topo | 43 | fechamento acima de 2,43 com volume forte. | perde força abaixo de 1,72. |
+| 207 | COST | defensive_dividends | Alerta bearish — padrao de topo | 43 | fechamento acima de 1096,50 com volume forte. | perde força abaixo de 976,39. |
+| 208 | EWU | developed_international | Alerta bearish — padrao de topo | 43 | fechamento acima de 47,69 com volume forte. | perde força abaixo de 45,25. |
+| 209 | EWQ | developed_international | Alerta bearish — padrao de topo | 43 | fechamento acima de 46,78 com volume forte. | perde força abaixo de 44,09. |
+| 210 | EWL | developed_international | Alerta bearish — padrao de topo | 43 | fechamento acima de 63,23 com volume forte. | perde força abaixo de 55,97. |
+| 211 | PSA | reits | Alerta bearish — padrao de topo | 43 | fechamento acima de 313,12 com volume forte. | perde força abaixo de 289,21. |
+| 212 | IMAB11.SA | brazil_etfs | Alerta bearish — padrao de topo | 43 | fechamento acima de 114,87 com volume forte. | perde força abaixo de 108,75. |
+| 213 | LREN3.SA | brazil_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 15,51 com volume forte. | perde força abaixo de 13,31. |
+| 214 | HGRU11.SA | brazil_reits | Alerta bearish — padrao de topo | 43 | fechamento acima de 132,53 com volume forte. | perde força abaixo de 126,59. |
+| 215 | BTLG11.SA | brazil_reits | Alerta bearish — padrao de topo | 43 | fechamento acima de 103,69 com volume forte. | perde força abaixo de 100,38. |
+| 216 | AFL | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 119,19 com volume forte. | perde força abaixo de 108,52. |
+| 217 | AIZ | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 260,97 com volume forte. | perde força abaixo de 212,87. |
+| 218 | ARES | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 129,35 com volume forte. | perde força abaixo de 117,80. |
+| 219 | BBY | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 64,63 com volume forte. | perde força abaixo de 55,10. |
+| 220 | BNY | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 141,65 com volume forte. | perde força abaixo de 112,38. |
+| 221 | BXP | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 61,39 com volume forte. | perde força abaixo de 51,09. |
+| 222 | CPAY | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 355,88 com volume forte. | perde força abaixo de 305,19. |
+| 223 | DAL | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 83,75 com volume forte. | perde força abaixo de 66,49. |
+| 224 | ELV | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 408,00 com volume forte. | perde força abaixo de 384,30. |
+| 225 | EVRG | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 84,49 com volume forte. | perde força abaixo de 79,63. |
+| 226 | FAST | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 45,64 com volume forte. | perde força abaixo de 42,91. |
+| 227 | FER | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 71,27 com volume forte. | perde força abaixo de 64,67. |
+| 228 | FITB | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 51,25 com volume forte. | perde força abaixo de 46,80. |
+| 229 | FRT | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 121,57 com volume forte. | perde força abaixo de 102,79. |
+| 230 | GD | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 353,57 com volume forte. | perde força abaixo de 333,29. |
+| 231 | HRL | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 21,64 com volume forte. | perde força abaixo de 19,70. |
+| 232 | HSIC | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 76,57 com volume forte. | perde força abaixo de 68,84. |
+| 233 | HST | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 23,54 com volume forte. | perde força abaixo de 18,23. |
+| 234 | KIM | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 24,62 com volume forte. | perde força abaixo de 22,80. |
+| 235 | KVUE | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 17,99 com volume forte. | perde força abaixo de 16,85. |
+| 236 | LEN | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 93,78 com volume forte. | perde força abaixo de 81,18. |
+| 237 | MAA | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 132,67 com volume forte. | perde força abaixo de 125,15. |
+| 238 | MET | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 85,29 com volume forte. | perde força abaixo de 73,78. |
+| 239 | MNST | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 89,85 com volume forte. | perde força abaixo de 73,35. |
+| 240 | MTB | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 219,47 com volume forte. | perde força abaixo de 202,85. |
+| 241 | NDSN | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 296,86 com volume forte. | perde força abaixo de 264,64. |
+| 242 | PEG | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 82,16 com volume forte. | perde força abaixo de 76,05. |
+| 243 | PFG | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 105,00 com volume forte. | perde força abaixo de 86,30. |
+| 244 | PPG | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 113,70 com volume forte. | perde força abaixo de 100,00. |
+| 245 | PSKY | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 11,25 com volume forte. | perde força abaixo de 9,71. |
+| 246 | PSX | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 184,72 com volume forte. | perde força abaixo de 152,63. |
+| 247 | STT | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 159,31 com volume forte. | perde força abaixo de 122,30. |
+| 248 | TGT | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 131,20 com volume forte. | perde força abaixo de 115,74. |
+| 249 | TJX | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 160,89 com volume forte. | perde força abaixo de 145,66. |
+| 250 | TROW | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 106,93 com volume forte. | perde força abaixo de 100,50. |
+| 251 | TTD | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 24,87 com volume forte. | perde força abaixo de 19,83. |
+| 252 | WMB | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 80,08 com volume forte. | perde força abaixo de 71,99. |
+| 253 | WSM | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 206,93 com volume forte. | perde força abaixo de 165,51. |
+| 254 | XEL | us_core_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 83,85 com volume forte. | perde força abaixo de 77,54. |
+| 255 | AHEB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 24,00 com volume forte. | perde força abaixo de 22,91. |
+| 256 | AMBP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 0,23 com volume forte. | perde força abaixo de 0,16. |
+| 257 | BSLI4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 4,26 com volume forte. | perde força abaixo de 3,33. |
+| 258 | CAMB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 10,39 com volume forte. | perde força abaixo de 8,93. |
+| 259 | CASH3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 4,58 com volume forte. | perde força abaixo de 3,74. |
+| 260 | CBEE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 11,99 com volume forte. | perde força abaixo de 8,91. |
+| 261 | CEEB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 48,89 com volume forte. | perde força abaixo de 46,41. |
+| 262 | EALT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 13,65 com volume forte. | perde força abaixo de 13,15. |
+| 263 | EKTR4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 42,00 com volume forte. | perde força abaixo de 36,19. |
+| 264 | FICT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 0,34 com volume forte. | perde força abaixo de 0,18. |
+| 265 | GGBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 20,91 com volume forte. | perde força abaixo de 18,03. |
+| 266 | GMAT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 4,65 com volume forte. | perde força abaixo de 4,03. |
+| 267 | GOAU3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 9,90 com volume forte. | perde força abaixo de 9,11. |
+| 268 | HOOT4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 7,20 com volume forte. | perde força abaixo de 6,60. |
+| 269 | LOGG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 27,98 com volume forte. | perde força abaixo de 24,72. |
+| 270 | MILS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 15,25 com volume forte. | perde força abaixo de 12,16. |
+| 271 | PDGR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 1,82 com volume forte. | perde força abaixo de 1,44. |
+| 272 | PPLA11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 0,58 com volume forte. | perde força abaixo de 0,43. |
+| 273 | USIM5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 10,48 com volume forte. | perde força abaixo de 6,13. |
+| 274 | USIM6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 8,00 com volume forte. | perde força abaixo de 7,84. |
+| 275 | VSTE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 4,10 com volume forte. | perde força abaixo de 3,42. |
+| 276 | YDUQ3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 43 | fechamento acima de 11,14 com volume forte. | perde força abaixo de 9,25. |
+| 277 | XME | commodities | Alerta bearish — padrao de topo | 42 | fechamento acima de 125,82 com volume forte. | perde força abaixo de 108,70. |
+| 278 | XRT | sectors | Alerta bearish — padrao de topo | 42 | fechamento acima de 86,33 com volume forte. | perde força abaixo de 77,86. |
+| 279 | NVDA | mega_caps | Alerta bearish — padrao de topo | 42 | fechamento acima de 236,54 com volume forte. | perde força abaixo de 177,60. |
+| 280 | CSCO | mega_caps | Alerta bearish — padrao de topo | 42 | fechamento acima de 120,79 com volume forte. | perde força abaixo de 76,30. |
+| 281 | USB | banks | Alerta bearish — padrao de topo | 42 | fechamento acima de 57,05 com volume forte. | perde força abaixo de 49,81. |
+| 282 | BX | banks | Alerta bearish — padrao de topo | 42 | fechamento acima de 127,06 com volume forte. | perde força abaixo de 104,13. |
+| 283 | HASH11.SA | brazil_etfs | Alerta bearish — padrao de topo | 42 | fechamento acima de 53,00 com volume forte. | perde força abaixo de 45,00. |
+| 284 | APH | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 154,92 com volume forte. | perde força abaixo de 118,01. |
+| 285 | APTV | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 62,16 com volume forte. | perde força abaixo de 51,68. |
+| 286 | ARM | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 325,00 com volume forte. | perde força abaixo de 119,70. |
+| 287 | ASML | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 1653,53 com volume forte. | perde força abaixo de 1379,74. |
+| 288 | BKNG | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 176,83 com volume forte. | perde força abaixo de 150,14. |
+| 289 | CDNS | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 383,80 com volume forte. | perde força abaixo de 262,75. |
+| 290 | CPT | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 109,08 com volume forte. | perde força abaixo de 102,51. |
+| 291 | CSX | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 47,17 com volume forte. | perde força abaixo de 35,09. |
+| 292 | CTSH | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 54,73 com volume forte. | perde força abaixo de 45,16. |
+| 293 | ECL | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 266,91 com volume forte. | perde força abaixo de 243,15. |
+| 294 | EFX | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 178,19 com volume forte. | perde força abaixo de 155,93. |
+| 295 | HON | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 235,92 com volume forte. | perde força abaixo de 207,40. |
+| 296 | PHM | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 125,21 com volume forte. | perde força abaixo de 108,49. |
+| 297 | PM | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 193,05 com volume forte. | perde força abaixo de 161,69. |
+| 298 | RCL | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 288,86 com volume forte. | perde força abaixo de 232,10. |
+| 299 | ROST | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 237,41 com volume forte. | perde força abaixo de 206,01. |
+| 300 | STLD | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 259,91 com volume forte. | perde força abaixo de 170,32. |
+| 301 | SW | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 42,22 com volume forte. | perde força abaixo de 35,53. |
+| 302 | UDR | us_core_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 38,44 com volume forte. | perde força abaixo de 36,45. |
+| 303 | BPAC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 30,80 com volume forte. | perde força abaixo de 24,20. |
+| 304 | EUCA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 26,50 com volume forte. | perde força abaixo de 20,55. |
+| 305 | FRAS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 22,58 com volume forte. | perde força abaixo de 20,95. |
+| 306 | GSHP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 3,29 com volume forte. | perde força abaixo de 2,81. |
+| 307 | IRBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 54,85 com volume forte. | perde força abaixo de 51,38. |
+| 308 | MLAS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 1,76 com volume forte. | perde força abaixo de 1,32. |
+| 309 | ORVR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 83,81 com volume forte. | perde força abaixo de 75,27. |
+| 310 | PMAM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 0,65 com volume forte. | perde força abaixo de 0,32. |
+| 311 | RAIZ4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 0,49 com volume forte. | perde força abaixo de 0,38. |
+| 312 | TUPY3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 15,08 com volume forte. | perde força abaixo de 12,54. |
+| 313 | USIM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 42 | fechamento acima de 9,79 com volume forte. | perde força abaixo de 6,22. |
+| 314 | VWOB | bonds | Alerta bearish — padrao de topo | 41 | fechamento acima de 67,25 com volume forte. | perde força abaixo de 65,34. |
+| 315 | XLU | sectors | Alerta bearish — padrao de topo | 41 | fechamento acima de 47,30 com volume forte. | perde força abaixo de 43,53. |
+| 316 | ROKU | growth_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 132,80 com volume forte. | perde força abaixo de 83,46. |
+| 317 | AXP | banks | Alerta bearish — padrao de topo | 41 | fechamento acima de 325,00 com volume forte. | perde força abaixo de 303,04. |
+| 318 | BLK | banks | Alerta bearish — padrao de topo | 41 | fechamento acima de 1111,09 com volume forte. | perde força abaixo de 930,00. |
+| 319 | KWEB | emerging_markets | Alerta bearish — padrao de topo | 41 | fechamento acima de 30,74 com volume forte. | perde força abaixo de 26,41. |
+| 320 | EWY | emerging_markets | Alerta bearish — padrao de topo | 41 | fechamento acima de 202,58 com volume forte. | perde força abaixo de 110,36. |
+| 321 | EWT | emerging_markets | Alerta bearish — padrao de topo | 41 | fechamento acima de 104,16 com volume forte. | perde força abaixo de 67,71. |
+| 322 | ARB-USD | crypto | Alerta bearish — padrao de topo | 41 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 323 | SUI-USD | crypto | Alerta bearish — padrao de topo | 41 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 324 | SANB11.SA | brazil_banks | Alerta bearish — padrao de topo | 41 | fechamento acima de 29,61 com volume forte. | perde força abaixo de 26,38. |
+| 325 | GGBR4.SA | brazil_commodities | Alerta bearish — padrao de topo | 41 | fechamento acima de 24,42 com volume forte. | perde força abaixo de 21,40. |
+| 326 | AMGN | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 346,92 com volume forte. | perde força abaixo de 320,97. |
+| 327 | BLDR | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 88,07 com volume forte. | perde força abaixo de 65,10. |
+| 328 | D | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 68,97 com volume forte. | perde força abaixo de 60,97. |
+| 329 | DELL | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 312,14 com volume forte. | perde força abaixo de 111,91. |
+| 330 | EIX | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 71,99 com volume forte. | perde força abaixo de 65,02. |
+| 331 | EXPD | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 163,10 com volume forte. | perde força abaixo de 138,59. |
+| 332 | F | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 16,06 com volume forte. | perde força abaixo de 11,97. |
+| 333 | FSLR | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 276,40 com volume forte. | perde força abaixo de 214,00. |
+| 334 | HPQ | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 25,60 com volume forte. | perde força abaixo de 18,03. |
+| 335 | HWM | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 280,62 com volume forte. | perde força abaixo de 232,72. |
+| 336 | NSC | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 326,00 com volume forte. | perde força abaixo de 276,70. |
+| 337 | NTAP | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 143,65 com volume forte. | perde força abaixo de 94,89. |
+| 338 | ODFL | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 233,79 com volume forte. | perde força abaixo de 186,89. |
+| 339 | OKE | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 96,07 com volume forte. | perde força abaixo de 83,66. |
+| 340 | PANW | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 261,41 com volume forte. | perde força abaixo de 151,71. |
+| 341 | REG | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 80,38 com volume forte. | perde força abaixo de 75,87. |
+| 342 | SNPS | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 539,48 com volume forte. | perde força abaixo de 405,71. |
+| 343 | TRI | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 101,88 com volume forte. | perde força abaixo de 78,01. |
+| 344 | VRTX | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 456,68 com volume forte. | perde força abaixo de 425,26. |
+| 345 | WELL | us_core_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 221,68 com volume forte. | perde força abaixo de 207,96. |
+| 346 | AZEV4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 0,16 com volume forte. | perde força abaixo de 0,13. |
+| 347 | BHIA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 2,72 com volume forte. | perde força abaixo de 1,22. |
+| 348 | BRAP4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 23,73 com volume forte. | perde força abaixo de 21,87. |
+| 349 | BRKM6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 7,02 com volume forte. | perde força abaixo de 6,83. |
+| 350 | CTSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 2,10 com volume forte. | perde força abaixo de 2,00. |
+| 351 | DOHL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 3,94 com volume forte. | perde força abaixo de 3,20. |
+| 352 | GEPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 38,00 com volume forte. | perde força abaixo de 32,03. |
+| 353 | POMO4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 6,62 com volume forte. | perde força abaixo de 5,79. |
+| 354 | PSVM11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 7,00 com volume forte. | perde força abaixo de 3,51. |
+| 355 | SMFT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 21,03 com volume forte. | perde força abaixo de 18,01. |
+| 356 | TOKY3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 41 | fechamento acima de 0,36 com volume forte. | perde força abaixo de 0,14. |
+| 357 | INTC | mega_caps | Alerta bearish — padrao de topo | 40 | fechamento acima de 132,75 com volume forte. | perde força abaixo de 42,28. |
+| 358 | IBM | mega_caps | Alerta bearish — padrao de topo | 40 | fechamento acima de 264,38 com volume forte. | perde força abaixo de 212,34. |
+| 359 | JD | emerging_markets | Alerta bearish — padrao de topo | 40 | fechamento acima de 34,30 com volume forte. | perde força abaixo de 26,23. |
+| 360 | ETH-USD | crypto | Alerta bearish — padrao de topo | 40 | fechamento acima de 2381,26 com volume forte. | perde força abaixo de 2010,55. |
+| 361 | DUK | defensive_dividends | Alerta bearish — padrao de topo | 40 | fechamento acima de 129,58 com volume forte. | perde força abaixo de 120,90. |
+| 362 | VIVA3.SA | brazil_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 28,79 com volume forte. | perde força abaixo de 21,85. |
+| 363 | A | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 120,28 com volume forte. | perde força abaixo de 108,35. |
+| 364 | ADM | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 82,56 com volume forte. | perde força abaixo de 66,11. |
+| 365 | AME | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 243,18 com volume forte. | perde força abaixo de 220,00. |
+| 366 | BAX | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 19,97 com volume forte. | perde força abaixo de 17,00. |
+| 367 | CCL | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 28,28 com volume forte. | perde força abaixo de 23,33. |
+| 368 | CVS | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 98,43 com volume forte. | perde força abaixo de 70,07. |
+| 369 | DIS | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 110,48 com volume forte. | perde força abaixo de 101,02. |
+| 370 | DLTR | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 98,66 com volume forte. | perde força abaixo de 85,88. |
+| 371 | FIS | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 48,01 com volume forte. | perde força abaixo de 41,33. |
+| 372 | FOXA | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 68,25 com volume forte. | perde força abaixo de 56,21. |
+| 373 | GPN | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 75,60 com volume forte. | perde força abaixo de 66,13. |
+| 374 | GWW | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 1285,36 com volume forte. | perde força abaixo de 1029,82. |
+| 375 | HUM | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 315,66 com volume forte. | perde força abaixo de 162,77. |
+| 376 | KLAC | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 2060,08 com volume forte. | perde força abaixo de 1425,85. |
+| 377 | KMI | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 34,81 com volume forte. | perde força abaixo de 31,85. |
+| 378 | LRCX | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 333,33 com volume forte. | perde força abaixo de 213,61. |
+| 379 | MDLZ | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 62,59 com volume forte. | perde força abaixo de 56,50. |
+| 380 | NXPI | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 339,95 com volume forte. | perde força abaixo de 227,58. |
+| 381 | SYF | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 76,42 com volume forte. | perde força abaixo de 68,32. |
+| 382 | TDG | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 1262,26 com volume forte. | perde força abaixo de 1137,06. |
+| 383 | TECH | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 56,90 com volume forte. | perde força abaixo de 43,12. |
+| 384 | TT | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 503,47 com volume forte. | perde força abaixo de 444,09. |
+| 385 | UNH | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 404,15 com volume forte. | perde força abaixo de 278,24. |
+| 386 | VICI | us_core_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 29,51 com volume forte. | perde força abaixo de 27,60. |
+| 387 | AGXY3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 2,18 com volume forte. | perde força abaixo de 1,85. |
+| 388 | CALI3.SA | brazil_all_stocks | Possível estabilização | 40 | fechamento acima de 25,00 com volume forte. | perde força abaixo de 14,59. |
+| 389 | CURY3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 33,05 com volume forte. | perde força abaixo de 28,67. |
+| 390 | IFCM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 0,93 com volume forte. | perde força abaixo de 0,50. |
+| 391 | MELK3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 3,39 com volume forte. | perde força abaixo de 3,12. |
+| 392 | MULT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 32,45 com volume forte. | perde força abaixo de 28,91. |
+| 393 | PINE4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 40 | fechamento acima de 15,83 com volume forte. | perde força abaixo de 12,62. |
+| 394 | NET | growth_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 258,88 com volume forte. | perde força abaixo de 160,35. |
+| 395 | CELH | growth_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 35,75 com volume forte. | perde força abaixo de 27,66. |
+| 396 | META | mega_caps | Alerta bearish — padrao de topo | 39 | fechamento acima de 674,25 com volume forte. | perde força abaixo de 594,81. |
+| 397 | WFC | banks | Alerta bearish — padrao de topo | 39 | fechamento acima de 82,19 com volume forte. | perde força abaixo de 72,78. |
+| 398 | INDA | emerging_markets | Alerta bearish — padrao de topo | 39 | fechamento acima de 50,30 com volume forte. | perde força abaixo de 47,13. |
+| 399 | DOGE-USD | crypto | Alerta bearish — padrao de topo | 39 | fechamento acima de 0,12 com volume forte. | perde força abaixo de 0,09. |
+| 400 | PEP | defensive_dividends | Alerta bearish — padrao de topo | 39 | fechamento acima de 160,00 com volume forte. | perde força abaixo de 145,50. |
+| 401 | EWA | developed_international | Alerta bearish — padrao de topo | 39 | fechamento acima de 30,14 com volume forte. | perde força abaixo de 27,59. |
+| 402 | VNQ | reits | Alerta bearish — padrao de topo | 39 | fechamento acima de 97,71 com volume forte. | perde força abaixo de 88,30. |
+| 403 | SMAL11.SA | brazil_etfs | Alerta bearish — padrao de topo | 39 | fechamento acima de 120,99 com volume forte. | perde força abaixo de 108,00. |
+| 404 | B5P211.SA | brazil_etfs | Alerta bearish — padrao de topo | 39 | fechamento acima de 108,04 com volume forte. | perde força abaixo de 103,13. |
+| 405 | RENT3.SA | brazil_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 50,45 com volume forte. | perde força abaixo de 41,36. |
+| 406 | BDX | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 155,28 com volume forte. | perde força abaixo de 141,82. |
+| 407 | BMY | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 60,78 com volume forte. | perde força abaixo de 55,85. |
+| 408 | CI | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 303,33 com volume forte. | perde força abaixo de 272,33. |
+| 409 | CTAS | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 176,38 com volume forte. | perde força abaixo de 160,72. |
+| 410 | ETN | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 434,23 com volume forte. | perde força abaixo de 342,62. |
+| 411 | FDX | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 413,70 com volume forte. | perde força abaixo de 346,01. |
+| 412 | FICO | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 1289,50 com volume forte. | perde força abaixo de 1046,22. |
+| 413 | FTNT | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 134,91 com volume forte. | perde força abaixo de 77,27. |
+| 414 | GEN | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 25,25 com volume forte. | perde força abaixo de 21,57. |
+| 415 | GM | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 84,52 com volume forte. | perde força abaixo de 70,43. |
+| 416 | HPE | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 38,58 com volume forte. | perde força abaixo de 19,95. |
+| 417 | KDP | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 30,53 com volume forte. | perde força abaixo de 26,17. |
+| 418 | KMB | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 101,96 com volume forte. | perde força abaixo de 95,50. |
+| 419 | MSCI | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 607,26 com volume forte. | perde força abaixo de 528,37. |
+| 420 | NI | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 48,98 com volume forte. | perde força abaixo de 46,16. |
+| 421 | NKE | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 46,59 com volume forte. | perde força abaixo de 41,35. |
+| 422 | NWS | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 31,92 com volume forte. | perde força abaixo de 25,48. |
+| 423 | TPR | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 149,31 com volume forte. | perde força abaixo de 128,48. |
+| 424 | URI | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 989,97 com volume forte. | perde força abaixo de 911,15. |
+| 425 | WDAY | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 135,93 com volume forte. | perde força abaixo de 112,55. |
+| 426 | WDC | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 546,68 com volume forte. | perde força abaixo de 237,47. |
+| 427 | WEC | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 118,20 com volume forte. | perde força abaixo de 108,78. |
+| 428 | WY | us_core_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 25,05 com volume forte. | perde força abaixo de 22,45. |
+| 429 | AMOB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 15,76 com volume forte. | perde força abaixo de 13,01. |
+| 430 | CEDO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 10,00 com volume forte. | perde força abaixo de 7,00. |
+| 431 | CEGR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 32,91 com volume forte. | perde força abaixo de 32,69. |
+| 432 | CTAX3.SA | brazil_all_stocks | Possível estabilização | 39 | fechamento acima de 0,71 com volume forte. | perde força abaixo de 0,56. |
+| 433 | EQMA3B.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 32,50 com volume forte. | perde força abaixo de 29,23. |
+| 434 | EQPA5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 16,40 com volume forte. | perde força abaixo de 7,44. |
+| 435 | MBRF3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 18,21 com volume forte. | perde força abaixo de 15,87. |
+| 436 | MTRE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 3,71 com volume forte. | perde força abaixo de 3,35. |
+| 437 | MWET4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 17,00 com volume forte. | perde força abaixo de 8,38. |
+| 438 | NUTR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 2,56 com volume forte. | perde força abaixo de 2,16. |
+| 439 | PINE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 14,78 com volume forte. | perde força abaixo de 11,73. |
+| 440 | SOND5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 76,00 com volume forte. | perde força abaixo de 51,08. |
+| 441 | TGMA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 39 | fechamento acima de 32,44 com volume forte. | perde força abaixo de 29,80. |
+| 442 | DBC | commodities | Alerta bearish — padrao de topo | 38 | fechamento acima de 31,79 com volume forte. | perde força abaixo de 28,00. |
+| 443 | XBI | sectors | Alerta bearish — padrao de topo | 38 | fechamento acima de 138,10 com volume forte. | perde força abaixo de 120,28. |
+| 444 | ARKK | sectors | Alerta bearish — padrao de topo | 38 | fechamento acima de 80,68 com volume forte. | perde força abaixo de 69,08. |
+| 445 | SHOP | growth_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 129,39 com volume forte. | perde força abaixo de 94,00. |
+| 446 | SNOW | growth_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 181,27 com volume forte. | perde força abaixo de 146,05. |
+| 447 | SOFI | growth_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 16,95 com volume forte. | perde força abaixo de 14,92. |
+| 448 | MELI | growth_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 1890,00 com volume forte. | perde força abaixo de 1495,00. |
+| 449 | LTC-USD | crypto | Alerta bearish — padrao de topo | 38 | fechamento acima de 60,53 com volume forte. | perde força abaixo de 51,61. |
+| 450 | T | defensive_dividends | Alerta bearish — padrao de topo | 38 | fechamento acima de 26,47 com volume forte. | perde força abaixo de 23,85. |
+| 451 | AKAM | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 165,45 com volume forte. | perde força abaixo de 89,23. |
+| 452 | CAH | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 204,90 com volume forte. | perde força abaixo de 180,45. |
+| 453 | CMG | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 35,10 com volume forte. | perde força abaixo de 31,97. |
+| 454 | CRH | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 118,84 com volume forte. | perde força abaixo de 97,80. |
+| 455 | DGX | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 196,92 com volume forte. | perde força abaixo de 186,43. |
+| 456 | EBAY | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 119,31 com volume forte. | perde força abaixo de 90,29. |
+| 457 | ERIE | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 229,13 com volume forte. | perde força abaixo de 211,38. |
+| 458 | ESS | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 279,50 com volume forte. | perde força abaixo de 242,02. |
+| 459 | EXR | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 145,73 com volume forte. | perde força abaixo de 136,69. |
+| 460 | FOX | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 61,58 com volume forte. | perde força abaixo de 51,19. |
+| 461 | HD | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 330,52 com volume forte. | perde força abaixo de 289,10. |
+| 462 | HLT | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 337,59 com volume forte. | perde força abaixo de 287,42. |
+| 463 | INTU | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 423,99 com volume forte. | perde força abaixo de 300,50. |
+| 464 | INVH | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 29,58 com volume forte. | perde força abaixo de 24,91. |
+| 465 | IVZ | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 28,38 com volume forte. | perde força abaixo de 24,93. |
+| 466 | L | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 113,84 com volume forte. | perde força abaixo de 103,03. |
+| 467 | LITE | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 1085,68 com volume forte. | perde força abaixo de 845,00. |
+| 468 | LULU | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 141,73 com volume forte. | perde força abaixo de 116,63. |
+| 469 | NTRS | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 170,24 com volume forte. | perde força abaixo de 139,61. |
+| 470 | NUE | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 247,40 com volume forte. | perde força abaixo de 165,12. |
+| 471 | RVTY | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 103,00 com volume forte. | perde força abaixo de 82,79. |
+| 472 | SNA | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 386,16 com volume forte. | perde força abaixo de 353,11. |
+| 473 | STE | us_core_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 219,98 com volume forte. | perde força abaixo de 207,80. |
+| 474 | AERI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 2,71 com volume forte. | perde força abaixo de 2,25. |
+| 475 | ALPA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 13,16 com volume forte. | perde força abaixo de 10,99. |
+| 476 | AZTE3.SA | brazil_all_stocks | Possível estabilização | 38 | fechamento acima de 0,38 com volume forte. | perde força abaixo de 0,19. |
+| 477 | BMEB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 85,76 com volume forte. | perde força abaixo de 65,13. |
+| 478 | CEDO4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 7,09 com volume forte. | perde força abaixo de 5,63. |
+| 479 | DESK3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 18,57 com volume forte. | perde força abaixo de 17,17. |
+| 480 | HYPE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 23,80 com volume forte. | perde força abaixo de 21,91. |
+| 481 | NEXP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 2,78 com volume forte. | perde força abaixo de 2,53. |
+| 482 | SHOW3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 5,99 com volume forte. | perde força abaixo de 5,57. |
+| 483 | SMTO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 18,80 com volume forte. | perde força abaixo de 16,75. |
+| 484 | TECN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 38 | fechamento acima de 8,99 com volume forte. | perde força abaixo de 7,96. |
+| 485 | IAU | commodities | Alerta bearish — padrao de topo | 37 | fechamento acima de 89,62 com volume forte. | perde força abaixo de 82,85. |
+| 486 | PICK | commodities | Alerta bearish — padrao de topo | 37 | fechamento acima de 67,90 com volume forte. | perde força abaixo de 57,17. |
+| 487 | XLRE | sectors | Alerta bearish — padrao de topo | 37 | fechamento acima de 44,99 com volume forte. | perde força abaixo de 40,47. |
+| 488 | GOOGL | mega_caps | Alerta bearish — padrao de topo | 37 | fechamento acima de 408,61 com volume forte. | perde força abaixo de 296,04. |
+| 489 | AVGO | mega_caps | Alerta bearish — padrao de topo | 37 | fechamento acima de 442,36 com volume forte. | perde força abaixo de 313,45. |
+| 490 | TXN | mega_caps | Alerta bearish — padrao de topo | 37 | fechamento acima de 331,51 com volume forte. | perde força abaixo de 185,79. |
+| 491 | JPM | banks | Alerta bearish — padrao de topo | 37 | fechamento acima de 316,30 com volume forte. | perde força abaixo de 293,67. |
+| 492 | MA | banks | Alerta bearish — padrao de topo | 37 | fechamento acima de 534,21 com volume forte. | perde força abaixo de 488,01. |
+| 493 | MCD | defensive_dividends | Alerta bearish — padrao de topo | 37 | fechamento acima de 295,58 com volume forte. | perde força abaixo de 273,24. |
+| 494 | JNJ | defensive_dividends | Alerta bearish — padrao de topo | 37 | fechamento acima de 234,15 com volume forte. | perde força abaixo de 224,15. |
+| 495 | EWH | developed_international | Alerta bearish — padrao de topo | 37 | fechamento acima de 24,66 com volume forte. | perde força abaixo de 22,66. |
+| 496 | IYR | reits | Alerta bearish — padrao de topo | 37 | fechamento acima de 103,63 com volume forte. | perde força abaixo de 94,15. |
+| 497 | CSNA3.SA | brazil_commodities | Alerta bearish — padrao de topo | 37 | fechamento acima de 6,88 com volume forte. | perde força abaixo de 5,67. |
+| 498 | MXRF11.SA | brazil_reits | Alerta bearish — padrao de topo | 37 | fechamento acima de 10,00 com volume forte. | perde força abaixo de 9,50. |
+| 499 | ACN | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 184,79 com volume forte. | perde força abaixo de 155,82. |
+| 500 | ADI | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 435,72 com volume forte. | perde força abaixo de 303,51. |
+| 501 | AMAT | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 462,40 com volume forte. | perde força abaixo de 316,27. |
+| 502 | ANET | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 179,10 com volume forte. | perde força abaixo de 124,38. |
+| 503 | AON | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 330,22 com volume forte. | perde força abaixo de 308,51. |
+| 504 | BRO | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 63,73 com volume forte. | perde força abaixo de 53,81. |
+| 505 | CARR | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 68,79 com volume forte. | perde força abaixo de 54,46. |
+| 506 | CNC | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 60,76 com volume forte. | perde força abaixo de 36,06. |
+| 507 | DD | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 51,44 com volume forte. | perde força abaixo de 41,52. |
+| 508 | DRI | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 210,43 com volume forte. | perde força abaixo de 189,97. |
+| 509 | EG | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 361,27 com volume forte. | perde força abaixo de 314,22. |
+| 510 | EME | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 951,96 com volume forte. | perde força abaixo de 686,99. |
+| 511 | EMR | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 148,87 com volume forte. | perde força abaixo de 128,13. |
+| 512 | EPAM | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 116,31 com volume forte. | perde força abaixo de 89,25. |
+| 513 | GE | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 320,48 com volume forte. | perde força abaixo de 281,31. |
+| 514 | GIS | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 35,94 com volume forte. | perde força abaixo de 32,64. |
+| 515 | GL | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 157,92 com volume forte. | perde força abaixo de 138,07. |
+| 516 | GPC | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 108,03 com volume forte. | perde força abaixo de 90,78. |
+| 517 | HBAN | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 16,80 com volume forte. | perde força abaixo de 15,06. |
+| 518 | IFF | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 83,89 com volume forte. | perde força abaixo de 68,34. |
+| 519 | INSM | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 142,90 com volume forte. | perde força abaixo de 104,48. |
+| 520 | IQV | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 182,70 com volume forte. | perde força abaixo de 161,75. |
+| 521 | ITW | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 269,39 com volume forte. | perde força abaixo de 244,37. |
+| 522 | MCO | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 468,76 com volume forte. | perde força abaixo de 421,16. |
+| 523 | MMM | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 156,68 com volume forte. | perde força abaixo de 141,03. |
+| 524 | MRSH | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 171,49 com volume forte. | perde força abaixo de 158,16. |
+| 525 | MSI | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 444,24 com volume forte. | perde força abaixo de 386,79. |
+| 526 | NCLH | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 19,12 com volume forte. | perde força abaixo de 14,53. |
+| 527 | NDAQ | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 93,63 com volume forte. | perde força abaixo de 83,37. |
+| 528 | PODD | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 182,91 com volume forte. | perde força abaixo de 141,02. |
+| 529 | PRU | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 103,50 com volume forte. | perde força abaixo de 90,65. |
+| 530 | RF | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 28,64 com volume forte. | perde força abaixo de 26,16. |
+| 531 | ROK | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 462,06 com volume forte. | perde força abaixo de 398,87. |
+| 532 | SHW | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 328,14 com volume forte. | perde força abaixo de 293,56. |
+| 533 | SJM | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 104,79 com volume forte. | perde força abaixo de 98,16. |
+| 534 | SLB | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 58,82 com volume forte. | perde força abaixo de 48,84. |
+| 535 | SYK | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 322,87 com volume forte. | perde força abaixo de 290,00. |
+| 536 | TAP | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 44,04 com volume forte. | perde força abaixo de 40,68. |
+| 537 | TEL | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 216,65 com volume forte. | perde força abaixo de 193,00. |
+| 538 | TKO | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 196,75 com volume forte. | perde força abaixo de 182,00. |
+| 539 | TMUS | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 200,63 com volume forte. | perde força abaixo de 185,10. |
+| 540 | TRV | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 310,41 com volume forte. | perde força abaixo de 290,94. |
+| 541 | VTRS | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 17,40 com volume forte. | perde força abaixo de 12,95. |
+| 542 | WAB | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 274,16 com volume forte. | perde força abaixo de 235,91. |
+| 543 | ZBRA | us_core_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 263,49 com volume forte. | perde força abaixo de 214,87. |
+| 544 | AALR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 3,50 com volume forte. | perde força abaixo de 3,06. |
+| 545 | ABCB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 25,41 com volume forte. | perde força abaixo de 23,32. |
+| 546 | ALUP11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 35,61 com volume forte. | perde força abaixo de 31,26. |
+| 547 | BMGB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 5,53 com volume forte. | perde força abaixo de 4,69. |
+| 548 | BMOB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 27,16 com volume forte. | perde força abaixo de 23,83. |
+| 549 | CGRA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 26,05 com volume forte. | perde força abaixo de 24,79. |
+| 550 | COGN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 2,92 com volume forte. | perde força abaixo de 2,40. |
+| 551 | EUCA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 28,03 com volume forte. | perde força abaixo de 19,70. |
+| 552 | INTB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 15,97 com volume forte. | perde força abaixo de 13,82. |
+| 553 | MRVE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 7,20 com volume forte. | perde força abaixo de 5,93. |
+| 554 | MYPK3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 10,22 com volume forte. | perde força abaixo de 8,69. |
+| 555 | PLAS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 2,96 com volume forte. | perde força abaixo de 2,57. |
+| 556 | PRNR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 19,60 com volume forte. | perde força abaixo de 17,35. |
+| 557 | PTBL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 2,32 com volume forte. | perde força abaixo de 1,84. |
+| 558 | PTNT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 8,75 com volume forte. | perde força abaixo de 8,25. |
+| 559 | TEND3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 33,50 com volume forte. | perde força abaixo de 28,21. |
+| 560 | TRAD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 2,41 com volume forte. | perde força abaixo de 1,30. |
+| 561 | WLMM4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 37 | fechamento acima de 21,73 com volume forte. | perde força abaixo de 19,00. |
+| 562 | TIPS | bonds | Alerta bearish — padrao de topo | 36 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 563 | URA | commodities | Alerta bearish — padrao de topo | 36 | fechamento acima de 58,63 com volume forte. | perde força abaixo de 46,56. |
+| 564 | XLE | sectors | Alerta bearish — padrao de topo | 36 | fechamento acima de 61,70 com volume forte. | perde força abaixo de 52,83. |
+| 565 | AMZN | mega_caps | Alerta bearish — padrao de topo | 36 | fechamento acima de 278,56 com volume forte. | perde força abaixo de 202,48. |
+| 566 | CRM | mega_caps | Alerta bearish — padrao de topo | 36 | fechamento acima de 190,31 com volume forte. | perde força abaixo de 164,33. |
+| 567 | BPAC11.SA | brazil_banks | Alerta bearish — padrao de topo | 36 | fechamento acima de 60,77 com volume forte. | perde força abaixo de 52,56. |
+| 568 | SUZB3.SA | brazil_commodities | Alerta bearish — padrao de topo | 36 | fechamento acima de 45,61 com volume forte. | perde força abaixo de 40,97. |
+| 569 | HGLG11.SA | brazil_reits | Alerta bearish — padrao de topo | 36 | fechamento acima de 157,55 com volume forte. | perde força abaixo de 152,66. |
+| 570 | AEP | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 138,43 com volume forte. | perde força abaixo de 124,68. |
+| 571 | ALNY | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 317,56 com volume forte. | perde força abaixo de 284,38. |
+| 572 | BIIB | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 205,97 com volume forte. | perde força abaixo de 181,24. |
+| 573 | CBOE | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 371,18 com volume forte. | perde força abaixo de 266,84. |
+| 574 | CCI | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 93,79 com volume forte. | perde força abaixo de 84,22. |
+| 575 | CFG | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 66,00 com volume forte. | perde força abaixo de 59,74. |
+| 576 | CMS | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 76,59 com volume forte. | perde força abaixo de 71,53. |
+| 577 | COHR | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 413,00 com volume forte. | perde força abaixo de 230,10. |
+| 578 | DHI | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 155,94 com volume forte. | perde força abaixo de 133,84. |
+| 579 | DVA | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 202,69 com volume forte. | perde força abaixo de 147,21. |
+| 580 | ED | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 111,50 com volume forte. | perde força abaixo de 104,71. |
+| 581 | EQR | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 67,52 com volume forte. | perde força abaixo de 60,56. |
+| 582 | GNRC | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 280,85 com volume forte. | perde força abaixo de 161,40. |
+| 583 | GRMN | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 254,97 com volume forte. | perde força abaixo de 224,54. |
+| 584 | IEX | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 223,06 com volume forte. | perde força abaixo de 202,73. |
+| 585 | IP | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 33,62 com volume forte. | perde força abaixo de 28,83. |
+| 586 | JBL | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 381,94 com volume forte. | perde força abaixo de 237,59. |
+| 587 | KHC | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 24,69 com volume forte. | perde força abaixo de 22,01. |
+| 588 | LUV | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 44,42 com volume forte. | perde força abaixo de 37,23. |
+| 589 | MAS | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 74,00 com volume forte. | perde força abaixo de 62,95. |
+| 590 | MDT | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 81,45 com volume forte. | perde força abaixo de 75,40. |
+| 591 | MRVL | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 218,26 com volume forte. | perde força abaixo de 76,59. |
+| 592 | ON | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 129,13 com volume forte. | perde força abaixo de 58,28. |
+| 593 | PCG | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 16,92 com volume forte. | perde força abaixo de 15,28. |
+| 594 | RMD | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 215,95 com volume forte. | perde força abaixo de 200,17. |
+| 595 | STX | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 888,95 com volume forte. | perde força abaixo de 393,55. |
+| 596 | TRGP | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 280,00 com volume forte. | perde força abaixo de 230,12. |
+| 597 | TSN | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 69,48 com volume forte. | perde força abaixo de 62,35. |
+| 598 | TXT | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 97,61 com volume forte. | perde força abaixo de 86,34. |
+| 599 | TYL | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 366,63 com volume forte. | perde força abaixo de 294,36. |
+| 600 | WAT | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 357,45 com volume forte. | perde força abaixo de 288,45. |
+| 601 | WST | us_core_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 330,88 com volume forte. | perde força abaixo de 231,67. |
+| 602 | ALUP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 13,25 com volume forte. | perde força abaixo de 11,34. |
+| 603 | BRAP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 20,44 com volume forte. | perde força abaixo de 18,91. |
+| 604 | BSLI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 4,04 com volume forte. | perde força abaixo de 3,25. |
+| 605 | FESA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 12,65 com volume forte. | perde força abaixo de 11,58. |
+| 606 | RECV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 12,85 com volume forte. | perde força abaixo de 11,60. |
+| 607 | SLCE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 17,92 com volume forte. | perde força abaixo de 15,58. |
+| 608 | TASA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 5,26 com volume forte. | perde força abaixo de 4,62. |
+| 609 | UCAS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 36 | fechamento acima de 1,44 com volume forte. | perde força abaixo de 1,30. |
+| 610 | GLD | commodities | Alerta bearish — padrao de topo | 35 | fechamento acima de 437,42 com volume forte. | perde força abaixo de 404,31. |
+| 611 | NIB | commodities | Alerta bearish — padrao de topo | 35 | fechamento acima de 36,29 com volume forte. | perde força abaixo de 31,15. |
+| 612 | COIN | growth_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 222,35 com volume forte. | perde força abaixo de 173,71. |
+| 613 | HOOD | growth_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 81,93 com volume forte. | perde força abaixo de 72,79. |
+| 614 | ITUB4.SA | brazil_banks | Alerta bearish — padrao de topo | 35 | fechamento acima de 43,99 com volume forte. | perde força abaixo de 38,69. |
+| 615 | APO | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 136,01 com volume forte. | perde força abaixo de 127,82. |
+| 616 | BA | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 244,07 com volume forte. | perde força abaixo de 214,00. |
+| 617 | CAT | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 931,35 com volume forte. | perde força abaixo de 661,59. |
+| 618 | COO | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 63,44 com volume forte. | perde força abaixo de 59,06. |
+| 619 | CPB | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 21,47 com volume forte. | perde força abaixo de 19,56. |
+| 620 | EXC | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 47,68 com volume forte. | perde força abaixo de 43,05. |
+| 621 | FFIV | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 399,59 com volume forte. | perde força abaixo de 274,29. |
+| 622 | HAS | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 98,83 com volume forte. | perde força abaixo de 87,00. |
+| 623 | IBKR | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 88,44 com volume forte. | perde força abaixo de 70,71. |
+| 624 | IRM | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 134,09 com volume forte. | perde força abaixo de 90,88. |
+| 625 | J | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 137,34 com volume forte. | perde força abaixo de 105,35. |
+| 626 | MLM | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 628,57 com volume forte. | perde força abaixo de 525,38. |
+| 627 | MO | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 74,56 com volume forte. | perde força abaixo de 63,68. |
+| 628 | OMC | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 78,50 com volume forte. | perde força abaixo de 69,98. |
+| 629 | PFE | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 26,53 com volume forte. | perde força abaixo de 25,19. |
+| 630 | RSG | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 218,91 com volume forte. | perde força abaixo de 200,01. |
+| 631 | SBUX | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 108,25 com volume forte. | perde força abaixo de 94,89. |
+| 632 | SWKS | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 85,18 com volume forte. | perde força abaixo de 51,98. |
+| 633 | TER | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 406,65 com volume forte. | perde força abaixo de 300,29. |
+| 634 | UHS | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 175,00 com volume forte. | perde força abaixo de 154,27. |
+| 635 | VRSN | us_core_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 312,48 com volume forte. | perde força abaixo de 240,88. |
+| 636 | AFLT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 7,75 com volume forte. | perde força abaixo de 6,95. |
+| 637 | AZZA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 23,38 com volume forte. | perde força abaixo de 18,46. |
+| 638 | CGRA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 26,38 com volume forte. | perde força abaixo de 24,76. |
+| 639 | COCE3.SA | brazil_all_stocks | Possível estabilização | 35 | fechamento acima de 38,00 com volume forte. | perde força abaixo de 33,32. |
+| 640 | CPLE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 16,05 com volume forte. | perde força abaixo de 14,49. |
+| 641 | ESTR4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 4,51 com volume forte. | perde força abaixo de 3,00. |
+| 642 | JSLG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 7,45 com volume forte. | perde força abaixo de 6,30. |
+| 643 | ROMI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 6,95 com volume forte. | perde força abaixo de 6,35. |
+| 644 | SNSY5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 2,22 com volume forte. | perde força abaixo de 1,98. |
+| 645 | TELB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 13,99 com volume forte. | perde força abaixo de 12,40. |
+| 646 | VLID3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 19,75 com volume forte. | perde força abaixo de 16,52. |
+| 647 | VTRU3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 35 | fechamento acima de 14,80 com volume forte. | perde força abaixo de 12,84. |
+| 648 | DBA | commodities | Alerta bearish — padrao de topo | 34 | fechamento acima de 28,84 com volume forte. | perde força abaixo de 25,49. |
+| 649 | NFLX | mega_caps | Alerta bearish — padrao de topo | 34 | fechamento acima de 94,70 com volume forte. | perde força abaixo de 75,23. |
+| 650 | BABA | emerging_markets | Alerta bearish — padrao de topo | 34 | fechamento acima de 146,87 com volume forte. | perde força abaixo de 126,25. |
+| 651 | ILF | emerging_markets | Alerta bearish — padrao de topo | 34 | fechamento acima de 36,97 com volume forte. | perde força abaixo de 34,11. |
+| 652 | WMT | defensive_dividends | Alerta bearish — padrao de topo | 34 | fechamento acima de 135,16 com volume forte. | perde força abaixo de 117,92. |
+| 653 | BBDC4.SA | brazil_banks | Alerta bearish — padrao de topo | 34 | fechamento acima de 19,64 com volume forte. | perde força abaixo de 17,26. |
+| 654 | BBAS3.SA | brazil_banks | Alerta bearish — padrao de topo | 34 | fechamento acima de 22,60 com volume forte. | perde força abaixo de 19,74. |
+| 655 | KNRI11.SA | brazil_reits | Alerta bearish — padrao de topo | 34 | fechamento acima de 169,09 com volume forte. | perde força abaixo de 157,12. |
+| 656 | ABNB | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 146,97 com volume forte. | perde força abaixo de 127,83. |
+| 657 | CEG | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 328,29 com volume forte. | perde força abaixo de 256,10. |
+| 658 | CMI | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 715,83 com volume forte. | perde força abaixo de 523,99. |
+| 659 | DG | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 118,58 com volume forte. | perde força abaixo de 99,57. |
+| 660 | DTE | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 153,72 com volume forte. | perde força abaixo de 139,75. |
+| 661 | EA | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 202,80 com volume forte. | perde força abaixo de 198,93. |
+| 662 | FE | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 49,32 com volume forte. | perde força abaixo de 43,73. |
+| 663 | HAL | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 43,59 com volume forte. | perde força abaixo de 32,35. |
+| 664 | MPC | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 264,14 com volume forte. | perde força abaixo de 189,72. |
+| 665 | SNDK | us_core_stocks | Fora do padrão | 34 | fechamento acima de 1658,77 com volume forte. | perde força abaixo de 540,14. |
+| 666 | SYY | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 77,10 com volume forte. | perde força abaixo de 72,44. |
+| 667 | TSCO | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 35,31 com volume forte. | perde força abaixo de 29,42. |
+| 668 | ZS | us_core_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 191,25 com volume forte. | perde força abaixo de 125,66. |
+| 669 | ALUP4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 11,10 com volume forte. | perde força abaixo de 9,80. |
+| 670 | AMAR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 0,88 com volume forte. | perde força abaixo de 0,66. |
+| 671 | BDLL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 7,50 com volume forte. | perde força abaixo de 6,01. |
+| 672 | BMIN4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 17,85 com volume forte. | perde força abaixo de 17,75. |
+| 673 | CEBR6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 32,32 com volume forte. | perde força abaixo de 29,58. |
+| 674 | CMIG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 17,25 com volume forte. | perde força abaixo de 14,40. |
+| 675 | CVCB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 2,57 com volume forte. | perde força abaixo de 1,68. |
+| 676 | ECOR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 9,29 com volume forte. | perde força abaixo de 7,27. |
+| 677 | ENMT4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 50,00 com volume forte. | perde força abaixo de 41,62. |
+| 678 | FHER3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 4,22 com volume forte. | perde força abaixo de 3,95. |
+| 679 | FLRY3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 16,96 com volume forte. | perde força abaixo de 15,28. |
+| 680 | GEPA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 42,50 com volume forte. | perde força abaixo de 36,37. |
+| 681 | OSXB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 1,47 com volume forte. | perde força abaixo de 1,33. |
+| 682 | PSSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 52,23 com volume forte. | perde força abaixo de 47,45. |
+| 683 | SOJA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 7,14 com volume forte. | perde força abaixo de 6,21. |
+| 684 | TASA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 5,02 com volume forte. | perde força abaixo de 4,25. |
+| 685 | TTEN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 17,45 com volume forte. | perde força abaixo de 15,34. |
+| 686 | UGPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 30,59 com volume forte. | perde força abaixo de 25,49. |
+| 687 | VITT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 34 | fechamento acima de 3,60 com volume forte. | perde força abaixo de 3,10. |
+| 688 | PDBC | commodities | Alerta bearish — padrao de topo | 33 | fechamento acima de 18,95 com volume forte. | perde força abaixo de 16,72. |
+| 689 | PLTR | growth_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 149,64 com volume forte. | perde força abaixo de 128,75. |
+| 690 | PRIO3.SA | brazil_commodities | Alerta bearish — padrao de topo | 33 | fechamento acima de 70,80 com volume forte. | perde força abaixo de 62,41. |
+| 691 | CMIG4.SA | brazil_utilities | Alerta bearish — padrao de topo | 33 | fechamento acima de 12,55 com volume forte. | perde força abaixo de 11,09. |
+| 692 | XPML11.SA | brazil_reits | Alerta bearish — padrao de topo | 33 | fechamento acima de 110,90 com volume forte. | perde força abaixo de 106,00. |
+| 693 | CB | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 334,03 com volume forte. | perde força abaixo de 315,04. |
+| 694 | DPZ | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 342,70 com volume forte. | perde força abaixo de 297,48. |
+| 695 | ETR | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 118,45 com volume forte. | perde força abaixo de 108,28. |
+| 696 | GILD | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 137,50 com volume forte. | perde força abaixo de 128,34. |
+| 697 | INCY | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 103,01 com volume forte. | perde força abaixo de 94,10. |
+| 698 | KKR | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 105,93 com volume forte. | perde força abaixo de 91,08. |
+| 699 | NVR | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 6442,99 com volume forte. | perde força abaixo de 5501,01. |
+| 700 | OTIS | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 78,25 com volume forte. | perde força abaixo de 69,72. |
+| 701 | PGR | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 206,84 com volume forte. | perde força abaixo de 195,69. |
+| 702 | PH | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 968,27 com volume forte. | perde força abaixo de 839,15. |
+| 703 | SWK | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 82,36 com volume forte. | perde força abaixo de 66,54. |
+| 704 | UPS | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 108,02 com volume forte. | perde força abaixo de 93,86. |
+| 705 | VEEV | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 175,11 com volume forte. | perde força abaixo de 152,81. |
+| 706 | YUM | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 163,54 com volume forte. | perde força abaixo de 149,69. |
+| 707 | ZBH | us_core_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 87,22 com volume forte. | perde força abaixo de 81,74. |
+| 708 | ALPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 11,57 com volume forte. | perde força abaixo de 9,71. |
+| 709 | AVLL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 0,99 com volume forte. | perde força abaixo de 0,61. |
+| 710 | BDLL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 4,99 com volume forte. | perde força abaixo de 3,10. |
+| 711 | CTKA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 46,95 com volume forte. | perde força abaixo de 44,00. |
+| 712 | CXSE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 18,05 com volume forte. | perde força abaixo de 17,03. |
+| 713 | DEXP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 7,50 com volume forte. | perde força abaixo de 6,94. |
+| 714 | JALL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 3,42 com volume forte. | perde força abaixo de 2,66. |
+| 715 | JFEN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 0,73 com volume forte. | perde força abaixo de 0,64. |
+| 716 | LUPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 0,88 com volume forte. | perde força abaixo de 0,74. |
+| 717 | LUXM4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 3,99 com volume forte. | perde força abaixo de 3,35. |
+| 718 | RAPT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 5,48 com volume forte. | perde força abaixo de 4,82. |
+| 719 | RNEW3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 1,05 com volume forte. | perde força abaixo de 0,90. |
+| 720 | SBFG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 11,70 com volume forte. | perde força abaixo de 10,27. |
+| 721 | VBBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 34,07 com volume forte. | perde força abaixo de 28,25. |
+| 722 | VIVR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 33 | fechamento acima de 0,40 com volume forte. | perde força abaixo de 0,34. |
+| 723 | EDV | bonds | Alerta bearish — padrao de topo | 32 | fechamento acima de 64,28 com volume forte. | perde força abaixo de 60,49. |
+| 724 | ZROZ | bonds | Alerta bearish — padrao de topo | 32 | fechamento acima de 63,26 com volume forte. | perde força abaixo de 59,22. |
+| 725 | O | reits | Alerta bearish — padrao de topo | 32 | fechamento acima de 64,33 com volume forte. | perde força abaixo de 61,11. |
+| 726 | ACGL | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 97,43 com volume forte. | perde força abaixo de 90,77. |
+| 727 | AIG | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 79,77 com volume forte. | perde força abaixo de 74,12. |
+| 728 | ALL | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 227,62 com volume forte. | perde força abaixo de 200,21. |
+| 729 | BG | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 133,13 com volume forte. | perde força abaixo de 117,68. |
+| 730 | BSX | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 58,51 com volume forte. | perde força abaixo de 50,04. |
+| 731 | CIEN | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 605,61 com volume forte. | perde força abaixo de 461,07. |
+| 732 | DOV | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 230,73 com volume forte. | perde força abaixo de 199,92. |
+| 733 | FTV | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 62,81 com volume forte. | perde força abaixo de 52,57. |
+| 734 | GOOG | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 404,47 com volume forte. | perde força abaixo de 296,69. |
+| 735 | JCI | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 147,32 com volume forte. | perde força abaixo de 133,61. |
+| 736 | KEYS | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 370,17 com volume forte. | perde força abaixo de 264,70. |
+| 737 | LII | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 551,50 com volume forte. | perde força abaixo de 470,62. |
+| 738 | LOW | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 239,27 com volume forte. | perde força abaixo de 208,00. |
+| 739 | MKC | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 51,39 com volume forte. | perde força abaixo de 44,82. |
+| 740 | MPWR | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 1714,09 com volume forte. | perde força abaixo de 994,02. |
+| 741 | PWR | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 788,75 com volume forte. | perde força abaixo de 531,11. |
+| 742 | TDY | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 654,05 com volume forte. | perde força abaixo de 599,57. |
+| 743 | TTWO | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 247,00 com volume forte. | perde força abaixo de 189,45. |
+| 744 | VLTO | us_core_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 92,53 com volume forte. | perde força abaixo de 84,15. |
+| 745 | ALOS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 30,99 com volume forte. | perde força abaixo de 27,54. |
+| 746 | BBDC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 16,94 com volume forte. | perde força abaixo de 15,02. |
+| 747 | BIED3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 8,47 com volume forte. | perde força abaixo de 4,51. |
+| 748 | COCE5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 34,59 com volume forte. | perde força abaixo de 28,63. |
+| 749 | CTSA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 1,29 com volume forte. | perde força abaixo de 1,07. |
+| 750 | DXCO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 5,93 com volume forte. | perde força abaixo de 4,67. |
+| 751 | EZTC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 14,38 com volume forte. | perde força abaixo de 12,50. |
+| 752 | INEP4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 2,35 com volume forte. | perde força abaixo de 1,11. |
+| 753 | ITUB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 43,90 com volume forte. | perde força abaixo de 39,25. |
+| 754 | LEVE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 36,21 com volume forte. | perde força abaixo de 31,65. |
+| 755 | LJQQ3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 2,00 com volume forte. | perde força abaixo de 1,33. |
+| 756 | LWSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 4,24 com volume forte. | perde força abaixo de 3,54. |
+| 757 | RPAD5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 7,15 com volume forte. | perde força abaixo de 5,81. |
+| 758 | TRIS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 32 | fechamento acima de 4,97 com volume forte. | perde força abaixo de 4,02. |
+| 759 | BIDU | emerging_markets | Alerta bearish — padrao de topo | 31 | fechamento acima de 152,37 com volume forte. | perde força abaixo de 105,77. |
+| 760 | PDD | emerging_markets | Alerta bearish — padrao de topo | 31 | fechamento acima de 102,87 com volume forte. | perde força abaixo de 83,61. |
+| 761 | BTC-USD | crypto | Alerta bearish — padrao de topo | 31 | fechamento acima de 82430,17 com volume forte. | perde força abaixo de 74255,23. |
+| 762 | WEGE3.SA | brazil_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 46,79 com volume forte. | perde força abaixo de 41,51. |
+| 763 | MGLU3.SA | brazil_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 8,58 com volume forte. | perde força abaixo de 6,34. |
+| 764 | CPFE3.SA | brazil_utilities | Alerta bearish — padrao de topo | 31 | fechamento acima de 49,95 com volume forte. | perde força abaixo de 42,43. |
+| 765 | AZO | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 3729,82 com volume forte. | perde força abaixo de 2986,01. |
+| 766 | BEN | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 32,44 com volume forte. | perde força abaixo de 24,32. |
+| 767 | BF-B | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 27,95 com volume forte. | perde força abaixo de 24,82. |
+| 768 | BR | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 161,32 com volume forte. | perde força abaixo de 139,79. |
+| 769 | CASY | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 901,00 com volume forte. | perde força abaixo de 650,55. |
+| 770 | CBRE | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 148,97 com volume forte. | perde força abaixo de 126,33. |
+| 771 | CDW | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 137,99 com volume forte. | perde força abaixo de 96,77. |
+| 772 | EL | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 92,25 com volume forte. | perde força abaixo de 74,68. |
+| 773 | GLW | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 211,79 com volume forte. | perde força abaixo de 124,57. |
+| 774 | IDXX | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 585,12 com volume forte. | perde força abaixo de 523,38. |
+| 775 | LH | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 265,99 com volume forte. | perde força abaixo de 250,00. |
+| 776 | LYV | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 173,12 com volume forte. | perde força abaixo de 152,64. |
+| 777 | NOC | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 582,13 com volume forte. | perde força abaixo de 539,00. |
+| 778 | PKG | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 231,27 com volume forte. | perde força abaixo de 201,25. |
+| 779 | PNR | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 83,05 com volume forte. | perde força abaixo de 70,73. |
+| 780 | ROP | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 363,60 com volume forte. | perde força abaixo de 305,96. |
+| 781 | SPGI | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 438,88 com volume forte. | perde força abaixo de 401,00. |
+| 782 | WYNN | us_core_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 108,71 com volume forte. | perde força abaixo de 93,45. |
+| 783 | ATED3.SA | brazil_all_stocks | Fora do padrão | 31 | fechamento acima de 2,43 com volume forte. | perde força abaixo de 2,06. |
+| 784 | BEEF3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 4,46 com volume forte. | perde força abaixo de 3,77. |
+| 785 | BEES4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 9,11 com volume forte. | perde força abaixo de 8,39. |
+| 786 | BMEB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 63,00 com volume forte. | perde força abaixo de 51,60. |
+| 787 | BMKS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 404,50 com volume forte. | perde força abaixo de 364,15. |
+| 788 | ENJU3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 1,26 com volume forte. | perde força abaixo de 1,00. |
+| 789 | HETA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 5,78 com volume forte. | perde força abaixo de 4,51. |
+| 790 | PCAR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 3,02 com volume forte. | perde força abaixo de 1,97. |
+| 791 | RAPT4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 5,53 com volume forte. | perde força abaixo de 4,83. |
+| 792 | RCSL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 0,56 com volume forte. | perde força abaixo de 0,36. |
+| 793 | RDOR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 40,84 com volume forte. | perde força abaixo de 33,53. |
+| 794 | SIMH3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 11,41 com volume forte. | perde força abaixo de 8,69. |
+| 795 | SYNE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 4,04 com volume forte. | perde força abaixo de 3,57. |
+| 796 | TPIS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 11,50 com volume forte. | perde força abaixo de 6,15. |
+| 797 | UNIP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 31 | fechamento acima de 62,00 com volume forte. | perde força abaixo de 57,02. |
+| 798 | CORN | commodities | Alerta bearish — padrao de topo | 30 | fechamento acima de 19,13 com volume forte. | perde força abaixo de 17,99. |
+| 799 | FXI | emerging_markets | Alerta bearish — padrao de topo | 30 | fechamento acima de 38,35 com volume forte. | perde força abaixo de 35,13. |
+| 800 | EWZ | emerging_markets | Alerta bearish — padrao de topo | 30 | fechamento acima de 40,04 com volume forte. | perde força abaixo de 35,31. |
+| 801 | MCHI | emerging_markets | Alerta bearish — padrao de topo | 30 | fechamento acima de 59,93 com volume forte. | perde força abaixo de 54,86. |
+| 802 | NEE | defensive_dividends | Alerta bearish — padrao de topo | 30 | fechamento acima de 98,75 com volume forte. | perde força abaixo de 86,63. |
+| 803 | RAIL3.SA | brazil_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 17,14 com volume forte. | perde força abaixo de 13,95. |
+| 804 | PETR3.SA | brazil_commodities | Alerta bearish — padrao de topo | 30 | fechamento acima de 55,19 com volume forte. | perde força abaixo de 47,55. |
+| 805 | ENGI11.SA | brazil_utilities | Alerta bearish — padrao de topo | 30 | fechamento acima de 54,24 com volume forte. | perde força abaixo de 47,16. |
+| 806 | VISC11.SA | brazil_reits | Alerta bearish — padrao de topo | 30 | fechamento acima de 111,68 com volume forte. | perde força abaixo de 106,20. |
+| 807 | ALB | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 221,00 com volume forte. | perde força abaixo de 156,88. |
+| 808 | ALGN | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 180,42 com volume forte. | perde força abaixo de 151,58. |
+| 809 | APD | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 307,96 com volume forte. | perde força abaixo de 284,82. |
+| 810 | AVB | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 188,09 com volume forte. | perde força abaixo de 170,17. |
+| 811 | AVY | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 169,13 com volume forte. | perde força abaixo de 152,68. |
+| 812 | BALL | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 61,98 com volume forte. | perde força abaixo de 54,58. |
+| 813 | CMCSA | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 27,73 com volume forte. | perde força abaixo de 24,53. |
+| 814 | COP | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 127,33 com volume forte. | perde força abaixo de 112,10. |
+| 815 | DHR | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 180,27 com volume forte. | perde força abaixo de 160,93. |
+| 816 | DLR | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 201,58 com volume forte. | perde força abaixo de 172,94. |
+| 817 | EQT | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 60,49 com volume forte. | perde força abaixo de 55,06. |
+| 818 | FIX | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 2073,18 com volume forte. | perde força abaixo de 1091,01. |
+| 819 | GEV | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 1125,43 com volume forte. | perde força abaixo de 790,14. |
+| 820 | HIG | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 138,99 com volume forte. | perde força abaixo de 131,44. |
+| 821 | HII | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 371,31 com volume forte. | perde força abaixo de 314,15. |
+| 822 | HUBB | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 554,69 com volume forte. | perde força abaixo de 453,48. |
+| 823 | KR | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 71,71 com volume forte. | perde força abaixo de 64,02. |
+| 824 | LDOS | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 153,90 com volume forte. | perde força abaixo de 121,20. |
+| 825 | OXY | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 61,24 com volume forte. | perde força abaixo de 52,05. |
+| 826 | VLO | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 262,50 com volume forte. | perde força abaixo de 230,11. |
+| 827 | ZTS | us_core_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 116,25 com volume forte. | perde força abaixo de 72,38. |
+| 828 | ANIM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 4,28 com volume forte. | perde força abaixo de 3,09. |
+| 829 | AURE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 14,20 com volume forte. | perde força abaixo de 11,38. |
+| 830 | BALM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 26,00 com volume forte. | perde força abaixo de 23,58. |
+| 831 | BRSR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 18,06 com volume forte. | perde força abaixo de 16,43. |
+| 832 | CLSC4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 152,28 com volume forte. | perde força abaixo de 140,39. |
+| 833 | CMIN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 5,03 com volume forte. | perde força abaixo de 4,08. |
+| 834 | CSUD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 18,40 com volume forte. | perde força abaixo de 16,46. |
+| 835 | DASA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 3,55 com volume forte. | perde força abaixo de 2,81. |
+| 836 | EALT4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 13,89 com volume forte. | perde força abaixo de 12,20. |
+| 837 | EGIE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 35,47 com volume forte. | perde força abaixo de 31,67. |
+| 838 | ISAE4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 30,73 com volume forte. | perde força abaixo de 26,99. |
+| 839 | ITSA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 14,03 com volume forte. | perde força abaixo de 12,57. |
+| 840 | JHSF3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 12,98 com volume forte. | perde força abaixo de 9,21. |
+| 841 | MAPT3.SA | brazil_all_stocks | Fora do padrão | 30 | fechamento acima de 2,52 com volume forte. | perde força abaixo de 2,50. |
+| 842 | MGEL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 6,25 com volume forte. | perde força abaixo de 5,24. |
+| 843 | MOTV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 16,20 com volume forte. | perde força abaixo de 14,29. |
+| 844 | PATI4.SA | brazil_all_stocks | Fora do padrão | 30 | fechamento acima de 37,00 com volume forte. | perde força abaixo de 29,44. |
+| 845 | RANI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 8,20 com volume forte. | perde força abaixo de 7,68. |
+| 846 | RIAA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 10,32 com volume forte. | perde força abaixo de 8,10. |
+| 847 | RNEW4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 1,07 com volume forte. | perde força abaixo de 0,86. |
+| 848 | SAUD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 16,17 com volume forte. | perde força abaixo de 12,70. |
+| 849 | TAEE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 13,98 com volume forte. | perde força abaixo de 12,55. |
+| 850 | UNIP5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 65,88 com volume forte. | perde força abaixo de 60,16. |
+| 851 | VULC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 30 | fechamento acima de 16,35 com volume forte. | perde força abaixo de 14,65. |
+| 852 | XFIX11.SA | brazil_etfs | Alerta bearish — padrao de topo | 29 | fechamento acima de 13,91 com volume forte. | perde força abaixo de 13,48. |
+| 853 | ABT | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 93,72 com volume forte. | perde força abaixo de 82,69. |
+| 854 | BKR | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 69,77 com volume forte. | perde força abaixo de 58,77. |
+| 855 | DASH | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 183,50 com volume forte. | perde força abaixo de 146,81. |
+| 856 | EXE | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 102,35 com volume forte. | perde força abaixo de 92,54. |
+| 857 | IR | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 80,38 com volume forte. | perde força abaixo de 68,07. |
+| 858 | LHX | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 326,76 com volume forte. | perde força abaixo de 298,04. |
+| 859 | MCHP | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 105,38 com volume forte. | perde força abaixo de 72,59. |
+| 860 | ORLY | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 100,63 com volume forte. | perde força abaixo de 86,80. |
+| 861 | RTX | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 179,21 com volume forte. | perde força abaixo de 170,07. |
+| 862 | SATS | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 147,25 com volume forte. | perde força abaixo de 105,57. |
+| 863 | STZ | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 157,73 com volume forte. | perde força abaixo de 139,10. |
+| 864 | VRT | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 379,93 com volume forte. | perde força abaixo de 292,67. |
+| 865 | XOM | us_core_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 163,68 com volume forte. | perde força abaixo de 144,17. |
+| 866 | ARML3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 5,00 com volume forte. | perde força abaixo de 3,20. |
+| 867 | EQPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 7,27 com volume forte. | perde força abaixo de 5,76. |
+| 868 | INEP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 2,80 com volume forte. | perde força abaixo de 1,19. |
+| 869 | ITSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 13,95 com volume forte. | perde força abaixo de 12,70. |
+| 870 | KEPL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 7,94 com volume forte. | perde força abaixo de 6,97. |
+| 871 | MDNE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 32,55 com volume forte. | perde força abaixo de 26,41. |
+| 872 | RPAD6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 6,50 com volume forte. | perde força abaixo de 4,21. |
+| 873 | RPMG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 2,38 com volume forte. | perde força abaixo de 2,01. |
+| 874 | SANB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 14,50 com volume forte. | perde força abaixo de 12,75. |
+| 875 | SANB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 15,02 com volume forte. | perde força abaixo de 13,67. |
+| 876 | SCAR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 14,90 com volume forte. | perde força abaixo de 13,06. |
+| 877 | SEER3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 13,96 com volume forte. | perde força abaixo de 11,25. |
+| 878 | SOND6.SA | brazil_all_stocks | Fora do padrão | 29 | fechamento acima de 77,77 com volume forte. | perde força abaixo de 49,95. |
+| 879 | UNIP6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 64,78 com volume forte. | perde força abaixo de 58,53. |
+| 880 | WEST3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 29 | fechamento acima de 8,65 com volume forte. | perde força abaixo de 5,72. |
+| 881 | ADSK | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 255,14 com volume forte. | perde força abaixo de 225,28. |
+| 882 | ALLE | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 139,67 com volume forte. | perde força abaixo de 125,00. |
+| 883 | CVNA | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 83,91 com volume forte. | perde força abaixo de 61,09. |
+| 884 | EXPE | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 257,35 com volume forte. | perde força abaixo de 206,35. |
+| 885 | GEHC | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 65,63 com volume forte. | perde força abaixo de 60,67. |
+| 886 | LMT | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 536,02 com volume forte. | perde força abaixo de 510,79. |
+| 887 | MCK | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 834,57 com volume forte. | perde força abaixo de 727,69. |
+| 888 | POOL | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 216,28 com volume forte. | perde força abaixo de 172,68. |
+| 889 | SRE | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 96,06 com volume forte. | perde força abaixo de 88,97. |
+| 890 | WTW | us_core_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 291,62 com volume forte. | perde força abaixo de 240,61. |
+| 891 | ALLD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 6,48 com volume forte. | perde força abaixo de 5,73. |
+| 892 | AMER3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 5,96 com volume forte. | perde força abaixo de 4,81. |
+| 893 | CYRE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 24,09 com volume forte. | perde força abaixo de 20,20. |
+| 894 | DEXP4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 7,49 com volume forte. | perde força abaixo de 7,10. |
+| 895 | ESPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 1,07 com volume forte. | perde força abaixo de 0,77. |
+| 896 | GRND3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 4,34 com volume forte. | perde força abaixo de 3,84. |
+| 897 | HBRE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 3,33 com volume forte. | perde força abaixo de 2,79. |
+| 898 | IGTI11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 28,58 com volume forte. | perde força abaixo de 25,63. |
+| 899 | LIGT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 5,05 com volume forte. | perde força abaixo de 2,43. |
+| 900 | MEAL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 1,09 com volume forte. | perde força abaixo de 0,95. |
+| 901 | PLPL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 10,94 com volume forte. | perde força abaixo de 9,18. |
+| 902 | SAPR4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 8,47 com volume forte. | perde força abaixo de 7,11. |
+| 903 | SBSP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 33,89 com volume forte. | perde força abaixo de 27,97. |
+| 904 | TCSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 1,38 com volume forte. | perde força abaixo de 1,12. |
+| 905 | TIMS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 26,88 com volume forte. | perde força abaixo de 21,88. |
+| 906 | WLMM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 28 | fechamento acima de 23,39 com volume forte. | perde força abaixo de 19,51. |
+| 907 | SCHW | banks | Alerta bearish — padrao de topo | 27 | fechamento acima de 93,43 com volume forte. | perde força abaixo de 84,72. |
+| 908 | KLBN11.SA | brazil_commodities | Alerta bearish — padrao de topo | 27 | fechamento acima de 17,94 com volume forte. | perde força abaixo de 16,10. |
+| 909 | CAG | us_core_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 14,56 com volume forte. | perde força abaixo de 13,14. |
+| 910 | CLX | us_core_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 98,54 com volume forte. | perde força abaixo de 88,50. |
+| 911 | NRG | us_core_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 159,25 com volume forte. | perde força abaixo de 121,22. |
+| 912 | ULTA | us_core_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 543,21 com volume forte. | perde força abaixo de 469,00. |
+| 913 | WM | us_core_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 235,62 com volume forte. | perde força abaixo de 213,29. |
+| 914 | AXIA6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 69,36 com volume forte. | perde força abaixo de 57,77. |
+| 915 | CSAN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 5,49 com volume forte. | perde força abaixo de 4,01. |
+| 916 | ENMT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 49,91 com volume forte. | perde força abaixo de 39,89. |
+| 917 | EPAR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 2,74 com volume forte. | perde força abaixo de 2,00. |
+| 918 | JOPA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 17,58 com volume forte. | perde força abaixo de 16,80. |
+| 919 | PDTC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 1,55 com volume forte. | perde força abaixo de 1,38. |
+| 920 | PGMN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 5,70 com volume forte. | perde força abaixo de 4,35. |
+| 921 | PNVL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 14,47 com volume forte. | perde força abaixo de 11,50. |
+| 922 | PTNT4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 8,89 com volume forte. | perde força abaixo de 7,78. |
+| 923 | SHUL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 27 | fechamento acima de 5,40 com volume forte. | perde força abaixo de 4,87. |
+| 924 | PETR4.SA | brazil_commodities | Alerta bearish — padrao de topo | 26 | fechamento acima de 49,85 com volume forte. | perde força abaixo de 42,15. |
+| 925 | TAEE11.SA | brazil_utilities | Alerta bearish — padrao de topo | 26 | fechamento acima de 41,98 com volume forte. | perde força abaixo de 37,92. |
+| 926 | AMP | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 480,05 com volume forte. | perde força abaixo de 437,40. |
+| 927 | AOS | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 65,30 com volume forte. | perde força abaixo de 54,16. |
+| 928 | DE | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 594,41 com volume forte. | perde força abaixo de 515,15. |
+| 929 | EOG | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 145,70 com volume forte. | perde força abaixo de 125,96. |
+| 930 | ICE | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 161,34 com volume forte. | perde força abaixo de 148,11. |
+| 931 | LYB | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 78,43 com volume forte. | perde força abaixo de 53,62. |
+| 932 | REGN | us_core_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 729,50 com volume forte. | perde força abaixo de 609,69. |
+| 933 | BRKM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 10,34 com volume forte. | perde força abaixo de 8,13. |
+| 934 | BRSR6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 15,75 com volume forte. | perde força abaixo de 14,08. |
+| 935 | CAML3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 6,65 com volume forte. | perde força abaixo de 5,53. |
+| 936 | CGAS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 128,00 com volume forte. | perde força abaixo de 121,00. |
+| 937 | CRPG5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 18,24 com volume forte. | perde força abaixo de 15,61. |
+| 938 | CSED3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 5,63 com volume forte. | perde força abaixo de 4,00. |
+| 939 | ENEV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 27,75 com volume forte. | perde força abaixo de 20,17. |
+| 940 | ISAE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 35,25 com volume forte. | perde força abaixo de 32,81. |
+| 941 | KLBN4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 3,60 com volume forte. | perde força abaixo de 3,24. |
+| 942 | LAVV3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 13,41 com volume forte. | perde força abaixo de 11,03. |
+| 943 | LOGN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 31,83 com volume forte. | perde força abaixo de 29,52. |
+| 944 | LPSB3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 1,92 com volume forte. | perde força abaixo de 1,52. |
+| 945 | OFSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 34,69 com volume forte. | perde força abaixo de 23,05. |
+| 946 | POSI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 4,65 com volume forte. | perde força abaixo de 3,77. |
+| 947 | QUAL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 1,97 com volume forte. | perde força abaixo de 1,61. |
+| 948 | RSID3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 1,88 com volume forte. | perde força abaixo de 1,60. |
+| 949 | WHRL4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 26 | fechamento acima de 4,43 com volume forte. | perde força abaixo de 3,97. |
+| 950 | GDXJ | commodities | Alerta bearish — padrao de topo | 25 | fechamento acima de 131,36 com volume forte. | perde força abaixo de 109,52. |
+| 951 | EZA | emerging_markets | Alerta bearish — padrao de topo | 25 | fechamento acima de 73,31 com volume forte. | perde força abaixo de 66,27. |
+| 952 | TUR | emerging_markets | Alerta bearish — padrao de topo | 25 | fechamento acima de 43,98 com volume forte. | perde força abaixo de 36,40. |
+| 953 | BCH-USD | crypto | Alerta bearish — padrao de topo | 25 | fechamento acima de 464,49 com volume forte. | perde força abaixo de 336,04. |
+| 954 | EQTL3.SA | brazil_utilities | Alerta bearish — padrao de topo | 25 | fechamento acima de 43,84 com volume forte. | perde força abaixo de 37,00. |
+| 955 | RBRF11.SA | brazil_reits | Alerta bearish — padrao de topo | 25 | fechamento acima de 6,65 com volume forte. | perde força abaixo de 6,65. |
+| 956 | CVX | us_core_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 198,87 com volume forte. | perde força abaixo de 177,12. |
+| 957 | PCAR | us_core_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 121,32 com volume forte. | perde força abaixo de 107,78. |
+| 958 | PPL | us_core_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 39,48 com volume forte. | perde força abaixo de 34,74. |
+| 959 | ROL | us_core_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 56,01 com volume forte. | perde força abaixo de 50,02. |
+| 960 | TMO | us_core_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 481,83 com volume forte. | perde força abaixo de 435,27. |
+| 961 | AXIA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 63,23 com volume forte. | perde força abaixo de 52,53. |
+| 962 | BIOM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 7,95 com volume forte. | perde força abaixo de 6,75. |
+| 963 | CRPG6.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 17,89 com volume forte. | perde força abaixo de 16,51. |
+| 964 | KLBN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 3,58 com volume forte. | perde força abaixo de 3,23. |
+| 965 | LAND3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 9,25 com volume forte. | perde força abaixo de 8,30. |
+| 966 | REDE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 6,39 com volume forte. | perde força abaixo de 5,70. |
+| 967 | SAPR11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 43,86 com volume forte. | perde força abaixo de 36,56. |
+| 968 | TAEE4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 25 | fechamento acima de 14,18 com volume forte. | perde força abaixo de 12,74. |
+| 969 | GDX | commodities | Alerta bearish — padrao de topo | 24 | fechamento acima de 98,74 com volume forte. | perde força abaixo de 83,35. |
+| 970 | USO | commodities | Alerta bearish — padrao de topo | 24 | fechamento acima de 154,08 com volume forte. | perde força abaixo de 74,46. |
+| 971 | UGA | commodities | Alerta bearish — padrao de topo | 24 | fechamento acima de 125,47 com volume forte. | perde força abaixo de 93,50. |
+| 972 | APA | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 42,09 com volume forte. | perde força abaixo de 24,81. |
+| 973 | AWK | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 135,78 com volume forte. | perde força abaixo de 121,94. |
+| 974 | CTVA | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 84,32 com volume forte. | perde força abaixo de 72,10. |
+| 975 | ISRG | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 463,50 com volume forte. | perde força abaixo de 414,30. |
+| 976 | LVS | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 54,62 com volume forte. | perde força abaixo de 48,24. |
+| 977 | MTD | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 1347,03 com volume forte. | perde força abaixo de 1023,05. |
+| 978 | NEM | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 121,26 com volume forte. | perde força abaixo de 104,13. |
+| 979 | SBAC | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 221,24 com volume forte. | perde força abaixo de 195,60. |
+| 980 | TRMB | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 69,79 com volume forte. | perde força abaixo de 52,80. |
+| 981 | UBER | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 80,83 com volume forte. | perde força abaixo de 69,60. |
+| 982 | VMC | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 305,69 com volume forte. | perde força abaixo de 251,92. |
+| 983 | WRB | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 69,10 com volume forte. | perde força abaixo de 64,94. |
+| 984 | XYL | us_core_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 120,49 com volume forte. | perde força abaixo de 105,29. |
+| 985 | BEES3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 9,17 com volume forte. | perde força abaixo de 7,94. |
+| 986 | CGAS5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 133,85 com volume forte. | perde força abaixo de 123,57. |
+| 987 | ENGI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 13,60 com volume forte. | perde força abaixo de 11,90. |
+| 988 | FIQE3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 7,03 com volume forte. | perde força abaixo de 6,22. |
+| 989 | IGTI4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 12,69 com volume forte. | perde força abaixo de 10,74. |
+| 990 | SAPR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 9,98 com volume forte. | perde força abaixo de 8,14. |
+| 991 | TELB4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 9,19 com volume forte. | perde força abaixo de 7,65. |
+| 992 | VIVT3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 24 | fechamento acima de 38,99 com volume forte. | perde força abaixo de 33,18. |
+| 993 | EIDO | emerging_markets | Alerta bearish — padrao de topo | 23 | fechamento acima de 15,30 com volume forte. | perde força abaixo de 12,84. |
+| 994 | ATO | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 190,41 com volume forte. | perde força abaixo de 174,24. |
+| 995 | CF | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 129,90 com volume forte. | perde força abaixo de 91,78. |
+| 996 | COR | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 312,03 com volume forte. | perde força abaixo de 251,60. |
+| 997 | CRL | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 194,57 com volume forte. | perde força abaixo de 146,20. |
+| 998 | FANG | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 213,34 com volume forte. | perde força abaixo de 160,81. |
+| 999 | JKHY | us_core_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 156,09 com volume forte. | perde força abaixo de 132,36. |
+| 1000 | AGRO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 19,43 com volume forte. | perde força abaixo de 18,49. |
+| 1001 | BGIP4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 36,99 com volume forte. | perde força abaixo de 30,75. |
+| 1002 | BOBR4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 1,45 com volume forte. | perde força abaixo de 1,18. |
+| 1003 | BPAC5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 17,80 com volume forte. | perde força abaixo de 10,82. |
+| 1004 | CRPG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 18,70 com volume forte. | perde força abaixo de 16,00. |
+| 1005 | CTKA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 43,69 com volume forte. | perde força abaixo de 34,06. |
+| 1006 | DMVF3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 7,11 com volume forte. | perde força abaixo de 5,66. |
+| 1007 | ETER3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 4,15 com volume forte. | perde força abaixo de 3,50. |
+| 1008 | EVEN3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 6,48 com volume forte. | perde força abaixo de 5,26. |
+| 1009 | GGPS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 15,53 com volume forte. | perde força abaixo de 12,50. |
+| 1010 | HAGA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 3,14 com volume forte. | perde força abaixo de 2,00. |
+| 1011 | HAGA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 1,75 com volume forte. | perde força abaixo de 1,30. |
+| 1012 | HBSA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 3,55 com volume forte. | perde força abaixo de 3,22. |
+| 1013 | MATD3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 5,91 com volume forte. | perde força abaixo de 5,00. |
+| 1014 | MDIA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 24,76 com volume forte. | perde força abaixo de 19,38. |
+| 1015 | TFCO4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 16,33 com volume forte. | perde força abaixo de 14,18. |
+| 1016 | TOTS3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 36,84 com volume forte. | perde força abaixo de 30,29. |
+| 1017 | WIZC3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 23 | fechamento acima de 9,10 com volume forte. | perde força abaixo de 7,80. |
+| 1018 | BOVA11.SA | brazil_etfs | Alerta bearish — padrao de topo | 22 | fechamento acima de 185,27 com volume forte. | perde força abaixo de 170,30. |
+| 1019 | CME | us_core_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 308,01 com volume forte. | perde força abaixo de 277,01. |
+| 1020 | DOW | us_core_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 41,47 com volume forte. | perde força abaixo de 26,00. |
+| 1021 | HCA | us_core_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 441,65 com volume forte. | perde força abaixo de 386,01. |
+| 1022 | MRNA | us_core_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 59,48 com volume forte. | perde força abaixo de 45,62. |
+| 1023 | RJF | us_core_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 161,08 com volume forte. | perde força abaixo de 142,40. |
+| 1024 | BAZA3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 84,99 com volume forte. | perde força abaixo de 68,41. |
+| 1025 | BRBI11.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 19,18 com volume forte. | perde força abaixo de 15,89. |
+| 1026 | FESA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 7,85 com volume forte. | perde força abaixo de 6,04. |
+| 1027 | MOVI3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 22 | fechamento acima de 12,79 com volume forte. | perde força abaixo de 8,95. |
+| 1028 | DVN | us_core_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 51,95 com volume forte. | perde força abaixo de 42,48. |
+| 1029 | TPL | us_core_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 454,84 com volume forte. | perde força abaixo de 375,32. |
+| 1030 | BRST3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 3,14 com volume forte. | perde força abaixo de 2,73. |
+| 1031 | EMAE4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 47,80 com volume forte. | perde força abaixo de 38,70. |
+| 1032 | ENGI4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 10,19 com volume forte. | perde força abaixo de 8,83. |
+| 1033 | MNPR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 21 | fechamento acima de 4,14 com volume forte. | perde força abaixo de 3,78. |
+| 1034 | BGIP3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 60,88 com volume forte. | perde força abaixo de 51,75. |
+| 1035 | CEBR5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 29,17 com volume forte. | perde força abaixo de 26,01. |
+| 1036 | CSMG3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 55,58 com volume forte. | perde força abaixo de 49,36. |
+| 1037 | HBTS5.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 35,50 com volume forte. | perde força abaixo de 25,10. |
+| 1038 | RADL3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 22,47 com volume forte. | perde força abaixo de 17,82. |
+| 1039 | VAMO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 20 | fechamento acima de 4,09 com volume forte. | perde força abaixo de 3,20. |
+| 1040 | BNBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 19 | fechamento acima de 120,00 com volume forte. | perde força abaixo de 107,00. |
+| 1041 | CEBR3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 19 | fechamento acima de 33,22 com volume forte. | perde força abaixo de 26,81. |
+| 1042 | MTSA4.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 18 | fechamento acima de 61,38 com volume forte. | perde força abaixo de 46,50. |
+| 1043 | VVEO3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 18 | fechamento acima de 1,47 com volume forte. | perde força abaixo de 1,15. |
+| 1044 | DIVO11.SA | brazil_etfs | Alerta bearish — padrao de topo | 17 | fechamento acima de 135,63 com volume forte. | perde força abaixo de 122,94. |
+| 1045 | PFRM3.SA | brazil_all_stocks | Alerta bearish — padrao de topo | 17 | fechamento acima de 7,99 com volume forte. | perde força abaixo de 6,25. |
+| 1046 | Q | us_core_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1047 | ARND3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1048 | AUAU3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1049 | AXIA7.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1050 | AZEV11.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1051 | AZUL3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1052 | BIOM11.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1053 | CYRE4.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1054 | EMBJ3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1055 | OBTC3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1056 | PASS3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1057 | RENT4.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |
+| 1058 | WDCN3.SA | brazil_all_stocks | Fora do padrão | 0 | aguardar confirmacao tecnica. | nível de invalidação não definido com segurança. |

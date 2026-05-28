@@ -1,9 +1,14 @@
 from __future__ import annotations
 
+import csv
 import warnings
 from dataclasses import dataclass
 
-from src.config import TEST_ASSETS
+from src.config import DATA_DIR, TEST_ASSETS
+
+
+BRAZIL_STOCKS_ALL_FILE = DATA_DIR / "brazil_stocks_all.csv"
+US_STOCKS_CORE_FILE = DATA_DIR / "us_stocks_core.csv"
 
 
 DISABLED_TICKERS: dict[str, str] = {
@@ -327,10 +332,42 @@ UNIVERSE_BY_CLASS: dict[str, list[str]] = {
 }
 
 
+def _load_all_brazil_stock_symbols() -> list[str]:
+    if not BRAZIL_STOCKS_ALL_FILE.exists():
+        return []
+    symbols: list[str] = []
+    with BRAZIL_STOCKS_ALL_FILE.open("r", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            symbol = (row.get("yfinance_symbol") or row.get("ticker") or "").strip().upper()
+            if not symbol:
+                continue
+            if not symbol.endswith(".SA"):
+                symbol = f"{symbol}.SA"
+            symbols.append(symbol)
+    return symbols
+
+
+def _load_us_core_stock_symbols() -> list[str]:
+    if not US_STOCKS_CORE_FILE.exists():
+        return []
+    symbols: list[str] = []
+    with US_STOCKS_CORE_FILE.open("r", newline="", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            symbol = (row.get("yfinance_symbol") or row.get("ticker") or "").strip().upper()
+            if symbol:
+                symbols.append(symbol)
+    return symbols
+
+
 def _build_universe(emit_warnings: bool = False) -> list[Asset]:
     assets: list[Asset] = []
     seen: set[str] = set()
-    for asset_class, symbols in UNIVERSE_BY_CLASS.items():
+    universe_by_class = {key: list(value) for key, value in UNIVERSE_BY_CLASS.items()}
+    universe_by_class.setdefault("us_core_stocks", []).extend(_load_us_core_stock_symbols())
+    universe_by_class.setdefault("brazil_all_stocks", []).extend(_load_all_brazil_stock_symbols())
+    for asset_class, symbols in universe_by_class.items():
         for symbol in symbols:
             normalized = symbol.upper()
             if normalized in seen:
@@ -399,7 +436,10 @@ def get_disabled_tickers() -> dict[str, str]:
 def get_validation_universe() -> list[Asset]:
     assets: list[Asset] = []
     seen: set[str] = set()
-    for asset_class, symbols in UNIVERSE_BY_CLASS.items():
+    universe_by_class = {key: list(value) for key, value in UNIVERSE_BY_CLASS.items()}
+    universe_by_class.setdefault("us_core_stocks", []).extend(_load_us_core_stock_symbols())
+    universe_by_class.setdefault("brazil_all_stocks", []).extend(_load_all_brazil_stock_symbols())
+    for asset_class, symbols in universe_by_class.items():
         for symbol in symbols:
             normalized = symbol.upper()
             if normalized in seen:
@@ -412,3 +452,58 @@ def get_validation_universe() -> list[Asset]:
 
 def get_brazil_validation_universe() -> list[Asset]:
     return [asset for asset in get_validation_universe() if asset.region == "brazil"]
+
+
+MOMENTUM_UNIVERSE_BY_CLASS: dict[str, list[str]] = {  # V4
+    "defense_space": [  # V4
+        "LMT", "RTX", "NOC", "GD", "BA", "HII", "LDOS", "SAIC", "VOYG", "RKLB",  # V4
+        "ASTS", "AVAV", "KTOS", "BBAI",  # V4
+        "RHEG.DE", "LDO.MI", "HO.PA", "BAE.L", "AIR.PA",  # V4
+        "ITA", "XAR", "SHLD", "PPA", "FITE",  # V4
+    ],  # V4
+    "ai_semis": [  # V4
+        "TSM", "ASML", "AMAT", "LRCX", "KLAC", "MRVL", "ARM", "CRDO", "MPWR",  # V4
+        "NOW", "GTLB", "AI",  # V4
+        "SMH", "SOXX", "ROBO", "BOTZ", "AIQ", "IRBO",  # V4
+    ],  # V4
+    "robotics_automation": [  # V4
+        "FANUY", "ABB", "ROK", "ISRG", "GMED", "OUST", "SERV", "VPG", "TER", "CGNX",  # V4
+    ],  # V4
+    "biotech_health": [  # V4
+        "LLY", "NVO", "SMMT", "RXRX", "BEAM", "CRSP", "NTLA", "MRNA", "BNTX",  # V4
+        "XBI", "IBB", "ARKG",  # V4
+    ],  # V4
+    "clean_energy": [  # V4
+        "ENPH", "FSLR", "SEDG", "RUN", "NEE", "BEP", "PLUG", "FCEL", "BE",  # V4
+        "ICLN", "TAN", "QCLN",  # V4
+    ],  # V4
+    "international_momentum": [  # V4
+        "EZU", "VGK", "FEZ", "EWG", "EWQ", "EWU",  # V4
+        "EWJ", "EWY", "EWT", "MCHI", "EWH", "EWA",  # V4
+        "VWO", "FM", "EEMS",  # V4
+    ],  # V4
+    "brazil_momentum": [  # V4
+        "POSI3.SA", "TOTS3.SA", "INTB3.SA", "LWSA3.SA", "SMLL11.SA",  # V4
+        "AGRO3.SA", "SLCE3.SA", "GGBR4.SA", "EGIE3.SA", "TAEE11.SA", "CPFE3.SA",  # V4
+    ],  # V4
+}  # V4
+
+
+def get_momentum_universe() -> list[Asset]:  # V4
+    """Retorna o universo de momentum deduplicado, respeitando DISABLED_TICKERS."""  # V4
+    assets: list[Asset] = []  # V4
+    seen: set[str] = set()  # V4
+    universe_by_class = {key: list(value) for key, value in MOMENTUM_UNIVERSE_BY_CLASS.items()}  # V4
+    universe_by_class.setdefault("us_core_momentum", []).extend(_load_us_core_stock_symbols())  # V5
+    universe_by_class.setdefault("brazil_momentum", []).extend(_load_all_brazil_stock_symbols())  # V4
+    for asset_class, symbols in universe_by_class.items():  # V4
+        for symbol in symbols:  # V4
+            normalized = symbol.upper()  # V4
+            if normalized in seen:  # V4
+                continue  # V4
+            seen.add(normalized)  # V4
+            if normalized in DISABLED_TICKERS:  # V4
+                continue  # V4
+            region = "brazil" if normalized.endswith(".SA") else "global"  # V4
+            assets.append(Asset(symbol=symbol, name=symbol, asset_class=asset_class, region=region))  # V4
+    return assets  # V4

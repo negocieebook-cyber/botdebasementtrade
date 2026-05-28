@@ -5,6 +5,8 @@ MARKET_GROUPS = {
     "us_equities": {
         "growth_stocks",
         "mega_caps",
+        "us_core_stocks",
+        "us_core_momentum",
         "banks",
         "sectors",
         "equity_indices",
@@ -14,6 +16,7 @@ MARKET_GROUPS = {
         "brazil_indices",
         "brazil_etfs",
         "brazil_stocks",
+        "brazil_all_stocks",
         "brazil_banks",
         "brazil_commodities",
         "brazil_utilities",

@@ -4,18 +4,18 @@
 - Ativo: IMX-USD
 - Classe: crypto
 - Data: 2022-07-23
-- Fase: Possível estabilização
-- Score: 38/100
-- Classificação: Possivel estabilizacao
+- Fase: Acumulação inicial
+- Score: 50/100
+- Classificação: Acumulacao inicial
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 38/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Entrou no radar como Acumulação inicial porque combina queda relevante para a classe, score 50/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
-- Suporte recente foi defendido.
 - Invalidacao abaixo de 0.00.
-- Regime macro: neutral/mixed.
+- Regime macro: supportive.
+- NR7: menor range dos últimos 7 dias — setup de contração antes de rompimento.
 
 ## Pontos contra
 - Preço abaixo da SMA 50.
@@ -25,24 +25,27 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
+- Risco de perder suporte.
 - Confirmação técnica ainda pendente.
-- Intermarket fraco ou não calculado.
-- Narrativa não calculada nesta execução.
+- Intermarket misto.
+- Sem padrão de acumulação por volume.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 30.0
-- regime: hostile
-- notes: +3: QQQ rising.
+- score: 51.0
+- regime: mixed
+- notes: +1.2: BTC rising (trend score 1.2/4).; +3.0: QQQ rising (trend score 3.0/3).; +0.9: Dollar proxy UUP falling (falling trend score 0.9/3).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 52.0
+- tone: neutral
+- notes: +16 positive signals in 20 headlines; -14 negative signals in 20 headlines
 
 ## Gatilho de confirmação
 Confirmacao acima de 0.03, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
@@ -64,7 +67,7 @@ Invalidacao abaixo de 0.00.
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 38/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo permanece no radar como Acumulação inicial, com score 50/100, aguardando confirmação e respeitando o ponto de invalidação.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

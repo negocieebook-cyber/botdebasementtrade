@@ -4,12 +4,12 @@
 - Ativo: FM
 - Classe: emerging_markets
 - Data: 2025-01-08
-- Fase: Possível estabilização
-- Score: 45/100
-- Classificação: Possivel estabilizacao
+- Fase: Alerta bearish — padrao de topo
+- Score: 47/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 45/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
 - Preço acima da SMA 50.
@@ -20,29 +20,32 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Suporte recente foi defendido.
 - Confirmação técnica já presente.
 - Invalidacao abaixo de 26.85.
-- Regime macro: neutral/mixed.
+- Regime macro: supportive.
+- Padrão de acumulação por volume: dias de alta com volume maior que dias de baixa.
+- NR7: menor range dos últimos 7 dias — setup de contração antes de rompimento.
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
 - Intermarket misto.
-- Narrativa não calculada nesta execução.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
 - score: 50.0
 - regime: mixed
-- notes: +5: EEM/KWEB proxy rising.
+- notes: +3.5: EEM/KWEB proxy rising (trend score 3.5/5).; +1.5: Dollar proxy UUP falling (falling trend score 1.5/5).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 72.1
+- tone: bullish
+- notes: +14 positive signals in 11 headlines; -4 negative signals in 11 headlines; 3/11 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 27.26, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
@@ -53,7 +56,7 @@ Invalidacao abaixo de 26.85.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 80
 - confidence_level: Alta
 - issues: Última data disponível parece antiga: 2025-01-08.
@@ -64,7 +67,7 @@ Invalidacao abaixo de 26.85.
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 45/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 47/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

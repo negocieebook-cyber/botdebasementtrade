@@ -11,7 +11,7 @@ from src.thresholds import get_threshold as get_class_threshold
 from src.utils import clamp
 
 
-RAW_TOTAL_WEIGHT = 105.0  # MELHORIA — 95 base + 3 volume trigger + 7 divergências + 10 padrões
+RAW_TOTAL_WEIGHT = 115.0  # V3 — 95 base + 3 volume trigger + 7 divergências + 10 padrões + 10 acumulação/confirmação V3
 
 
 @dataclass
@@ -39,6 +39,7 @@ class ScoringEngine:
         intermarket: IntermarketSnapshot,
         narrative: NarrativeSnapshot,
         asset_class: str = "equity_indices",
+        data_quality: dict | None = None,  # V3
     ) -> ScoreResult:
         snapshot = _snapshot_from_technical(technical)
         snapshot["asset_class"] = asset_class
@@ -72,13 +73,13 @@ class ScoringEngine:
                 "Accumulation/lateralization",
                 accumulation_score >= 10,
                 accumulation_score,
-                "Scores lateralization, support defense, volatility compression and range position.",
+                "Scores lateralization, support defense, volatility compression, range position and volume accumulation.",  # V3
             ),
             ThesisPhase(
                 "Technical confirmation",
                 confirmation_score >= 10,
                 confirmation_score,
-                "Scores SMA50 recovery, RSI > 50, MACD above signal and 60D resistance proximity.",
+                "Scores SMA50 recovery, RSI > 50, MACD above signal, 60D resistance proximity, NR7, inside bar and relative strength.",  # V3
             ),
             ThesisPhase(
                 "Macro",
@@ -112,7 +113,10 @@ class ScoringEngine:
             ),  # MELHORIA
         ]
 
-        total = calculate_total_score(snapshot, asset_class, macro_result, intermarket_result, narrative_result, technical)  # MELHORIA
+        total = calculate_total_score(snapshot, asset_class, macro_result, intermarket_result, narrative_result, technical, data_quality)  # V3
+        # V3 — dynamic macro weight: hostile regime caps the total score
+        if macro.regime == "hostile" and total > 65:  # V3
+            total = max(int(total * 0.88), 0)  # V3
         classification = classify_asset(total, snapshot, asset_class, macro_result, intermarket_result, narrative_result, technical)  # MELHORIA
         risk = _risk(technical, threshold, macro, intermarket)
         return ScoreResult(total_score=total, classification=classification, risk=risk, phases=phases)
@@ -137,7 +141,8 @@ def score_accumulation(snapshot) -> int:
     score += 4 if _value(snapshot, "defended_support", False) else 0
     score += 3 if 25 <= _value(snapshot, "range_position_60d", 50) <= 75 else 0
     score += 3 if _value(snapshot, "atr_compression_ratio", 1.0) <= 0.85 else 0
-    return int(clamp(score, 0, 20))
+    score += 5 if _value(snapshot, "volume_accumulation_pattern", False) else 0  # V3
+    return int(clamp(score, 0, 25))  # V3
 
 
 def score_technical_confirmation(snapshot) -> int:
@@ -156,7 +161,10 @@ def score_technical_confirmation(snapshot) -> int:
     score += 3 if _value(snapshot, "trigger_volume_confirmed", False) else 0   # MELHORIA
     score += 4 if _value(snapshot, "rsi_bullish_divergence", False) else 0     # MELHORIA
     score += 3 if _value(snapshot, "macd_bullish_divergence", False) else 0    # MELHORIA
-    return int(clamp(score, 0, 20))
+    score += 2 if _value(snapshot, "nr7_pattern", False) else 0                # V3
+    score += 2 if _value(snapshot, "inside_bar", False) else 0                 # V3
+    score += 3 if _value(snapshot, "outperforming_class", False) else 0        # V3
+    return int(clamp(score, 0, 25))  # V3
 
 
 def score_macro(macro_result) -> int:
@@ -215,6 +223,7 @@ def calculate_total_score(
     intermarket_result=None,
     narrative_result=None,
     technical=None,  # MELHORIA
+    data_quality=None,  # V3
 ) -> int:
     raw_score = (
         score_drawdown(snapshot, asset_class)
@@ -226,6 +235,13 @@ def calculate_total_score(
         + score_liquidity(snapshot)
         + score_pattern(technical)  # MELHORIA
     )
+    # V3 — data quality confidence penalty
+    if data_quality is not None:  # V3
+        conf = data_quality.get("confidence_level", "Alta") if isinstance(data_quality, dict) else "Alta"  # V3
+        if conf == "Baixa":  # V3
+            raw_score = int(raw_score * 0.85)  # V3
+        elif conf == "Media":  # V3
+            raw_score = int(raw_score * 0.95)  # V3
     return int(round(clamp((raw_score / RAW_TOTAL_WEIGHT) * 100, 0, 100)))
 
 
@@ -331,6 +347,12 @@ def _snapshot_from_technical(technical: TechnicalSnapshot) -> dict:
         "trigger_volume_confirmed": getattr(technical, "trigger_volume_confirmed", False),  # MELHORIA
         "rsi_bullish_divergence": getattr(technical, "rsi_bullish_divergence", False),      # MELHORIA
         "macd_bullish_divergence": getattr(technical, "macd_bullish_divergence", False),    # MELHORIA
+        "volume_accumulation_pattern": getattr(technical, "volume_accumulation_pattern", False),  # V3
+        "volume_dry_ratio": getattr(technical, "volume_dry_ratio", 1.0),                          # V3
+        "relative_strength_vs_class": getattr(technical, "relative_strength_vs_class", 0.0),      # V3
+        "outperforming_class": getattr(technical, "outperforming_class", False),                  # V3
+        "nr7_pattern": getattr(technical, "nr7_pattern", False),                                  # V3
+        "inside_bar": getattr(technical, "inside_bar", False),                                    # V3
     }
 
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time  # V3
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -69,27 +70,58 @@ class YFinanceCollector:
         interval: str,
         start_date: str | None = None,
     ) -> MarketDataResult:
-        try:
-            download_kwargs = {
-                "tickers": asset.symbol,
-                "interval": interval,
-                "auto_adjust": True,
-                "progress": False,
-                "threads": False,
-            }
-            if start_date:
-                download_kwargs["start"] = start_date
-            else:
-                download_kwargs["period"] = period
+        # V3 — TTL cache: reuse file if last download was < 20 hours ago
+        cache_path = self.cache_dir / f"{slugify(asset.symbol)}.csv"  # V3
+        if cache_path.exists():  # V3
+            age_hours = (time.time() - cache_path.stat().st_mtime) / 3600  # V3
+            if age_hours < 20:  # V3
+                try:  # V3
+                    cached_df = pd.read_csv(cache_path, index_col=0, parse_dates=True)  # V3
+                    cached_df.columns = [str(c) for c in cached_df.columns]  # V3
+                    cached_df = cached_df.dropna(subset=["Close"])  # V3
+                    return MarketDataResult(asset=asset, data=cached_df)  # V3
+                except Exception:  # V3
+                    pass  # V3 — fall through to fresh download
 
-            df = yf.download(
-                **download_kwargs,
-            )
-        except Exception as exc:
-            return MarketDataResult(asset=asset, data=pd.DataFrame(), error=str(exc))
+        download_kwargs = {
+            "tickers": asset.symbol,
+            "interval": interval,
+            "auto_adjust": True,
+            "progress": False,
+            "threads": False,
+        }
+        if start_date:
+            download_kwargs["start"] = start_date
+        else:
+            download_kwargs["period"] = period
+
+        # V3 — retry loop with exponential backoff (max 3 attempts)
+        last_exc: Exception | None = None  # V3
+        df = pd.DataFrame()  # V3
+        for attempt in range(3):  # V3
+            try:  # V3
+                df = yf.download(**download_kwargs)  # V3
+                break  # V3 — success, exit retry loop
+            except Exception as exc:  # V3
+                last_exc = exc  # V3
+                if attempt < 2:  # V3
+                    time.sleep(2 ** attempt)  # V3 — backoff: 1s, 2s
+
+        if df.empty and asset.symbol.upper().endswith(".SA"):
+            try:
+                df = yf.download(
+                    tickers=asset.symbol,
+                    start="2020-01-01",
+                    interval=interval,
+                    auto_adjust=True,
+                    progress=False,
+                    threads=False,
+                )
+            except Exception as exc:
+                last_exc = exc
 
         if df.empty:
-            return MarketDataResult(asset=asset, data=df, error="empty dataset")
+            return MarketDataResult(asset=asset, data=df, error=str(last_exc) if last_exc else "empty dataset")
 
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)

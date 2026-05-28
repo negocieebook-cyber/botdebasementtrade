@@ -40,6 +40,11 @@ THRESHOLDS = {
         "strong_drawdown": 0.40,
         "extreme_drawdown": 0.55,
     },
+    "us_core_stocks": {
+        "relevant_drawdown": 0.30,
+        "strong_drawdown": 0.45,
+        "extreme_drawdown": 0.60,
+    },
     "banks": {
         "relevant_drawdown": 0.25,
         "strong_drawdown": 0.40,
@@ -90,6 +95,11 @@ THRESHOLDS = {
         "strong_drawdown": 0.55,
         "extreme_drawdown": 0.70,
     },
+    "brazil_all_stocks": {
+        "relevant_drawdown": 0.35,
+        "strong_drawdown": 0.55,
+        "extreme_drawdown": 0.70,
+    },
     "brazil_banks": {
         "relevant_drawdown": 0.25,
         "strong_drawdown": 0.40,
@@ -119,6 +129,7 @@ CLASS_PARAMETERS = {
     "sectors": {"capitulation_rsi": 38.0, "support_distance_pct": 8.0, "volatility_compression_ratio": 0.75},
     "growth_stocks": {"capitulation_rsi": 40.0, "support_distance_pct": 12.0, "volatility_compression_ratio": 0.70},
     "mega_caps": {"capitulation_rsi": 38.0, "support_distance_pct": 8.0, "volatility_compression_ratio": 0.75},
+    "us_core_stocks": {"capitulation_rsi": 38.0, "support_distance_pct": 9.0, "volatility_compression_ratio": 0.75},
     "banks": {"capitulation_rsi": 38.0, "support_distance_pct": 9.0, "volatility_compression_ratio": 0.75},
     "emerging_markets": {"capitulation_rsi": 38.0, "support_distance_pct": 10.0, "volatility_compression_ratio": 0.75},
     "commodities": {"capitulation_rsi": 38.0, "support_distance_pct": 10.0, "volatility_compression_ratio": 0.80},
@@ -129,6 +140,7 @@ CLASS_PARAMETERS = {
     "brazil_indices": {"capitulation_rsi": 38.0, "support_distance_pct": 8.0, "volatility_compression_ratio": 0.76},
     "brazil_etfs": {"capitulation_rsi": 38.0, "support_distance_pct": 8.0, "volatility_compression_ratio": 0.76},
     "brazil_stocks": {"capitulation_rsi": 40.0, "support_distance_pct": 12.0, "volatility_compression_ratio": 0.70},
+    "brazil_all_stocks": {"capitulation_rsi": 40.0, "support_distance_pct": 12.0, "volatility_compression_ratio": 0.70},
     "brazil_banks": {"capitulation_rsi": 38.0, "support_distance_pct": 9.0, "volatility_compression_ratio": 0.75},
     "brazil_commodities": {"capitulation_rsi": 38.0, "support_distance_pct": 10.0, "volatility_compression_ratio": 0.80},
     "brazil_utilities": {"capitulation_rsi": 38.0, "support_distance_pct": 7.0, "volatility_compression_ratio": 0.78},

@@ -3,22 +3,24 @@
 ## Resumo
 - Ativo: UGA
 - Classe: commodities
-- Data: 2026-05-22
-- Fase: Fora do padrão
-- Score: 21/100
-- Classificação: Fora do padrao
+- Data: 2026-05-27
+- Fase: Alerta bearish — padrao de topo
+- Score: 24/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Rejeitado nesta leitura: Fora do padrão.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
-- Preço acima da SMA 50.
 - Preço acima da SMA 200.
-- Invalidacao abaixo de 63.61.
-- Regime macro: neutral/mixed.
+- Invalidacao abaixo de 93.50.
+- Regime macro: supportive.
+- Força relativa positiva vs benchmark da classe (+29.7pp nos últimos 63 dias).
+- NR7: menor range dos últimos 7 dias — setup de contração antes de rompimento.
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
+- Preço abaixo da SMA 50.
 - RSI ainda fraco.
 - MACD não confirmou.
 - Muito distante da resistência de 60 dias.
@@ -27,28 +29,29 @@ Rejeitado nesta leitura: Fora do padrão.
 - Risco de perder suporte.
 - Confirmação técnica ainda pendente.
 - Intermarket fraco ou não calculado.
-- Narrativa não calculada nesta execução.
+- Sem padrão de acumulação por volume.
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 0.0
+- score: 30.0
 - regime: hostile
-- notes: Required intermarket data missing or insufficient.
+- notes: +1.5: GLD rising (trend score 1.5/5).; +1.5: Dollar proxy UUP falling (falling trend score 1.5/5).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 100.0
+- tone: bullish
+- notes: +1 positive signals in 1 headlines; 1/1 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 125.47, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
-Invalidacao abaixo de 63.61.
+Invalidacao abaixo de 93.50.
 
 ## Qualidade dos dados
 - has_price_data: True
@@ -60,11 +63,11 @@ Invalidacao abaixo de 63.61.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-22
+- last_date: 2026-05-27
 - source: yfinance/cache
 
 ## Conclusão
-O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 21/100.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 24/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

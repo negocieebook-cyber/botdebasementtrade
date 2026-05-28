@@ -23,6 +23,9 @@ REQUIRED_RELATIONS = {
     "IWM": ["SPY"],
 }
 
+BRAZIL_BENCHMARK_PRIMARY = "BOVA11.SA"
+BRAZIL_BENCHMARK_FALLBACK = "EWZ"
+
 INTERMARKET_SYMBOLS = [
     "TLT",
     "GLD",
@@ -34,6 +37,11 @@ INTERMARKET_SYMBOLS = [
     DXY_PROXY,
     VIX_PROXY,
     TREASURY_YIELD_10Y_PROXY,
+    "XLF",
+    "EFA",
+    "VNQ",
+    BRAZIL_BENCHMARK_PRIMARY,
+    BRAZIL_BENCHMARK_FALLBACK,
 ]
 
 
@@ -156,20 +164,64 @@ def _calculate_intermarket_score_from_data(symbol: str, asset_class: str, market
         score += s1; score += s2  # MELHORIA
         if n1: notes.append(f"+{s1:.1f}: SPY rising ({n1}).")  # MELHORIA
         if n2: notes.append(f"+{s2:.1f}: VIX proxy ^VIX falling ({n2}).")  # MELHORIA
-    elif asset_class == "banks":
-        notes.append("Banks curve/yield rule is intentionally neutral until specific bank data is configured.")
-        score = 5.0
+    elif asset_class in {"sectors", "defensive_dividends"}:  # V3
+        if not _has_usable_data(market_data, ["SPY", VIX_PROXY]):  # V3
+            return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: SPY and/or ^VIX.")  # V3
+        s1, n1 = _score_trend(market_data.get("SPY"), 5)  # V3
+        s2, n2 = _score_trend_falling(market_data.get(VIX_PROXY), 5)  # V3
+        score += s1; score += s2  # V3
+        if n1: notes.append(f"+{s1:.1f}: SPY rising ({n1}).")  # V3
+        if n2: notes.append(f"+{s2:.1f}: VIX proxy ^VIX falling ({n2}).")  # V3
+    elif asset_class == "reits":  # V3
+        vnq_df = market_data.get("VNQ")  # V3
+        tlt_df = market_data.get("TLT")  # V3
+        if vnq_df is None and tlt_df is None:  # V3
+            return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: VNQ and TLT.")  # V3
+        s1, n1 = _score_trend(vnq_df, 5)  # V3
+        s2, n2 = _score_trend_falling(market_data.get(TREASURY_YIELD_10Y_PROXY), 5)  # V3
+        score += s1; score += s2  # V3
+        if n1: notes.append(f"+{s1:.1f}: VNQ rising ({n1}).")  # V3
+        if n2: notes.append(f"+{s2:.1f}: 10Y yield ^TNX falling favors REITs ({n2}).")  # V3
+    elif asset_class == "developed_international":  # V3
+        efa_df = market_data.get("EFA")  # V3
+        if efa_df is None:  # V3
+            return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: EFA and/or UUP.")  # V3
+        s1, n1 = _score_trend(efa_df, 5)  # V3
+        s2, n2 = _score_trend_falling(market_data.get(DXY_PROXY), 5)  # V3
+        score += s1; score += s2  # V3
+        if n1: notes.append(f"+{s1:.1f}: EFA rising ({n1}).")  # V3
+        if n2: notes.append(f"+{s2:.1f}: Dollar proxy UUP falling favors international ({n2}).")  # V3
+    elif asset_class == "banks":  # V3 — replaced fixed 5.0 with XLF + yield trend
+        xlf_df = market_data.get("XLF")  # V3
+        tnx_df = market_data.get(TREASURY_YIELD_10Y_PROXY)  # V3
+        if xlf_df is None and tnx_df is None:  # V3
+            return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: XLF and/or ^TNX.")  # V3
+        s1, n1 = _score_trend(xlf_df, 5)  # V3
+        s2, n2 = _score_trend(tnx_df, 5)  # V3 — banks benefit from rising yields
+        score += s1; score += s2  # V3
+        if n1: notes.append(f"+{s1:.1f}: XLF (banks ETF) rising ({n1}).")  # V3
+        if n2: notes.append(f"+{s2:.1f}: 10Y yield ^TNX rising supports bank margins ({n2}).")  # V3
     elif asset_class == "emerging_markets":
         if not _has_usable_data(market_data, [DXY_PROXY]) or not (_has_usable_data(market_data, [normalized_symbol]) or _has_usable_data(market_data, ["EEM"])):
             return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: EEM/KWEB proxy and/or UUP.")
         em_df = market_data.get(normalized_symbol)
         if em_df is None or (hasattr(em_df, "empty") and em_df.empty):
-           em_df = market_data.get("EEM")
+            em_df = market_data.get("EEM")
         s1, n1 = _score_trend(em_df, 5)  # MELHORIA
         s2, n2 = _score_trend_falling(market_data.get(DXY_PROXY), 5)  # MELHORIA
         score += s1; score += s2  # MELHORIA
         if n1: notes.append(f"+{s1:.1f}: EEM/KWEB proxy rising ({n1}).")  # MELHORIA
         if n2: notes.append(f"+{s2:.1f}: Dollar proxy UUP falling ({n2}).")  # MELHORIA
+    elif asset_class.startswith("brazil_"):
+        bova_df = market_data.get(BRAZIL_BENCHMARK_PRIMARY) or market_data.get(BRAZIL_BENCHMARK_FALLBACK)
+        bench_label = BRAZIL_BENCHMARK_PRIMARY if market_data.get(BRAZIL_BENCHMARK_PRIMARY) is not None else BRAZIL_BENCHMARK_FALLBACK
+        if bova_df is None:
+            return _missing_intermarket_result(symbol, asset_class, f"Missing required intermarket data: {BRAZIL_BENCHMARK_PRIMARY}/{BRAZIL_BENCHMARK_FALLBACK} and/or UUP.")
+        s1, n1 = _score_trend(bova_df, 6)
+        s2, n2 = _score_trend_falling(market_data.get(DXY_PROXY), 4)
+        score += s1; score += s2
+        if n1: notes.append(f"+{s1:.1f}: {bench_label} (Ibovespa proxy) rising ({n1}).")
+        if n2: notes.append(f"+{s2:.1f}: Dollar proxy UUP falling favors Brazil assets ({n2}).")
     else:
         return _missing_intermarket_result(symbol, asset_class, f"No intermarket rule for asset_class={asset_class}.")
 

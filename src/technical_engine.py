@@ -8,6 +8,19 @@ from scipy.signal import argrelmin  # MELHORIA
 
 from src.thresholds import ClassThreshold
 
+CLASS_BENCHMARK = {  # V3
+    "equity_indices": "SPY", "sectors": "SPY", "growth_stocks": "QQQ",  # V3
+    "mega_caps": "QQQ", "banks": "XLF", "emerging_markets": "EEM",  # V3
+    "us_core_stocks": "SPY", "us_core_momentum": "SPY",  # V5
+    "commodities": "DBC", "crypto": "BTC-USD", "defensive_dividends": "SPY",  # V3
+    "developed_international": "EFA", "reits": "VNQ",  # V3
+    "brazil_indices": "BOVA11.SA", "brazil_etfs": "BOVA11.SA",  # V3
+    "brazil_stocks": "BOVA11.SA", "brazil_banks": "BOVA11.SA",  # V3
+    "brazil_all_stocks": "BOVA11.SA",  # V5
+    "brazil_commodities": "BOVA11.SA", "brazil_utilities": "BOVA11.SA",  # V3
+    "brazil_reits": "BOVA11.SA", "bonds": "TLT",  # V3
+}  # V3
+
 
 @dataclass
 class TechnicalSnapshot:
@@ -56,6 +69,12 @@ class TechnicalSnapshot:
     rsi_bullish_divergence: bool = False     # MELHORIA — preço mínima < anterior, RSI não confirma
     macd_bullish_divergence: bool = False    # MELHORIA — mesmo critério com MACD
     pattern_snapshot: object = None          # MELHORIA — PatternSnapshot do pattern_engine
+    volume_accumulation_pattern: bool = False  # V3
+    volume_dry_ratio: float = 1.0              # V3
+    relative_strength_vs_class: float = 0.0   # V3
+    outperforming_class: bool = False          # V3
+    nr7_pattern: bool = False                  # V3
+    inside_bar: bool = False                   # V3
 
 
 def sma(series: pd.Series, window: int) -> pd.Series:
@@ -187,7 +206,7 @@ def _detect_bullish_divergence(close: pd.Series, indicator: pd.Series, window: i
 
 
 class TechnicalEngine:
-    def analyze(self, df: pd.DataFrame, threshold: ClassThreshold, asset_class: str = "equity_indices") -> TechnicalSnapshot:  # MELHORIA
+    def analyze(self, df: pd.DataFrame, threshold: ClassThreshold, asset_class: str = "equity_indices", benchmark_df: pd.DataFrame | None = None) -> TechnicalSnapshot:  # V3 added benchmark_df
         work = add_technical_indicators(df)
         close = work["Close"]
 
@@ -242,6 +261,48 @@ class TechnicalEngine:
         except Exception:  # MELHORIA
             pass  # MELHORIA
 
+        # V3 — volume accumulation pattern (up-day volume > down-day volume in last 20 bars)
+        last_20_work = work.tail(20)  # V3
+        if "Volume" in last_20_work.columns:  # V3
+            up_days = last_20_work[last_20_work["Close"] > last_20_work["Open"]]  # V3
+            down_days = last_20_work[last_20_work["Close"] <= last_20_work["Open"]]  # V3
+            up_vol = float(up_days["Volume"].mean()) if len(up_days) > 0 else 0.0  # V3
+            down_vol = float(down_days["Volume"].mean()) if len(down_days) > 0 else 0.0  # V3
+        else:  # V3
+            up_vol, down_vol = 0.0, 0.0  # V3
+        volume_accumulation_pattern = bool(up_vol > down_vol and up_vol > 0)  # V3
+        volume_dry_ratio = float(down_vol / up_vol) if up_vol > 0 else 1.0  # V3
+
+        # V3 — relative strength vs class benchmark (63-day return differential)
+        relative_strength_vs_class = 0.0  # V3
+        outperforming_class = False  # V3
+        if benchmark_df is not None and not benchmark_df.empty:  # V3
+            try:  # V3
+                bench_work = _normalize_ohlcv_columns(benchmark_df)  # V3
+                bench_close = bench_work["Close"].dropna()  # V3
+                if len(bench_close) >= 63:  # V3
+                    bench_return_63d = float((bench_close.iloc[-1] / bench_close.iloc[-63]) - 1) * 100  # V3
+                    asset_return_63d = _last_float(last, "Return3MPct")  # V3
+                    if not np.isnan(asset_return_63d):  # V3
+                        relative_strength_vs_class = float(asset_return_63d - bench_return_63d)  # V3
+                        outperforming_class = relative_strength_vs_class > 0  # V3
+            except Exception:  # V3
+                pass  # V3
+
+        # V3 — NR7 (narrowest range of last 7 bars) and inside bar
+        last_7 = work.tail(7)  # V3
+        if len(last_7) >= 7:  # V3
+            ranges_7 = (last_7["High"] - last_7["Low"]).values  # V3
+            nr7_pattern = bool(float(ranges_7[-1]) <= float(ranges_7.min()))  # V3
+        else:  # V3
+            nr7_pattern = False  # V3
+        if len(work) >= 2:  # V3
+            prev_bar = work.iloc[-2]  # V3
+            last_bar = work.iloc[-1]  # V3
+            inside_bar = bool(last_bar["High"] < prev_bar["High"] and last_bar["Low"] > prev_bar["Low"])  # V3
+        else:  # V3
+            inside_bar = False  # V3
+
         return TechnicalSnapshot(
             date=str(last_date.date() if hasattr(last_date, "date") else last_date),
             last_close=last_close,
@@ -288,4 +349,10 @@ class TechnicalEngine:
             rsi_bullish_divergence=bool(rsi_bullish_divergence),       # MELHORIA
             macd_bullish_divergence=bool(macd_bullish_divergence),     # MELHORIA
             pattern_snapshot=pattern_snapshot,                         # MELHORIA
+            volume_accumulation_pattern=bool(volume_accumulation_pattern),  # V3
+            volume_dry_ratio=float(volume_dry_ratio),                       # V3
+            relative_strength_vs_class=float(relative_strength_vs_class),  # V3
+            outperforming_class=bool(outperforming_class),                  # V3
+            nr7_pattern=bool(nr7_pattern),                                  # V3
+            inside_bar=bool(inside_bar),                                    # V3
         )

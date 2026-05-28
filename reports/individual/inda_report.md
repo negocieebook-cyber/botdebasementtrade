@@ -3,52 +3,54 @@
 ## Resumo
 - Ativo: INDA
 - Classe: emerging_markets
-- Data: 2026-05-22
-- Fase: Fora do padrão
-- Score: 32/100
-- Classificação: Fora do padrao
+- Data: 2026-05-27
+- Fase: Alerta bearish — padrao de topo
+- Score: 39/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Rejeitado nesta leitura: Fora do padrão.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
-- Suporte recente foi defendido.
-- Invalidacao abaixo de 45.21.
-- Regime macro: neutral/mixed.
+- Preço acima da SMA 50.
+- MACD confirmou acima da linha de sinal.
+- Invalidacao abaixo de 47.13.
+- Regime macro: supportive.
+- Padrão de acumulação por volume: dias de alta com volume maior que dias de baixa.
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
-- Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
-- MACD não confirmou.
 - Muito distante da resistência de 60 dias.
 - Volatilidade ainda sem compressão clara.
 - Volume fraco ou abaixo da média.
+- Risco de perder suporte.
 - Confirmação técnica ainda pendente.
-- Intermarket misto.
-- Narrativa não calculada nesta execução.
+- Intermarket fraco ou não calculado.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 50.0
-- regime: mixed
-- notes: +5: EEM/KWEB proxy rising.
+- score: 30.0
+- regime: hostile
+- notes: +1.5: EEM/KWEB proxy rising (trend score 1.5/5).; +1.5: Dollar proxy UUP falling (falling trend score 1.5/5).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 79.7
+- tone: bullish
+- notes: +9 positive signals in 14 headlines; -1 negative signals in 14 headlines; 4/14 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 50.30, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
-Invalidacao abaixo de 45.21.
+Invalidacao abaixo de 47.13.
 
 ## Qualidade dos dados
 - has_price_data: True
@@ -60,11 +62,11 @@ Invalidacao abaixo de 45.21.
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-22
+- last_date: 2026-05-27
 - source: yfinance/cache
 
 ## Conclusão
-O ativo não passa no filtro principal nesta leitura. Fase atual: Fora do padrão; score 32/100.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 39/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

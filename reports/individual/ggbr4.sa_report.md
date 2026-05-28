@@ -3,13 +3,13 @@
 ## Resumo
 - Ativo: GGBR4.SA
 - Classe: brazil_commodities
-- Data: 2026-05-22
-- Fase: Possível estabilização
-- Score: 36/100
-- Classificação: Possivel estabilizacao
+- Data: 2026-05-27
+- Fase: Alerta bearish — padrao de topo
+- Score: 41/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 36/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
 - Preço acima da SMA 50.
@@ -17,8 +17,9 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - RSI acima de 50.
 - Perto de rompimento da resistência de 60 dias.
 - Confirmação técnica já presente.
-- Invalidacao abaixo de 16.66.
-- Regime macro: neutral/mixed.
+- Invalidacao abaixo de 21.40.
+- Regime macro: supportive.
+- Força relativa positiva vs benchmark da classe (+21.8pp nos últimos 63 dias).
 
 ## Pontos contra
 - Drawdown ainda não é relevante para a classe.
@@ -27,44 +28,45 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
 - Intermarket fraco ou não calculado.
-- Narrativa não calculada nesta execução.
+- Sem padrão de acumulação por volume.
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 0.0
+- score: 30.0
 - regime: hostile
-- notes: No intermarket rule for asset_class=brazil_commodities.
+- notes: +1.8: BOVA11 (Ibovespa) rising (trend score 1.8/6).; +1.2: Dollar proxy UUP falling favors Brazil assets (falling trend score 1.2/4).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 74.3
+- tone: bullish
+- notes: +26 positive signals in 20 headlines; -7 negative signals in 20 headlines; 7/20 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 24.42, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
 
 ## Ponto de invalidação
-Invalidacao abaixo de 16.66.
+Invalidacao abaixo de 21.40.
 
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-22
+- last_date: 2026-05-27
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 36/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 41/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.

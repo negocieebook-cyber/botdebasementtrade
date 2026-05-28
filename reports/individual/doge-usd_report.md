@@ -3,21 +3,22 @@
 ## Resumo
 - Ativo: DOGE-USD
 - Classe: crypto
-- Data: 2026-05-23
-- Fase: Possível estabilização
-- Score: 43/100
-- Classificação: Possivel estabilizacao
+- Data: 2026-05-27
+- Fase: Alerta bearish — padrao de topo
+- Score: 39/100
+- Classificação: Alerta bearish — padrao de topo
 
 ## Por que entrou no radar
-Entrou no radar como Possível estabilização porque combina queda relevante para a classe, score 43/100 e sinais técnicos como suporte, médias, RSI, MACD ou compressão de volatilidade.
+Rejeitado nesta leitura: Alerta bearish — padrao de topo.
 
 ## Pontos a favor
 - Drawdown relevante para a classe do ativo.
-- Preço acima da SMA 50.
 - Invalidacao abaixo de 0.09.
-- Regime macro: neutral/mixed.
+- Regime macro: supportive.
+- Padrão de acumulação por volume: dias de alta com volume maior que dias de baixa.
 
 ## Pontos contra
+- Preço abaixo da SMA 50.
 - Abaixo da SMA 200.
 - RSI ainda fraco.
 - MACD não confirmou.
@@ -26,23 +27,24 @@ Entrou no radar como Possível estabilização porque combina queda relevante pa
 - Volume fraco ou abaixo da média.
 - Risco de perder suporte.
 - Confirmação técnica ainda pendente.
-- Intermarket fraco ou não calculado.
-- Narrativa não calculada nesta execução.
+- Intermarket misto.
+- Ativo abaixo do benchmark da classe (força relativa negativa).
+
 
 ## Macro
-- score: 59.0
-- regime: neutral/mixed
-- notes: Yield curve is positive: T10Y2Y=0.43.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.
+- score: 60.0
+- regime: supportive
+- notes: Yield curve is positive: T10Y2Y=0.48.; Unemployment trend is not materially deteriorating: -0.20 pp.; Fed balance sheet trend is expanding: 1.28%.; Taxa real negativa: -0.14% (favorável para ativos de risco).; CPI núcleo acelerando: tendência 1.32 pp nos últimos 6 meses.
 
 ## Intermarket
-- score: 30.0
-- regime: hostile
-- notes: +3: QQQ rising.
+- score: 51.0
+- regime: mixed
+- notes: +1.2: BTC rising (trend score 1.2/4).; +3.0: QQQ rising (trend score 3.0/3).; +0.9: Dollar proxy UUP falling (falling trend score 0.9/3).
 
 ## Narrativa
-- score: 0.0
-- tone: not_calculated
-- notes: Narrative not implemented yet.
+- score: 53.0
+- tone: neutral
+- notes: +15 positive signals in 20 headlines; -14 negative signals in 20 headlines; 2/20 theme-relevant headlines found
 
 ## Gatilho de confirmação
 Confirmacao acima de 0.12, idealmente com fechamento sustentado e volume igual ou acima da media de 30 dias.
@@ -53,18 +55,18 @@ Invalidacao abaixo de 0.09.
 ## Qualidade dos dados
 - has_price_data: True
 - error: None
-- approved: True
+- approved: False
 - confidence_score: 100
 - confidence_level: Alta
 - issues: 
 - has_enough_history: True
 - has_volume: True
 - missing_values_pct: 0.0
-- last_date: 2026-05-23
+- last_date: 2026-05-27
 - source: yfinance/cache
 
 ## Conclusão
-O ativo permanece no radar como Possível estabilização, com score 43/100, aguardando confirmação e respeitando o ponto de invalidação.
+O ativo não passa no filtro principal nesta leitura. Fase atual: Alerta bearish — padrao de topo; score 39/100.
 
 ## Aviso
 Este relatório é uma análise quantitativa e qualitativa inicial. Não é recomendação financeira, não promete retorno e deve ser usado apenas como apoio ao estudo.
