@@ -11,6 +11,9 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run daily alert
+      - name: Run daily alert - full universe
         if: github.event.schedule == '0 12 * * *' || github.event_name == 'workflow_dispatch'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -33,9 +36,9 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-        run: python main.py daily-alert
+        run: python main.py daily-alert --full
 
-      - name: Run weekly report
+      - name: Run weekly report - full universe
         if: github.event.schedule == '30 12 * * 0'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -45,4 +48,4 @@ jobs:
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-        run: python main.py weekly-report
+        run: python main.py weekly-report --full

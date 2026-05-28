@@ -213,8 +213,11 @@ def _calculate_intermarket_score_from_data(symbol: str, asset_class: str, market
         if n1: notes.append(f"+{s1:.1f}: EEM/KWEB proxy rising ({n1}).")  # MELHORIA
         if n2: notes.append(f"+{s2:.1f}: Dollar proxy UUP falling ({n2}).")  # MELHORIA
     elif asset_class.startswith("brazil_"):
-        bova_df = market_data.get(BRAZIL_BENCHMARK_PRIMARY) or market_data.get(BRAZIL_BENCHMARK_FALLBACK)
-        bench_label = BRAZIL_BENCHMARK_PRIMARY if market_data.get(BRAZIL_BENCHMARK_PRIMARY) is not None else BRAZIL_BENCHMARK_FALLBACK
+        bova_df = market_data.get(BRAZIL_BENCHMARK_PRIMARY)
+        bench_label = BRAZIL_BENCHMARK_PRIMARY
+        if bova_df is None or (hasattr(bova_df, "empty") and bova_df.empty):
+            bova_df = market_data.get(BRAZIL_BENCHMARK_FALLBACK)
+            bench_label = BRAZIL_BENCHMARK_FALLBACK
         if bova_df is None:
             return _missing_intermarket_result(symbol, asset_class, f"Missing required intermarket data: {BRAZIL_BENCHMARK_PRIMARY}/{BRAZIL_BENCHMARK_FALLBACK} and/or UUP.")
         s1, n1 = _score_trend(bova_df, 6)
