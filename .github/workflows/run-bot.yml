@@ -13,9 +13,6 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-    env:
-      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v4
 
@@ -63,7 +60,7 @@ jobs:
         run: python main.py daily-alert --full --narrative
 
       - name: Momentum alert
-        if: github.event.schedule == '0 23 * * 1-5'
+        if: github.event.schedule == '0 23 * * 1-5' || github.event_name == 'workflow_dispatch'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -75,7 +72,7 @@ jobs:
         run: python main.py momentum-alert --min-score 55
 
       - name: Weekly report
-        if: github.event.schedule == '0 21 * * 0'
+        if: github.event.schedule == '0 21 * * 0' || github.event_name == 'workflow_dispatch'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
