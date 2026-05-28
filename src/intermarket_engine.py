@@ -162,7 +162,9 @@ def _calculate_intermarket_score_from_data(symbol: str, asset_class: str, market
     elif asset_class == "emerging_markets":
         if not _has_usable_data(market_data, [DXY_PROXY]) or not (_has_usable_data(market_data, [normalized_symbol]) or _has_usable_data(market_data, ["EEM"])):
             return _missing_intermarket_result(symbol, asset_class, "Missing required intermarket data: EEM/KWEB proxy and/or UUP.")
-        em_df = market_data.get(normalized_symbol) or market_data.get("EEM")  # MELHORIA
+        em_df = market_data.get(normalized_symbol)
+        if em_df is None or (hasattr(em_df, "empty") and em_df.empty):
+           em_df = market_data.get("EEM")
         s1, n1 = _score_trend(em_df, 5)  # MELHORIA
         s2, n2 = _score_trend_falling(market_data.get(DXY_PROXY), 5)  # MELHORIA
         score += s1; score += s2  # MELHORIA
