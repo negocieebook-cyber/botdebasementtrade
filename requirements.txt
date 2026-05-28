@@ -7,3 +7,4 @@ ta
 matplotlib
 scipy
 tabulate
+lxml
